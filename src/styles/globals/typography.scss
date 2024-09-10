@@ -1,0 +1,44 @@
+// .text_xxs {}
+// .text_xs {}
+// .text_sm {}
+
+// For default body copy font
+.text_reg {
+	font-family: "Unbounded";
+	font-style: "regular";
+	font-size: 14px;
+}
+
+.text_md {
+	font-size: 18px;
+}
+.text_lg {
+	font-family: "unbounded";
+	font-style: "Medium";
+	font-size: 60px;
+}
+.text_xl {
+	font-size: 18px;
+}
+.text_xxl {
+	font-family: "Unbounded";
+	font-style: "Bold";
+	font-size: 100px;
+}
+.text_xxxl {
+	font-size: 18px;
+}
+.text_xxxxl {
+	font-size: 18px;
+}
+
+// // Each loop for creating font weights ->
+// //.text_100, .text_200 .....
+// light, reg, med, semibold, bold, extrabold,black
+$sizes: 300, 400, 500, 600, 700, 800, 900;
+
+@each $size in $sizes {
+	.text_#{$size} {
+		font-weight: $size;
+	}
+}

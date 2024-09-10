@@ -1,0 +1,55 @@
+$browser-prefixes: false !default;
+
+:root {
+	// Fonts
+	--font_primary: "Unbounded", sans-serif;
+	--font_secondary: "Kanit", sans-serif;
+
+	// Primary colors
+	--color_primary: #2e0c43;
+	--color_primary_light: #723f98;
+
+	// Secondary colors
+
+	--color_secondary: #dfa41b;
+	--color_secondary_light: #ffe1a4;
+
+	// Tertiary colors
+	--color_tertiary: #c96c98;
+
+	// Quaternary colors
+	--color_quaternary: #a2dad8;
+
+	// Extra colors
+	--color_black: #000000;
+	--color_white: #ffffff;
+
+	// Gradient
+	--color_gradient_gold: linear-gradient(
+		90deg,
+		#dfa41b00 0%,
+		#dfa41b 50%,
+		#dfa41b00 100%
+	);
+
+	// Extras
+	--container_width: 100%;
+	--container_left_space: calc((100% - var(--container_width)) / 2);
+	--transition: ease all 300ms;
+
+	@media (min-width: 768px) and (max-width: 991px) {
+		--container_width: 750px;
+	}
+
+	@media (min-width: 992px) and (max-width: 1199px) {
+		--container_width: 970px;
+	}
+
+	@media (min-width: 1200px) {
+		--container_width: 1170px;
+	}
+
+	// @media (min-width: 1401px) {
+	//   --container_width: 1360px;
+	// }
+}

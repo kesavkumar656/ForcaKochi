@@ -1,0 +1,72 @@
+@import "../helpers/helpers.scss";
+
+.hero_wrap {
+	padding-top: 100px;
+	line-height: 1;
+
+	.heading {
+		position: relative;
+		.FootbalTxt {
+			line-height: 1;
+		}
+		.text {
+			position: absolute;
+			right: 2%;
+			bottom: 5%;
+			width: 30%;
+			line-height: 1.5;
+		}
+		.Image {
+			position: absolute;
+			right: -2%;
+			bottom: 15%;
+		}
+		.Ground {
+			position: relative;
+			.Background {
+				position: absolute;
+			}
+		}
+	}
+	// .swiper {
+	// 	.swiper-wrapper {
+	// 		:global {
+	// 			.swiper-slide {
+	// 			}
+	// 			.swiper-slide-active {
+	// 			}
+
+	// 			.swiper-pagination {
+	// 				.swiper-pagination-bullets {
+	// 					width: 10px;
+	// 					background: var(--color_white);
+	// 				}
+	// 				.swiper-pagination-bullets-active {
+	// 					width: 50px;
+	// 					background: var(--color_white);
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	:global {
+		.swiper-pagination-bullet {
+			right: 0;
+			width: 10px;
+			height: 10px;
+			background-color: var(--color_white);
+			opacity: 0.5;
+			border-radius: 50%;
+			transition: all 0.3s ease;
+		}
+
+		.swiper-pagination-bullet-active {
+			width: 30px;
+			height: 10px;
+			background-color: var(--color_white);
+			opacity: 1;
+			border-radius: 20px;
+		}
+	}
+}
