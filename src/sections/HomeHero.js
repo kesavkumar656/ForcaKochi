@@ -31,7 +31,7 @@ import { useEffect } from "react";
 /** HomeHero Section */
 export default function HomeHero() {
 	return (
-		<div className="container-fluid section_spacing color_white">
+		<div className=" section_spacing color_white">
 			<div className={`${styles.hero_wrap}  container `}>
 				<div className={`${styles.heading}`}>
 					<h1
@@ -74,7 +74,6 @@ export default function HomeHero() {
 					</SwiperSlide>
 				</Swiper>
 			</div>
-			
 		</div>
 	);
 }

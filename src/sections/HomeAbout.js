@@ -12,23 +12,21 @@ import Image from "next/image";
 import styles from "@/styles/sections/HomeAbout.module.scss";
 
 // IMAGES //
-import Background from "@/../public/img/HomeHero/background.jpg";
-import Ground from "@/../public/img/HomeHero/background2.png";
+import Background from "@/../public/img/homeAbout/background.jpg";
+import Ground from "@/../public/img/homeAbout/background2.png";
+import football from "@/../public/img/homeAbout/football.png";
+import green from "@/../public/img/homeAbout/Green.png";
+import yellow from "@/../public/img/homeAbout/Yellow.png";
 // DATA //
 
 /** HomeAbout Section */
 export default function HomeAbout() {
 	return (
 		<section className={styles.HomeAbout}>
-			<div className={`${styles.Ground}`}>
-				<div className={styles.Background}>
-					<div className="next_image">
-						<Image src={Background} alt=" "></Image>
-					</div>
-					<div className="next_image">
-						<Image src={Ground} alt=" "></Image>
-					</div>
-					<div className={styles.textDiv}>
+			<div className={styles.Background}>
+				<div className="next_image">
+					<Image src={Background} alt=" "></Image>
+					<div className={`${styles.textDiv} container `}>
 						<h1
 							className={`${styles.Heading} text_xxl color_secondary font_primary text_700 `}
 						>
@@ -42,6 +40,15 @@ export default function HomeAbout() {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className={`${styles.groundDiv} `}>
+				<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
+
+				<Image className={`${styles.yellowPlayer} `} src={yellow} alt=""></Image>
+
+				<Image className={`${styles.footbball}`} src={football} alt=""></Image>
+
+				<Image className={`${styles.greenPlayer}`} src={green} alt=""></Image>
 			</div>
 		</section>
 	);

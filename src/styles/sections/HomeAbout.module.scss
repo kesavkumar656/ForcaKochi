@@ -1,26 +1,51 @@
 @import "../helpers/helpers.scss";
 
 .HomeAbout {
-	.Ground {
-		.Background {
-			@extend %relative_box;
-			img {
-				width: 100%;
-			}
-			.textDiv {
-				@extend %full_overlay;
-				width: 80%;
-				margin: 0 auto;
+	width: 100%;
 
-				@extend %rel_xy_center;
-				.Heading {
-					// margin: 0 auto;
-				}
-				.Para {
-					// margin: 0 auto;
-					width: 50%;
-				}
+	.Background {
+		@extend %relative_box;
+		img {
+			width: 100%;
+		}
+		.textDiv {
+			position: absolute;
+			@extend %rel_xy_center;
+			top: 40%;
+			text-align: center;
+			// padding-bottom: 5%;
+
+			// @include sm-down {
+			// 	.textDiv {
+			// 		font-size: small;
+			// 	}
+			// 	font-size: small;
+			// }
+			.Heading {
+				margin: 0 auto;
+				width: 50%;
+				text-align: center;
 			}
+			.Para {
+				line-height: 1.5;
+				max-width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+	.groundDiv {
+		.parentImage {
+			position: relative;
+		}
+		.greenPlayer .yellowPlayer .football {
+			position: absolute;
+			bottom: 0;
+		}
+		.yellowPlayer {
+			position: absolute;
+			bottom: -22%;
+			left: 0;
+			z-index: 1;
 		}
 	}
 }
