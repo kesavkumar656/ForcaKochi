@@ -3,16 +3,22 @@
 .HomeAbout {
 	.Ground {
 		.Background {
+			@extend %relative_box;
 			img {
-
 				width: 100%;
 			}
 			.textDiv {
-                
-				position: absolute;
+				@extend %full_overlay;
+				width: 80%;
+				margin: 0 auto;
+
+				@extend %rel_xy_center;
 				.Heading {
+					// margin: 0 auto;
 				}
 				.Para {
+					// margin: 0 auto;
+					width: 50%;
 				}
 			}
 		}

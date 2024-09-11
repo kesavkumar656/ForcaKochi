@@ -29,8 +29,12 @@ export default function HomeAbout() {
 						<Image src={Ground} alt=" "></Image>
 					</div>
 					<div className={styles.textDiv}>
-						<h1 className={`${styles.Heading}`}>Nammude Forca, Nammude Kochi</h1>
-						<p className={`${styles.Para} text_reg`}>
+						<h1
+							className={`${styles.Heading} text_xxl color_secondary font_primary text_700 `}
+						>
+							Nammude Forca, Nammude Kochi
+						</h1>
+						<p className={`${styles.Para} text_center  color_white text_md text_200`}>
 							Kerala is home to some of the most die-hard football fans in India. You
 							can feel the passion for the sport in every nook and corner of the State.
 							This is the passion that represents and drives Forca Kochi FC. You can
