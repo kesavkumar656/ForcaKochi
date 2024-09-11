@@ -33,7 +33,7 @@ export default function HomePage() {
 			{/* Page Content starts here */}
 			<main className={`${styles.HomePage} bg_primary`}>
 				<HomeHero></HomeHero>
-				<HomeAbout></HomeAbout>
+				<HomeAbout className="container-fluid"></HomeAbout>
 			</main>
 			{/* Page Content ends here */}
 
