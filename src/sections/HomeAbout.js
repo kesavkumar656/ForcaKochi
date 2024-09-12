@@ -22,17 +22,17 @@ import yellow from "@/../public/img/homeAbout/Yellow.png";
 /** HomeAbout Section */
 export default function HomeAbout() {
 	return (
-		<section className={styles.HomeAbout}>
-			<div className={styles.Background}>
+		<section className={`${styles.HomeAbout} `}>
+			<div className={`${styles.Background} `}>
 				<div className="next_image">
 					<Image src={Background} alt=" "></Image>
 					<div className={`${styles.textDiv} container `}>
 						<h1
-							className={`${styles.Heading} text_xxl color_secondary font_primary text_700 `}
+							className={`${styles.Heading} text_xxl color_secondary text_uppercase  font_primary text_700 `}
 						>
 							Nammude Forca, Nammude Kochi
 						</h1>
-						<p className={`${styles.Para} text_center  color_white text_md text_200`}>
+						<p className={`${styles.Para} text_center  color_white  text_200`}>
 							Kerala is home to some of the most die-hard football fans in India. You
 							can feel the passion for the sport in every nook and corner of the State.
 							This is the passion that represents and drives Forca Kochi FC. You can

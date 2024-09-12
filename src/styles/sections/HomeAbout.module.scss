@@ -1,13 +1,12 @@
 @import "../helpers/helpers.scss";
 
 .HomeAbout {
+	padding-top: 15%;
 	width: 100%;
 
 	.Background {
 		@extend %relative_box;
-		img {
-			width: 100%;
-		}
+		
 		.textDiv {
 			position: absolute;
 			@extend %rel_xy_center;
@@ -22,14 +21,27 @@
 			// 	font-size: small;
 			// }
 			.Heading {
+				line-height: 1;
 				margin: 0 auto;
 				width: 50%;
 				text-align: center;
+
+				@include sm-down {
+					font-size: 30px;
+				}
+				@include lg-down {
+					font-size: 40px;
+				}
 			}
 			.Para {
+				font-size: 20px;
 				line-height: 1.5;
 				max-width: 90%;
 				margin: 0 auto;
+				@include lg-down {
+					font-size: 14px;
+					width: 50%;
+				}
 			}
 		}
 	}
@@ -37,27 +49,45 @@
 		position: relative;
 		.parentImage {
 		}
-		.greenPlayer {
-			position: absolute;
-			bottom: 0;
-			@extend %rel_x_center;
-		}
+		.greenPlayer,
+		.football,
 		.yellowPlayer {
+			// max-width: 90%;
 			position: absolute;
 			bottom: 0;
 
-			@extend %rel_x_center;
+			@include md-down {
+				width: 50%;
+			}
+		}
+
+		.yellowPlayer {
+			// @extend %rel_x_center;
+			left: 0;
+			bottom: 0;
+			transform: translate(50%, -20%);
+			z-index: 1;
+			@include lg-down {
+				transform: translate(50%, -15%);
+			}
+		}
+		.greenPlayer {
+			// @extend %rel_x_center;
+			// right: 50%;
+			right: 0;
+			transform: translate(-50%, -20%);
+			z-index: 1;
+			bottom: 0;
+			@include lg-down {
+				transform: translate(-50%, -15%);
+			}
 		}
 		.football {
-			position: absolute;
-			bottom: 0;
 			@extend %rel_xy_center;
+			// right: 0;
+
+			transform: translate(-55%, -15%);
+			z-index: 1;
 		}
-		// .yellowPlayer {
-		// 	position: absolute;
-		// 	bottom: -22%;
-		// 	left: 0;
-		// 	z-index: 1;
-		// }
 	}
 }

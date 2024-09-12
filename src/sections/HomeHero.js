@@ -35,7 +35,7 @@ export default function HomeHero() {
 			<div className={`${styles.hero_wrap}  container `}>
 				<div className={`${styles.heading}`}>
 					<h1
-						className={`${styles.FootbalTxt}  text_uppercase text_xxl color_secondary`}
+						className={`${styles.FootbalTxt} font_primary text_700  text_uppercase text_xxl color_secondary`}
 					>
 						Football has a new force
 					</h1>

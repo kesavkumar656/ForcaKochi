@@ -40,65 +40,91 @@ export default function Header() {
 		<div
 			className={`${styles.main_header} ${
 				openSidebar ? styles.sidebar_opened : ""
-			}  `}
+			}`}
 		>
-			<div className="container ">
-				<div className={`${styles.header_inside} container-fluid`}>
+			<div className="container 	">
+				<div className={`${styles.header_inside}`}>
 					{/* Logo wrap */}
-
-					{/* Links Wrap */}
-					<div className={`${styles.links_wrap}`}>
-						{/* Add "has_dropdown" class if your link has dropdown */}
-
-						<div className={styles.link_title}>
-							<p>About Us</p>
-						</div>
-						{/* Dropdown is opened when link is clicked */}
-					</div>
-					<div
-						className={`${styles.links} ${styles.has_dropdown} ${
-							openDropdown === "blogs" ? styles.dropdown_opened : ""
-						} dropdown`}
-						onClick={() => toggleDropdown("blogs")}
-					>
-						<div className={styles.link_title}>
-							<p>Ticket & Merchandise</p>
-						</div>
-						{/* Dropdown is opened when link is clicked */}
-					</div>
-
-					<div className={styles.links}>
-						<Link href="">
-							<div className={styles.link_title}>Gallary</div>
-						</Link>
-					</div>
 					<Link href="/">
 						<div className={styles.image_wrap}>
 							<Image src={Logo} alt="Logo" />
 						</div>
 					</Link>
-					<div className={styles.links}>
-						<Link href="">
-							<div className={styles.link_title}>Community</div>
-						</Link>
-					</div>
-					<div className={styles.links}>
-						<Link href="">
-							<div className={styles.link_title}>Owners</div>
-						</Link>
-					</div>
-					<div className={styles.links}>
-						<Link href="">
-							<div className={styles.link_title}>Get in Touch</div>
-						</Link>
-					</div>
-				</div>
 
-				{/* Hamburger icon visible in mobile only */}
-				<div className={styles.hamburger_icon} onClick={toggleSidebar}>
-					<span className={styles.hamburger_line}></span>
-					<span className={styles.hamburger_line}></span>
-					<span className={styles.hamburger_line}></span>
+					{/* Links Wrap */}
+					<div className={`${styles.links_wrap}`}>
+						{/* Add "has_dropdown" class if your link has dropdown */}
+						<div>
+							<div
+								className={`${styles.links} ${styles.has_dropdown} ${
+									openDropdown === "aboutUs" ? styles.dropdown_opened : ""
+								} dropdown`}
+								onClick={() => toggleDropdown("aboutUs")}
+							>
+								<div className={`${styles.link_title} ${styles.div}`}>
+									<p>About Us</p>
+									<span className={styles.arrow_img}>
+										{/* <Image src={Arrow} alt="Arrow" /> */}
+									</span>
+								</div>
+								{/* Dropdown is opened when link is clicked */}
+								{/* <div className={`${styles.dropdown_wrap}`}>
+									<Link href="">
+										<p className={styles.dropdown_links}>About 1</p>
+									</Link>
+									<Link href="">
+										<p className={styles.dropdown_links}>About 2</p>
+									</Link>
+									<Link href="">
+										<p className={styles.dropdown_links}>About 3</p>
+									</Link>
+								</div> */}
+							</div>
+							<div
+								className={`${styles.links} ${styles.has_dropdown} ${
+									openDropdown === "blogs" ? styles.dropdown_opened : ""
+								} dropdown`}
+								onClick={() => toggleDropdown("blogs")}
+							>
+								<div className={styles.link_title}>
+									<p>Blogs</p>
+									{/* <span className={styles.arrow_img}></span> */}
+								</div>
+								{/* Dropdown is opened when link is clicked */}
+								{/* <div className={`${styles.dropdown_wrap}`}>
+									<Link href="">
+										<p className={styles.dropdown_links}>Blog 1</p>
+									</Link>
+									<Link href="">
+										<p className={styles.dropdown_links}>Blog 2</p>
+									</Link>
+									<Link href="">
+										<p className={styles.dropdown_links}>Blog 3</p>
+									</Link>
+								</div> */}
+							</div>
+						</div>
+
+						<div>
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Career</div>
+								</Link>
+							</div>
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Contact</div>
+								</Link>
+							</div>
+						</div>
+					</div>
+
+					{/* Hamburger icon visible in mobile only */}
+					<div className={styles.hamburger_icon} onClick={toggleSidebar}>
+						<span className={styles.hamburger_line}></span>
+						<span className={styles.hamburger_line}></span>
+						<span className={styles.hamburger_line}></span>
+					</div>
 				</div>
 			</div>
 		</div>
