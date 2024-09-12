@@ -42,13 +42,21 @@ export default function HomeAbout() {
 				</div>
 			</div>
 			<div className={`${styles.groundDiv} `}>
-				<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
+				<div className="next_image">
+					<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
+				</div>
 
-				<Image className={`${styles.yellowPlayer} `} src={yellow} alt=""></Image>
+				<div className={`${styles.yellowPlayer} `}>
+					<Image src={yellow} alt=""></Image>
+				</div>
 
-				<Image className={`${styles.footbball}`} src={football} alt=""></Image>
+				<div className={`${styles.football}`}>
+					<Image src={football} alt=""></Image>
+				</div>
 
-				<Image className={`${styles.greenPlayer}`} src={green} alt=""></Image>
+				<div className={`${styles.greenPlayer}`}>
+					<Image src={green} alt=""></Image>
+				</div>
 			</div>
 		</section>
 	);

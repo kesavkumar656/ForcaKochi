@@ -9,15 +9,36 @@
 
 .text_md {
 	font-size: 18px;
+	@include md-down {
+		font-size: 14px;
+	}
 }
 .text_lg {
 	font-size: 60px;
+	@include md-down {
+		font-size: 50px;
+	}
+	@include sm-down {
+		font-size: 40px;
+	}
 }
 .text_xl {
 	font-size: 90px;
+	@include md-down {
+		font-size: 40px;
+	}
+	@include sm-down {
+		font-size: 32px;
+	}
 }
 .text_xxl {
 	font-size: 100px;
+	@include md-down {
+		font-size: 30px;
+	}
+	// @include sm-down {
+	// 	font-size: 32px;
+	// }
 }
 .text_xxxl {
 	font-size: 18px;

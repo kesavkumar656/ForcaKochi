@@ -34,18 +34,30 @@
 		}
 	}
 	.groundDiv {
+		position: relative;
 		.parentImage {
-			position: relative;
 		}
-		.greenPlayer .yellowPlayer .football {
+		.greenPlayer {
 			position: absolute;
 			bottom: 0;
+			@extend %rel_x_center;
 		}
 		.yellowPlayer {
 			position: absolute;
-			bottom: -22%;
-			left: 0;
-			z-index: 1;
+			bottom: 0;
+
+			@extend %rel_x_center;
 		}
+		.football {
+			position: absolute;
+			bottom: 0;
+			@extend %rel_xy_center;
+		}
+		// .yellowPlayer {
+		// 	position: absolute;
+		// 	bottom: -22%;
+		// 	left: 0;
+		// 	z-index: 1;
+		// }
 	}
 }
