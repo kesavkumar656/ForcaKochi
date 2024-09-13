@@ -3,7 +3,7 @@
 .main_header {
 	@extend %f_r_aj_center;
 	position: fixed;
-	margin: 20px 0px;
+	margin: 50px 0px;
 	width: 100%;
 	z-index: 20;
 	height: 60px;
@@ -12,12 +12,12 @@
 	background-color: transparent;
 
 	.header_inside {
-		border-radius: 20px;
-		padding: 20px;
-		border: 1px solid (var(--color_secondary));
-		position: relative;
-		@extend %f_r_a_center;
-		// justify-content: space-between;
+		padding: 25px 20px;
+		border: 1px solid var(--color_secondary);
+		width: 100%;
+		border-radius: 40px;
+		justify-content: space-between;
+		align-self: stretch;
 		background-color: var(--color_primary);
 		.image_wrap {
 			padding: 10px 0;
@@ -26,13 +26,12 @@
 			position: absolute;
 			// transform: translate(50%, -50%);
 			@extend %rel_xy_center;
-
 			@extend %f_r_a_center;
 		}
 		.links_wrap {
 			@extend %d_flex;
 			width: 100%;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-self: stretch;
 			padding-inline-start: 0;
 			div {
@@ -73,6 +72,9 @@
 					font-weight: 400;
 					@extend %f_r_a_center;
 					justify-content: space-between;
+					&:hover {
+						color: var(--color_secondary);
+					}
 				}
 
 				// Dropdown on links

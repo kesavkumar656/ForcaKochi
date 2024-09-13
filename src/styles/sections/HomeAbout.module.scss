@@ -1,7 +1,7 @@
 @import "../helpers/helpers.scss";
 
 .HomeAbout {
-	padding-top: 15%;
+	padding-top: 6%;
 	width: 100%;
 
 	.Background {
@@ -65,7 +65,7 @@
 			// @extend %rel_x_center;
 			left: 0;
 			bottom: 0;
-			transform: translate(50%, -20%);
+			transform: translate(50%, -33%);
 			z-index: 1;
 			@include lg-down {
 				transform: translate(50%, -15%);
@@ -75,7 +75,7 @@
 			// @extend %rel_x_center;
 			// right: 50%;
 			right: 0;
-			transform: translate(-50%, -20%);
+			transform: translate(-50%, -33%);
 			z-index: 1;
 			bottom: 0;
 			@include lg-down {
@@ -86,7 +86,7 @@
 			@extend %rel_xy_center;
 			// right: 0;
 
-			transform: translate(-55%, -15%);
+			transform: translate(-55%, -12%);
 			z-index: 1;
 		}
 	}

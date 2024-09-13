@@ -42,8 +42,8 @@ export default function Header() {
 				openSidebar ? styles.sidebar_opened : ""
 			}`}
 		>
-			<div className="container 	">
-				<div className={`${styles.header_inside}`}>
+			<div className="container ">
+				<div className={`${styles.header_inside} ${styles.border}`}>
 					{/* Logo wrap */}
 					<Link href="/">
 						<div className={styles.image_wrap}>
@@ -53,55 +53,21 @@ export default function Header() {
 
 					{/* Links Wrap */}
 					<div className={`${styles.links_wrap}`}>
-						{/* Add "has_dropdown" class if your link has dropdown */}
 						<div>
-							<div
-								className={`${styles.links} ${styles.has_dropdown} ${
-									openDropdown === "aboutUs" ? styles.dropdown_opened : ""
-								} dropdown`}
-								onClick={() => toggleDropdown("aboutUs")}
-							>
-								<div className={`${styles.link_title} ${styles.div}`}>
-									<p>About Us</p>
-									<span className={styles.arrow_img}>
-										{/* <Image src={Arrow} alt="Arrow" /> */}
-									</span>
-								</div>
-								{/* Dropdown is opened when link is clicked */}
-								{/* <div className={`${styles.dropdown_wrap}`}>
-									<Link href="">
-										<p className={styles.dropdown_links}>About 1</p>
-									</Link>
-									<Link href="">
-										<p className={styles.dropdown_links}>About 2</p>
-									</Link>
-									<Link href="">
-										<p className={styles.dropdown_links}>About 3</p>
-									</Link>
-								</div> */}
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Contact</div>
+								</Link>
 							</div>
-							<div
-								className={`${styles.links} ${styles.has_dropdown} ${
-									openDropdown === "blogs" ? styles.dropdown_opened : ""
-								} dropdown`}
-								onClick={() => toggleDropdown("blogs")}
-							>
-								<div className={styles.link_title}>
-									<p>Blogs</p>
-									{/* <span className={styles.arrow_img}></span> */}
-								</div>
-								{/* Dropdown is opened when link is clicked */}
-								{/* <div className={`${styles.dropdown_wrap}`}>
-									<Link href="">
-										<p className={styles.dropdown_links}>Blog 1</p>
-									</Link>
-									<Link href="">
-										<p className={styles.dropdown_links}>Blog 2</p>
-									</Link>
-									<Link href="">
-										<p className={styles.dropdown_links}>Blog 3</p>
-									</Link>
-								</div> */}
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Tickets & Merchandise</div>
+								</Link>
+							</div>
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Contact</div>
+								</Link>
 							</div>
 						</div>
 
