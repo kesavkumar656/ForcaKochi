@@ -61,7 +61,7 @@ export default function HomeHero() {
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 					<SwiperSlide>
-						{" "}
+						
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 					<SwiperSlide>

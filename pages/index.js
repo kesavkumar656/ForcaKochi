@@ -15,6 +15,8 @@ import HomeHero from "@/sections/HomeHero";
 // STYLES //
 import styles from "@/styles/pages/Home.module.scss";
 import HomeAbout from "../src/sections/HomeAbout";
+import HomeSuperLeague from "../src/sections/HomeSuperLeague";
+import HomePowerHouse from "../src/sections/HomePowerHouse";
 
 // IMAGES //
 
@@ -34,6 +36,8 @@ export default function HomePage() {
 			<main className={`${styles.HomePage} bg_primary`}>
 				<HomeHero className="container"></HomeHero>
 				<HomeAbout className="container-fluid "></HomeAbout>
+				<HomeSuperLeague></HomeSuperLeague>
+				<HomePowerHouse></HomePowerHouse>
 			</main>
 			{/* Page Content ends here */}
 

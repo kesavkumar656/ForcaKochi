@@ -1,3 +1,17 @@
 @import "../helpers/helpers.scss";
-			
-.HomeSuperLeague{}
+
+.HomeSuperLeague {
+	@extend %relative_box;
+	background-color: var(--color_white);
+	.textDiv {
+	
+		p {
+			width: 50%;
+		}
+	}
+	.backgroundDiv {
+		width: 100%;
+		@extend %full_overlay;
+		left: 10%;
+	}
+}
