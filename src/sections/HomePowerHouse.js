@@ -104,20 +104,19 @@ export default function HomePowerHouse() {
 						slidesPerView={5}
 						navigation
 						pagination={{ clickable: true }}
-						modules={(Navigation, Pagination, Scrollbar)}
+						// modules={(Navigation, Pagination, Scrollbar)}
 						scrollbar={{ draggable: true }}
+						// button={true}
 					>
 						{Data.map((slide) => (
-							<SwiperSlide key={slide.id}>
-								<div>
-									<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
-									<Image
-										src={slide.name}
-										width={100}
-										height={50}
-										alt={`Player name image ${slide.id}`}
-									/>
-								</div>
+							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
+								<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
+								<Image
+									src={slide.name}
+									width={100}
+									height={50}
+									alt={`Player name image ${slide.id}`}
+								/>
 							</SwiperSlide>
 						))}
 

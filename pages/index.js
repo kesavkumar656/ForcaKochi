@@ -17,6 +17,8 @@ import styles from "@/styles/pages/Home.module.scss";
 import HomeAbout from "../src/sections/HomeAbout";
 import HomeSuperLeague from "../src/sections/HomeSuperLeague";
 import HomePowerHouse from "../src/sections/HomePowerHouse";
+import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
+import Table from "../src/components/Table";
 
 // IMAGES //
 
@@ -37,12 +39,14 @@ export default function HomePage() {
 				<HomeHero className="container"></HomeHero>
 				<HomeAbout className="container-fluid "></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
+				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>
 			</main>
 			{/* Page Content ends here */}
 
 			{/* Footer */}
 			<Footer />
+			{/* <Table></Table> */}
 		</div>
 	);
 }
