@@ -1,17 +1,14 @@
 @import "../helpers/helpers.scss";
 
 .HomeSuperLeague {
-	@extend %relative_box;
 	background-color: var(--color_white);
 	.textDiv {
-	
+		@extend %full_overlay;
 		p {
 			width: 50%;
 		}
 	}
 	.backgroundDiv {
-		width: 100%;
-		@extend %full_overlay;
-		left: 10%;
+		@extend %relative_box;
 	}
 }
