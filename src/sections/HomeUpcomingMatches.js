@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import "swiper/css/controller";
 
 // PLUGINS //
 
@@ -13,96 +14,166 @@ import "swiper/css/thumbs";
 
 // STYLES //
 import styles from "@/styles/sections/HomeUpcomingMatches.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { useState } from "react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs, Controller } from "swiper/modules";
 // IMAGES //
-
+import Team1Image from "@/../public/img/homeUpcomingMatches/team1.png";
+import Team2Image from "@/../public/img/homeUpcomingMatches/team2.png";
 // DATA //
 
 /** HomeUpcomingMatches Section */
 export default function HomeUpcomingMatches() {
 	const Data = [
-		{ id: "1", date: "Sep 7th, Sat" },
+		{
+			id: "1",
+			date: "Sep 7th, Sat",
+			team1: "Forca Kochi",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+			team2: "Thiruvanthapuram kombans fc",
+		},
 		{
 			id: "2",
 			date: "Sep 13th, Fri",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
 		},
-		{ id: "3", date: "Sep 18th, Wed" },
+		{
+			id: "3",
+			date: "Sep 18th, Wed",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+		},
 		{
 			id: "10",
 			date: "Sep 27th, Fri",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
 		},
 		{
 			id: "4",
 			date: "Sep 7th, Sat",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
 		},
-		{ id: "5", date: "Sep 13th, Fri" },
+		{
+			id: "5",
+			date: "Sep 13th, Fri",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+		},
 		{
 			id: "6",
 			date: "Sep 18th, Wed",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
 		},
 
-		{ id: "7", date: "Sep 27th, Fri" },
-		{ id: "8", date: "Oct 1st, Tues" },
-		{ id: "9", date: "Oct 9th, Wed" },
+		{
+			id: "7",
+			date: "Sep 27th, Fri",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+		},
+		{
+			id: "8",
+			date: "Oct 1st, Tues",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+		},
+		{
+			id: "9",
+			date: "Oct 9th, Wed",
+			team1: "Forca Kochi",
+			team2: "Thiruvanthapuram kombans fc",
+			team1Img: Team1Image,
+			team2Img: Team2Image,
+		},
 	];
-	const [SwipperState, useSwipperState] = useState(null);
+	const [thumbsSwiper, setThumbsSwiper] = useState(null);
+	const [mainSwiper, setMainSwiper] = useState(null);
+	const [controlledSwiper, setControlledSwiper] = useState(null);
+
 	return (
-		<section className={styles.HomeUpcomingMatches}>
-			<div className="container">
-				<h1 className="text_uppercase color_secondary font_primary text_700 text_lg">
+		<section className={`${styles.HomeUpcomingMatches} bg_white  `}>
+			<div className="container ">
+				<h1 className="text_uppercase color_secondary font_primary text_700 text_lg section_spacing">
 					Upcoming Matches
 				</h1>
-				<div className={`${styles.table}`}>
+				<div className={`${styles.table} bg_primary `}>
+					{/* First Swiper with thumbs control */}
 					<Swiper
-						style={{
-							"--swiper-navigation-color": "#fff",
-							"--swiper-pagination-color": "#fff",
-						}}
+						className={`${styles.DateDiv}`}
+						spaceBetween={50}
+						slidesPerView={5}
 						loop={true}
-						spaceBetween={10}
-						navigation={true}
-						thumbs={{ swiper: SwipperState }}
-						modules={[FreeMode, Navigation, Thumbs]}
+						// navigation={true}
+
+						thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+						modules={[FreeMode, Thumbs, Controller]}
+						onSwiper={setMainSwiper}
+						controller={{ control: controlledSwiper }}
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<div>
-									<h3 className="color_white">{slide.date}</h3>
+									<h3 >{slide.date}</h3>
 								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
+
+					{/* Second Swiper to control the first one */}
 					<Swiper
-						onSwiper={useSwipperState}
+						onSwiper={setControlledSwiper} // Set state for the second Swiper
 						spaceBetween={50}
 						slidesPerView={1}
-						// navigation="true"
 						pagination={{ clickable: true }}
-						thumbs={{ swiper: SwipperState }}
-						modules={[FreeMode, Navigation, Thumbs]}
-						scrollbar={{ draggable: true }}
+						modules={[FreeMode, Controller]} // Include Controller module
+						controller={{ control: mainSwiper }} // Link to first Swiper
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<div className={`${styles.ClubDiv}`}>
-									<div>
-										<div>
-											{/* <Image src={slide.leftLogo} alt=""></Image> */}
-											<h1>{slide.LeftClub}</h1>
-										</div>
-										<h1 className="color_secondary text_500">VS</h1>
-										<div>
-											{/* <Image src={slide.rightLogo} alt=""></Image> */}
-											<h1>{slide.RightClub}</h1>
-										</div>
+									<div className={`${styles.MatchSchedule}`}>
+										<Image width={200} height={200} src={slide.team1Img} alt=""></Image>
+										<h1 className="  color_white text_uppercase font_primary">
+											{slide.team1}
+										</h1>
+										<h2 className="color_secondary text_500 ">VS</h2>
+										<Image width={200} height={200} src={slide.team2Img} alt=""></Image>
+										<h1 className="color_white text_uppercase font_primary">
+											{slide.team2}
+										</h1>
 									</div>
-									<div></div>
-									<div></div>
+									<div className={`${styles.Place} `}>
+										<h1 className="color_White text_sm  text_100">
+											Jawaharlal Nehru International Stadium Kochi | Friday, 7th August
+											2024 at 01:00pm
+										</h1>
+									</div>
+									<div className={`${styles.Booking} color_white `}>
+										<button className="bg_secondary font_secondary color_primary">
+											Book Your Tickets
+										</button>
+									</div>
 								</div>
 							</SwiperSlide>
 						))}

@@ -1,3 +1,84 @@
 @import "../helpers/helpers.scss";
-			
-.HomeUpcomingMatches{}
+
+.HomeUpcomingMatches {
+	.table {
+		// padding: 20px;
+		border-radius: 20px;
+
+		.DateDiv {
+			// position: absolute;
+			color: var(--color_white);
+			top: -25px;
+			padding: 1%;
+			width: 80%;
+			background-color: #3c1654;
+			border-radius: 30px;
+			:global {
+				.swiper-slide-active {
+					background-color: var(--color_white);
+					color: var(--color_primary);
+					border-radius: 20px;
+				}
+			}
+			div {
+				h3 {
+				}
+			}
+		}
+		.ClubDiv {
+			display: grid;
+			justify-items: center;
+			.MatchSchedule {
+				@extend %f_r_aj_center;
+				h1 {
+					padding: 2%;
+
+					width: 50%;
+				}
+			}
+			.Place {
+				h1 {
+					padding: 2%;
+					color: var(--color_white);
+					font-weight: 100;
+					font-size: 20;
+				}
+			}
+			.Booking {
+				button {
+					padding: 10px;
+					border-radius: 10px;
+					color: var(--color_primary);
+					font-size: 20px;
+					font-weight: 400;
+					border: 1px solid;
+				}
+			}
+		}
+		:global {
+			.swiper-slide-active {
+				padding-left: 20px;
+			}
+			.swiper-button-prev {
+			}
+
+			.swiper-pagination-bullet {
+				right: 0;
+				width: 10px;
+				height: 10px;
+				background-color: var(--color_white);
+				opacity: 0.5;
+				border-radius: 50%;
+				transition: all 0.3s ease;
+			}
+
+			.swiper-pagination-bullet-active {
+				width: 30px;
+				height: 10px;
+				background-color: var(--color_white);
+				opacity: 1;
+				border-radius: 20px;
+			}
+		}
+	}
+}

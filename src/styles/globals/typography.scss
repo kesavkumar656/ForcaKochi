@@ -52,7 +52,18 @@
 .text_xxxxl {
 	font-size: 18px;
 }
-
+.textTable{
+	font-size: 100px;
+	@include md-down {
+		font-size: 80px;
+	}
+	@include sm-down {
+		font-size: 40px;
+	}
+	@include mdl-down {
+		font-size: 60px;
+	}
+}
 // // Each loop for creating font weights ->
 // //.text_100, .text_200 .....
 // light, reg, med, semibold, bold, extrabold,black
