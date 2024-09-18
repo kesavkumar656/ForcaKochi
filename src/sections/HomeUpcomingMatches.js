@@ -143,7 +143,7 @@ export default function HomeUpcomingMatches() {
 						spaceBetween={50}
 						slidesPerView={5}
 						loop={true}
-						// navigation={true}
+						navigation={true}
 
 						thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
 						modules={[FreeMode, Thumbs, Controller]}

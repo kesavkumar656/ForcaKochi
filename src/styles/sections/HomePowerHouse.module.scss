@@ -3,30 +3,35 @@
 .HomePowerHouse{
     .playerTable{
        .tableWrapper{
-        // :global {
-        //     .swiper-slide {
-        //     border: 1px solid red;
-        //     }
+        :global {
+            .swiper-slide {
+            border: 1px solid red;
+            position: relative;
+            }
         .BackgroundIMG{
-            display: none;
-            width: 100%;
-            position: absolute;
-        
+            position: relative;
+            img{
+                position: absolute;
+                top: o;
+            }
         }
        }
     }
-  
+
     :global{
         .swiper-slide{
             margin-right:0 ; 
-        }
+        .swiper-slide-active{
+            margin: 20px 20px 20px 20px;
+        } }
+       
     }
-    .tableWrapper:hover{
+    .:hover{
 background:linear-gradient(180deg,#dfa41b00,#c96c98);
     }
 }
         
     
 
-
+}
   

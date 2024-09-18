@@ -22,6 +22,7 @@ import BG from "@/../public/img/homePowerHouse/cardBG.png";
 import Player from "@/../public/img/homePowerHouse/player.png";
 import PlayerInfo from "@/../public/img/homePowerHouse/playerinfo2.png";
 import PlayerInfo1 from "@/../public/img/homePowerHouse/playerinfo1.png";
+
 // DATA //
 
 /** HomePowerHouse Section */
@@ -97,7 +98,9 @@ export default function HomePowerHouse() {
 	return (
 		<section className={`${styles.HomePowerHouse} bg_white`}>
 			<div className="container section_spacing">
-				<div className="color_secondary text_700  font_primary text_lg text_uppercase text_center">Meet the Powerhouse of Forca Kochi</div>
+				<div className="color_secondary text_700  font_primary text_lg text_uppercase text_center">
+					Meet the Powerhouse of Forca Kochi
+				</div>
 				<div className={`${styles.playerTable} section_spacing`}>
 					<Swiper
 						spaceBetween={50}
@@ -110,15 +113,11 @@ export default function HomePowerHouse() {
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
-								<Image 
-									src={slide.name}
-									width={150}
-									height={100}
-									alt=""
-								/>
+								<Image src={slide.name} width={150} height={100} alt="" />
 								<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
-								<Image className={`${styles.BackgroundIMG}`} alt="" src={BG}></Image>
-								
+								<div className={styles.BackgroundIMG}>
+									<Image alt="" src={BG}></Image>
+								</div>
 							</SwiperSlide>
 						))}
 
