@@ -171,31 +171,30 @@ export default function HomeUpcomingMatches() {
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<div className={`${styles.ClubDiv}`}>
-								<div className={`${styles.nth_match}`}>
-											<p>Match {slide.NthMatch}</p>
-										</div>
+									<div className={`${styles.nth_match}`}>											<p>Match {slide.NthMatch}</p>
+									</div>
 									<div className={`${styles.MatchSchedule}`}>
 										
 										<div className={`${styles.team1} `}>
-										<Image width={100} height={100} src={slide.team1Img} alt=""></Image>
-										<h1 className="  color_white text_uppercase font_primary">
-											{slide.team1}
-										</h1>
+											<Image width={100} height={100} src={slide.team1Img} alt=""></Image>
+											<h1 className="  color_white text_uppercase font_primary">
+												{slide.team1}
+											</h1>
 										</div>
 										
 										<h2 className="color_secondary text_500 ">VS</h2>
 										<div className={`${styles.team2} `}>
-										<Image width={100} height={100} src={slide.team2Img} alt=""></Image>
-										<h1 className="color_white text_uppercase font_primary">
-											{slide.team2}
-										</h1>
+											<Image width={100} height={100} src={slide.team2Img} alt=""></Image>
+											<h1 className="color_white text_uppercase font_primary">
+												{slide.team2}
+											</h1>
 										</div>
 										
 									</div>
 									<div className={`${styles.liveTxt}`}>
 										<div><p>	Live</p></div>
 									
-										</div>
+									</div>
 									<div className={`${styles.Place} `}>
 										<h1 className="color_White text_sm  text_100">
 											Jawaharlal Nehru International Stadium Kochi | Friday, 7th August

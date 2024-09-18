@@ -36,8 +36,8 @@ export default function HomeSuperLeague() {
 				<div>MATCH DATE</div>
 			</div>
 			<div className={`${styles.backgroundDiv}`}>
-					<Image className="next_image" src={Background} alt=""></Image>
-				</div>
+				<Image className="next_image" src={Background} alt=""></Image>
+			</div>
 		</section>
 	);
 }

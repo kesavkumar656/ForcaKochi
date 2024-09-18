@@ -22,7 +22,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper/modules";
-import { useEffect } from "react";
 
 // IMAGES //
 
