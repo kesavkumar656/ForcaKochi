@@ -8,22 +8,21 @@
         //     border: 1px solid red;
         //     }
         .BackgroundIMG{
-            visibility: hidden;
+            display: none;
             width: 100%;
             position: absolute;
-         &:hover{
-           visibility: visible;
-         }  
+        
         }
        }
     }
-    img{
-        display: inline-block;
-    }
+  
     :global{
         .swiper-slide{
             margin-right:0 !important; 
         }
+    }
+    .tableWrapper:hover{
+background:linear-gradient(180deg,#dfa41b00,#c96c98);
     }
 }
         
