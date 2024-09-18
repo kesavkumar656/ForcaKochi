@@ -35,7 +35,7 @@ export default function HomePage() {
 			<Header />
 
 			{/* Page Content starts here */}
-			<main className={`${styles.HomePage} bg_primary`}>
+			<main className={`${styles.HomePage} bg_primary` }>
 				<HomeHero className="container"></HomeHero>
 				<HomeAbout className="container-fluid "></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
