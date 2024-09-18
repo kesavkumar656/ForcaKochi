@@ -27,6 +27,7 @@ export default function HomeUpcomingMatches() {
 	const Data = [
 		{
 			id: "1",
+			NthMatch:"1",
 			date: "Sep 7th, Sat",
 			team1: "Forca Kochi",
 			team1Img: Team1Image,
@@ -35,6 +36,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "2",
+			NthMatch:"2",
+
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -43,6 +46,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "3",
+			NthMatch:"3",
+
 			date: "Sep 18th, Wed",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -51,6 +56,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "10",
+			NthMatch:"10",
+
 			date: "Sep 27th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -59,6 +66,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "4",
+			NthMatch:"4",
+
 			date: "Sep 7th, Sat",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -67,6 +76,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "5",
+			NthMatch:"5",
+
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -75,6 +86,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "6",
+			NthMatch:"6",
+
 			date: "Sep 18th, Wed",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -84,6 +97,8 @@ export default function HomeUpcomingMatches() {
 
 		{
 			id: "7",
+			NthMatch:"7",
+
 			date: "Sep 27th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -92,6 +107,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "8",
+			NthMatch:"8",
+
 			date: "Oct 1st, Tues",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -100,6 +117,8 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "9",
+			NthMatch:"9",
+
 			date: "Oct 9th, Wed",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
@@ -152,17 +171,31 @@ export default function HomeUpcomingMatches() {
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<div className={`${styles.ClubDiv}`}>
+								<div className={`${styles.nth_match}`}>
+											<p>Match {slide.NthMatch}</p>
+										</div>
 									<div className={`${styles.MatchSchedule}`}>
-										<Image width={200} height={200} src={slide.team1Img} alt=""></Image>
+										
+										<div className={`${styles.team1} `}>
+										<Image width={100} height={100} src={slide.team1Img} alt=""></Image>
 										<h1 className="  color_white text_uppercase font_primary">
 											{slide.team1}
 										</h1>
+										</div>
+										
 										<h2 className="color_secondary text_500 ">VS</h2>
-										<Image width={200} height={200} src={slide.team2Img} alt=""></Image>
+										<div className={`${styles.team2} `}>
+										<Image width={100} height={100} src={slide.team2Img} alt=""></Image>
 										<h1 className="color_white text_uppercase font_primary">
 											{slide.team2}
 										</h1>
+										</div>
+										
 									</div>
+									<div className={`${styles.liveTxt}`}>
+										<div><p>	Live</p></div>
+									
+										</div>
 									<div className={`${styles.Place} `}>
 										<h1 className="color_White text_sm  text_100">
 											Jawaharlal Nehru International Stadium Kochi | Friday, 7th August

@@ -39,7 +39,7 @@ export default function HomeHero() {
 					>
 						Football has a new force
 					</h1>
-					<p className={`${styles.text} text_md`}>
+					<p className={`${styles.text} text_sm`}>
 						Ready to experience the thrill with Forca Kochi FC
 					</p>
 

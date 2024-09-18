@@ -1,6 +1,17 @@
-// .text_xxs {}
-// .text_xs {}
-// .text_sm {}
+.text_xxs {
+	font-size: 14px
+}
+.text_xs {
+	font-size: 16px;
+}
+.text_sm {
+	font-size: 20px;
+	@include md-down {
+		font-size: 15px;
+	}
+	
+
+}
 
 // For default body copy font
 .text_reg {
@@ -8,9 +19,9 @@
 }
 
 .text_md {
-	font-size: 18px;
+	font-size: 50px;
 	@include md-down {
-		font-size: 14px;
+		font-size: 25px;
 	}
 }
 .text_lg {
@@ -25,7 +36,7 @@
 .text_xl {
 	font-size: 90px;
 	@include md-down {
-		font-size: 70px;
+		font-size: 50px;
 	}
 	@include sm-down {
 		font-size: 50px;
@@ -40,7 +51,7 @@
 		font-size: 40px;
 	}
 	@include mdl-down {
-		font-size: 60px;
+		font-size: 50px;
 	}
 	// @include sm-down {
 	// 	font-size: 32px;

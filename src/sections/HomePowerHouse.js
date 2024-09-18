@@ -97,8 +97,8 @@ export default function HomePowerHouse() {
 	return (
 		<section className={`${styles.HomePowerHouse} bg_white`}>
 			<div className="container section_spacing">
-				<div>Meet the Powerhouse of Forca Kochi</div>
-				<div>
+				<div className="color_secondary text_700  font_primary text_lg text_uppercase text_center">Meet the Powerhouse of Forca Kochi</div>
+				<div className="section_spacing">
 					<Swiper
 						spaceBetween={50}
 						slidesPerView={5}

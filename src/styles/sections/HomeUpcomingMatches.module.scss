@@ -1,8 +1,8 @@
 @import "../helpers/helpers.scss";
 
 .HomeUpcomingMatches {
+	margin-top:-320px ;
 	.table {
-		// padding: 20px;
 		border-radius: 20px;
 
 		.DateDiv {
@@ -28,15 +28,58 @@
 		.ClubDiv {
 			display: grid;
 			justify-items: center;
-			.MatchSchedule {
-				@extend %f_r_aj_center;
-				h1 {
-					padding: 2%;
+			padding: 2%;
+		.nth_match{
+			display: grid;
+			justify-items: center;
+			padding: 2%;
+			color: var(--color_secondary);
+			width: 90%;
 
-					width: 50%;
+			padding: 10px 0px;
+			border-bottom: 1px solid;
+			p{
+				padding:0px 15px;
+			border: 1px solid rgba(255, 255, 255, 0.283);
+			}
+		}
+			.MatchSchedule {
+			
+				width: 100%;
+			@extend	%f_r_a_center ;
+				justify-content:space-evenly;
+				.team1{ 
+					@extend	%f_r_a_center ;
+					width: 40%;
+
+				}
+				
+				.team2{
+					@extend	%f_r_a_center ;
+				width: 40%;
+
+
+				}
+			}
+			.liveTxt{
+				width: 100%;
+				display: grid;
+				justify-content: center;
+				border-bottom: 1px solid #ffffff22;
+				p{
+					
+			
+					background:var(--color_white);
+				padding: 0px 10px;
+border-radius: 5px 5px 0px 0px;
 				}
 			}
 			.Place {
+				display: grid;
+				justify-items: center;
+				width: 90%;
+				border-bottom: 1px solid #ffffff21;
+
 				h1 {
 					padding: 2%;
 					color: var(--color_white);
@@ -45,6 +88,11 @@
 				}
 			}
 			.Booking {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+padding-top: 2% ;
+
 				button {
 					padding: 10px;
 					border-radius: 10px;
@@ -52,7 +100,12 @@
 					font-size: 20px;
 					font-weight: 400;
 					border: 1px solid;
+					&:hover{
+background-color: var(--color_tertiary);
+transition: var(--transition);
+					}
 				}
+
 			}
 		}
 		:global {

@@ -21,13 +21,22 @@
 				right: 15%;
 			bottom: 5%;
 			}
+			@include sm-down {
+
+				right: 5%;
+			bottom: 5%;
+			}
 		}
 		.Image {
 			position: absolute;
-			right: -1%;
+			right: 0%;
 			bottom: 5%;
 			@include lg-down {
 				right: 10%;
+				bottom: 7%;
+			}
+			@include sm-down {
+				right: 1%;
 				bottom: 7%;
 			}
 		}
@@ -70,7 +79,12 @@
 			border-radius: 50%;
 			transition: all 0.3s ease;
 		}
-
+		.swiper-pagination {
+			position: absolute;
+			left: -2%;
+			bottom: 10px;
+			text-align: right;
+		}
 		.swiper-pagination-bullet-active {
 			width: 30px;
 			height: 10px;
