@@ -101,7 +101,7 @@ export default function HomePowerHouse() {
 				<div className={`${styles.playerTable} section_spacing`}>
 					<Swiper
 						spaceBetween={50}
-						slidesPerView={4}
+						slidesPerView={5}
 						navigation={false}
 						pagination={{ clickable: true }}
 						// modules={(Navigation, Pagination, Scrollbar)}
