@@ -98,11 +98,11 @@ export default function HomePowerHouse() {
 		<section className={`${styles.HomePowerHouse} bg_white`}>
 			<div className="container section_spacing">
 				<div className="color_secondary text_700  font_primary text_lg text_uppercase text_center">Meet the Powerhouse of Forca Kochi</div>
-				<div className="section_spacing">
+				<div className={`${styles.playerTable} section_spacing`}>
 					<Swiper
 						spaceBetween={50}
 						slidesPerView={5}
-						navigation
+						navigation={false}
 						pagination={{ clickable: true }}
 						// modules={(Navigation, Pagination, Scrollbar)}
 						scrollbar={{ draggable: true }}
@@ -110,13 +110,15 @@ export default function HomePowerHouse() {
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
-								<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
-								<Image
+								<Image 
 									src={slide.name}
-									width={100}
-									height={50}
-									alt={`Player name image ${slide.id}`}
+									width={150}
+									height={100}
+									alt=""
 								/>
+								<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
+								<Image className={`${styles.BackgroundIMG}`} alt="" src={BG}></Image>
+								
 							</SwiperSlide>
 						))}
 

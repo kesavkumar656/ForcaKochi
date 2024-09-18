@@ -1,5 +1,25 @@
 @import "../helpers/helpers.scss";
 			
 .HomePowerHouse{
-    
+    .playerTable{
+       .tableWrapper{
+        // :global {
+        //     .swiper-slide {
+        //     border: 1px solid red;
+        //     }
+        .BackgroundIMG{
+            width: 100%;
+            position: absolute;
+           
+        }
+       }
+    }
+    img{
+        display: inline-block;
+    }
 }
+        
+    
+
+
+  
