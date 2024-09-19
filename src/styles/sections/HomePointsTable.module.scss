@@ -2,32 +2,74 @@
 
 .HomePointsTable {
 
-  .blueTable {
-        width: 100%;
-        text-align: center;
-        border-collapse: separate;
-        thead{
+ 
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    // border-collapse: separate;
+    border-spacing: 0px 20px;
+    color: #fff;
+    
+  }
+  
+  thead th {
+    text-align: left;
+    background-color: #512d6d; 
+    padding: 10px;
+    color: var(--color_secondary);
+  }
+  tbody td {
+    padding: 20px;
+    text-align: center;
+   
+  }
+  
+  /* Row highlighting */
+  tbody tr {
+// padding: 20px;
+    background-color: #ffffff07; /* Dark purple background for rows */
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  tbody tr:hover {
+    background-color: #ffffff10; /* Slightly brighter on hover */
+  }
+  
+  /* Specific highlighted row (For example, the first one) */
+  tbody tr:first-child {
+    /* Highlighted background */
+  }
+  
+  /* Circular images for team logos */
 
-            tr{
-                th{
-
-                }
-            }
-        }
-
-.TableData{
-    th,
-        td {
-            width: 200px;
-            text-align: center;
-            border: 1px solid black;
-            background-color: red;
-            padding: 5px
-        }
+  
+  /* Table column styling */
+  td {
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  td:first-child {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  td:nth-child(2) {
+    padding-left: 10px;
+  }
+  
+  td:last-child {
+    font-weight: bold;
+    color: #f4d03f; /* Golden color for PTS */
+  }
+      
 }
-      }
      
     
       
     
-}
