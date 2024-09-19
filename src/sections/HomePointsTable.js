@@ -111,9 +111,11 @@ export default function HomePointsTable() {
 
 					<tbody>
 						{tableData.map((data, index) => (
-							<tr key={index}>
+							<tr key={index} className={`${styles.TableData } `}>
 								<td>{data.no}</td>
-								<td><Image width={50} height={50}  src={data.Img} alt=""/> </td>
+								<td>
+									<Image width={60} height={60} src={data.Img} alt="" />{" "}
+								</td>
 								<td>{data.P}</td>
 								<td>{data.D}</td>
 								<td>{data.L}</td>
@@ -123,67 +125,6 @@ export default function HomePointsTable() {
 								<td>{data.PTS}</td>
 							</tr>
 						))}
-
-						{/* <tr>
-							<td>cell1_2</td>
-							<td>cell2_2</td>
-							<td>cell3_2</td>
-							<td>cell4_2</td>
-							<td>cell5_2</td>
-							<td>cell6_2</td>
-							<td>cell7_2</td>
-							<td>cell8_2</td>
-							<td>cell9_2</td>
-							<td>cell10_2</td>
-						</tr>
-						<tr>
-							<td>cell1_3</td>
-							<td>cell2_3</td>
-							<td>cell3_3</td>
-							<td>cell4_3</td>
-							<td>cell5_3</td>
-							<td>cell6_3</td>
-							<td>cell7_3</td>
-							<td>cell8_3</td>
-							<td>cell9_3</td>
-							<td>cell10_3</td>
-						</tr>
-						<tr>
-							<td>cell1_4</td>
-							<td>cell2_4</td>
-							<td>cell3_4</td>
-							<td>cell4_4</td>
-							<td>cell5_4</td>
-							<td>cell6_4</td>
-							<td>cell7_4</td>
-							<td>cell8_4</td>
-							<td>cell9_4</td>
-							<td>cell10_4</td>
-						</tr>
-						<tr>
-							<td>cell1_5</td>
-							<td>cell2_5</td>
-							<td>cell3_5</td>
-							<td>cell4_5</td>
-							<td>cell5_5</td>
-							<td>cell6_5</td>
-							<td>cell7_5</td>
-							<td>cell8_5</td>
-							<td>cell9_5</td>
-							<td>cell10_5</td>
-						</tr>
-						<tr>
-							<td>cell1_6</td>
-							<td>cell2_6</td>
-							<td>cell3_6</td>
-							<td>cell4_6</td>
-							<td>cell5_6</td>
-							<td>cell6_6</td>
-							<td>cell7_6</td>
-							<td>cell8_6</td>
-							<td>cell9_6</td>
-							<td>cell10_6</td>
-						</tr> */}
 					</tbody>
 				</table>
 			</div>
