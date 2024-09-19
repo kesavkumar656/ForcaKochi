@@ -3,6 +3,7 @@
 .HomePowerHouse{
     .playerTable{
        .tableWrapper{ 
+
         .BackgroundIMG{
             display: none;
             position: absolute;
@@ -20,6 +21,9 @@
        
     //    }
     }
+    .tableWrapper:hover{
+        background:linear-gradient(180deg,#dfa41b00,#c96c98);
+    }
 
     :global{
         .swiper-slide{
@@ -32,7 +36,9 @@
  
 }
         
-    
+.BackgroundIMG:hover{
+    background:linear-gradient(180deg,#dfa41b00,#c96c98);
+        }
 
 }
   
