@@ -1,3 +1,26 @@
 @import "../helpers/helpers.scss";
-			
-.HomePointsTable{}
+
+.HomePointsTable {
+
+    table.blueTable {
+
+        background-color:rgba(255, 255, 255, 0.142);
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+    
+      table.blueTable tbody td {
+        font-size: 13px;
+      }
+     
+      table.blueTable thead {
+        background: rgba(255, 255, 255, 0.342);
+       border: 1px solid var(--color_secondary);
+        border-right:0 ;
+        border-left:0 ;
+      }
+    
+      
+    
+}

@@ -18,8 +18,7 @@ import HomeAbout from "../src/sections/HomeAbout";
 import HomeSuperLeague from "../src/sections/HomeSuperLeague";
 import HomePowerHouse from "../src/sections/HomePowerHouse";
 import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
-import Table from "../src/components/Table";
-
+import HomePointsTable from "../src/sections/HomePointsTable";
 // IMAGES //
 
 // DATA //
@@ -41,6 +40,7 @@ export default function HomePage() {
 				<HomeSuperLeague></HomeSuperLeague>
 				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>
+				<HomePointsTable></HomePointsTable>
 			</main>
 			{/* Page Content ends here */}
 
