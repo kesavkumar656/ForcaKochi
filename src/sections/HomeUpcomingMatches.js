@@ -41,8 +41,8 @@ export default function HomeUpcomingMatches() {
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
-			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team1Img: Team2Image,
+			team2Img: Team1Image,
 		},
 		{
 			id: "3",
@@ -61,8 +61,8 @@ export default function HomeUpcomingMatches() {
 			date: "Sep 27th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
-			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team1Img: Team2Image,
+			team2Img: Team1Image,
 		},
 		{
 			id: "4",
@@ -81,8 +81,8 @@ export default function HomeUpcomingMatches() {
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
-			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team1Img: Team2Image,
+			team2Img: Team1Image,
 		},
 		{
 			id: "6",
@@ -91,7 +91,7 @@ export default function HomeUpcomingMatches() {
 			date: "Sep 18th, Wed",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
-			team1Img: Team1Image,
+			team1Img: Team2Image,
 			team2Img: Team2Image,
 		},
 
@@ -103,7 +103,7 @@ export default function HomeUpcomingMatches() {
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
 			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team2Img: Team1Image,
 		},
 		{
 			id: "8",
@@ -122,14 +122,18 @@ export default function HomeUpcomingMatches() {
 			date: "Oct 9th, Wed",
 			team1: "Forca Kochi",
 			team2: "Thiruvanthapuram kombans fc",
-			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team1Img: Team2Image,
+			team2Img: Team1Image,
 		},
 	];
 
 	// eslint-disable-next-line require-jsdoc
 	const handleSlideChange = (swiper) => {
 		setActiveTab(swiper.activeIndex);
+	};
+	// eslint-disable-next-line require-jsdoc
+	const handleSlideClick = (index) => {
+		setActiveTab(index);
 	};
 	const [ActiveTab, setActiveTab] = useState(0);
 	const CurrentMatch = Data[ActiveTab];
@@ -145,15 +149,13 @@ export default function HomeUpcomingMatches() {
 						className={`${styles.DateDiv}`}
 						spaceBetween={50}
 						slidesPerView={5}
-						navigation={true}
 						pagination={true}
-						onScroll={true}
-						grabCursor={true}
+						navigation={true}
 						modules={[FreeMode, Thumbs, Controller]}
-						onSlideChange={handleSlideChange}
+						onSlideChange={handleSlideChange(handleSlideClick)}
 					>
-						{Data.map((slide) => (
-							<SwiperSlide key={slide.id}>
+						{Data.map((slide, index) => (
+							<SwiperSlide key={slide.id} onClick={() => handleSlideClick(index)}>
 								<div>
 									<h3>{slide.date}</h3>
 								</div>
