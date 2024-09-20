@@ -6,7 +6,7 @@
 
 	.Background {
 		@extend %relative_box;
-		
+
 		.textDiv {
 			position: absolute;
 			@extend %rel_xy_center;
@@ -90,7 +90,7 @@
 			@extend %rel_xy_center;
 			// right: 0;
 
-			transform: translate(-55%, -12%);
+			transform: translate(-50%, -35%);
 			z-index: 1;
 		}
 	}

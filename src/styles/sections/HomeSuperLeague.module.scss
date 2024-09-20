@@ -3,6 +3,9 @@
 .HomeSuperLeague {
 	background-color: var(--color_white);
 	.textDiv {
+		.heading {
+			line-height: 1;
+		}
 		@extend %full_overlay;
 		p {
 			width: 50%;

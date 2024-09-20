@@ -21,7 +21,9 @@ export default function HomeSuperLeague() {
 		<section className={styles.HomeSuperLeague}>
 			<div className="container">
 				<div className={`${styles.textDiv} section_spacing`}>
-					<div className="font_primary text_xl text_800  color_secondary text_uppercase">
+					<div
+						className={`${styles.heading} font_primary text_xl text_800  color_secondary text_uppercase`}
+					>
 						Super League Kerala
 					</div>
 					<div className={`${styles.para} text_primary text_100 text_sm`}>
@@ -32,8 +34,6 @@ export default function HomeSuperLeague() {
 						</p>
 					</div>
 				</div>
-			
-				<div>MATCH DATE</div>
 			</div>
 			<div className={`${styles.backgroundDiv}`}>
 				<Image className="next_image" src={Background} alt=""></Image>
