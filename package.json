@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@studio-freight/lenis": "^1.0.22",
+		"aos": "^2.3.4",
 		"commander": "^11.1.0",
 		"fs-extra": "^11.2.0",
 		"html-react-parser": "^5.0.6",

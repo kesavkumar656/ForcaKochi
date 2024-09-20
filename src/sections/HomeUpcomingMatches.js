@@ -27,16 +27,16 @@ export default function HomeUpcomingMatches() {
 	const Data = [
 		{
 			id: "1",
-			NthMatch:"1",
+			NthMatch: "1",
 			date: "Sep 7th, Sat",
 			team1: "Forca Kochi",
-			team1Img: Team1Image,
-			team2Img: Team2Image,
+			team1Img: Team2Image,
+			team2Img: Team1Image,
 			team2: "Thiruvanthapuram kombans fc",
 		},
 		{
 			id: "2",
-			NthMatch:"2",
+			NthMatch: "2",
 
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
@@ -46,7 +46,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "3",
-			NthMatch:"3",
+			NthMatch: "3",
 
 			date: "Sep 18th, Wed",
 			team1: "Forca Kochi",
@@ -56,7 +56,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "10",
-			NthMatch:"10",
+			NthMatch: "10",
 
 			date: "Sep 27th, Fri",
 			team1: "Forca Kochi",
@@ -66,7 +66,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "4",
-			NthMatch:"4",
+			NthMatch: "4",
 
 			date: "Sep 7th, Sat",
 			team1: "Forca Kochi",
@@ -76,7 +76,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "5",
-			NthMatch:"5",
+			NthMatch: "5",
 
 			date: "Sep 13th, Fri",
 			team1: "Forca Kochi",
@@ -86,7 +86,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "6",
-			NthMatch:"6",
+			NthMatch: "6",
 
 			date: "Sep 18th, Wed",
 			team1: "Forca Kochi",
@@ -97,7 +97,7 @@ export default function HomeUpcomingMatches() {
 
 		{
 			id: "7",
-			NthMatch:"7",
+			NthMatch: "7",
 
 			date: "Sep 27th, Fri",
 			team1: "Forca Kochi",
@@ -107,7 +107,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "8",
-			NthMatch:"8",
+			NthMatch: "8",
 
 			date: "Oct 1st, Tues",
 			team1: "Forca Kochi",
@@ -117,7 +117,7 @@ export default function HomeUpcomingMatches() {
 		},
 		{
 			id: "9",
-			NthMatch:"9",
+			NthMatch: "9",
 
 			date: "Oct 9th, Wed",
 			team1: "Forca Kochi",
@@ -126,10 +126,13 @@ export default function HomeUpcomingMatches() {
 			team2Img: Team2Image,
 		},
 	];
-	const [thumbsSwiper, setThumbsSwiper] = useState(null);
-	const [mainSwiper, setMainSwiper] = useState(null);
-	const [controlledSwiper, setControlledSwiper] = useState(null);
 
+	// eslint-disable-next-line require-jsdoc
+	const handleSlideChange = (swiper) => {
+		setActiveTab(swiper.activeIndex);
+	};
+	const [ActiveTab, setActiveTab] = useState(0);
+	const CurrentMatch = Data[ActiveTab];
 	return (
 		<section className={`${styles.HomeUpcomingMatches} bg_white  `}>
 			<div className="container ">
@@ -142,74 +145,71 @@ export default function HomeUpcomingMatches() {
 						className={`${styles.DateDiv}`}
 						spaceBetween={50}
 						slidesPerView={5}
-						loop={true}
 						navigation={true}
-
-						thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
+						pagination={true}
+						onScroll={true}
+						grabCursor={true}
 						modules={[FreeMode, Thumbs, Controller]}
-						onSwiper={setMainSwiper}
-						controller={{ control: controlledSwiper }}
+						onSlideChange={handleSlideChange}
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id}>
 								<div>
-									<h3 >{slide.date}</h3>
+									<h3>{slide.date}</h3>
 								</div>
 							</SwiperSlide>
 						))}
 					</Swiper>
 
 					{/* Second Swiper to control the first one */}
-					<Swiper
-						onSwiper={setControlledSwiper} // Set state for the second Swiper
-						spaceBetween={50}
-						slidesPerView={1}
-						pagination={{ clickable: true }}
-						modules={[FreeMode, Controller]} // Include Controller module
-						controller={{ control: mainSwiper }} // Link to first Swiper
-					>
-						{Data.map((slide) => (
-							<SwiperSlide key={slide.id}>
-								<div className={`${styles.ClubDiv}`}>
-									<div className={`${styles.nth_match}`}>											<p>Match {slide.NthMatch}</p>
-									</div>
-									<div className={`${styles.MatchSchedule}`}>
-										
-										<div className={`${styles.team1} `}>
-											<Image width={100} height={100} src={slide.team1Img} alt=""></Image>
-											<h1 className="  color_white text_uppercase font_primary">
-												{slide.team1}
-											</h1>
-										</div>
-										
-										<h2 className="color_secondary text_500 ">VS</h2>
-										<div className={`${styles.team2} `}>
-											<Image width={100} height={100} src={slide.team2Img} alt=""></Image>
-											<h1 className="color_white text_uppercase font_primary">
-												{slide.team2}
-											</h1>
-										</div>
-										
-									</div>
-									<div className={`${styles.liveTxt}`}>
-										<div><p>	Live</p></div>
-									
-									</div>
-									<div className={`${styles.Place} `}>
-										<h1 className="color_White text_sm  text_100">
-											Jawaharlal Nehru International Stadium Kochi | Friday, 7th August
-											2024 at 01:00pm
-										</h1>
-									</div>
-									<div className={`${styles.Booking} color_white `}>
-										<button className="bg_secondary font_secondary color_primary">
-											Book Your Tickets
-										</button>
-									</div>
-								</div>
-							</SwiperSlide>
-						))}
-					</Swiper>
+
+					<div className={`${styles.ClubDiv}`}>
+						<div className={`${styles.nth_match}`}>
+							<p>Match {CurrentMatch.NthMatch}</p>
+						</div>
+						<div className={`${styles.MatchSchedule}`}>
+							<div className={`${styles.team1} `}>
+								<Image
+									width={100}
+									height={100}
+									src={CurrentMatch.team1Img}
+									alt=""
+								></Image>
+								<h1 className="  color_white text_uppercase font_primary">
+									{CurrentMatch.team1}
+								</h1>
+							</div>
+
+							<h2 className="color_secondary text_500 ">VS</h2>
+							<div className={`${styles.team2} `}>
+								<Image
+									width={100}
+									height={100}
+									src={CurrentMatch.team2Img}
+									alt=""
+								></Image>
+								<h1 className="color_white text_uppercase font_primary">
+									{CurrentMatch.team2}
+								</h1>
+							</div>
+						</div>
+						<div className={`${styles.liveTxt}`}>
+							<div>
+								<p> Live</p>
+							</div>
+						</div>
+						<div className={`${styles.Place} `}>
+							<h1 className="color_White text_sm  text_100">
+								Jawaharlal Nehru International Stadium Kochi | {CurrentMatch.date} 2024
+								at 01:00pm
+							</h1>
+						</div>
+						<div className={`${styles.Booking} color_white `}>
+							<button className="bg_secondary font_secondary color_primary">
+								Book Your Tickets
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
