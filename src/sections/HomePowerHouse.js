@@ -113,10 +113,19 @@ export default function HomePowerHouse() {
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
-								<Image src={slide.name} width={150} height={100} alt="" />
-								<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
+								<div>
+									<Image src={slide.name} width={150} height={100} alt="" />
+
+									<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
+								</div>
 								<div className={styles.BackgroundIMG}>
-									<Image alt="" src={BG}></Image>
+									<Image
+										className={`${styles.Background}`}
+										width={300}
+										height={300}
+										alt=""
+										src={BG}
+									></Image>
 								</div>
 							</SwiperSlide>
 						))}

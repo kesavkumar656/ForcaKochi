@@ -2,15 +2,14 @@
 
 .HomeUpcomingMatches {
 	margin-top: -400px;
+
 	.table {
 		border-radius: 20px;
 
 		.DateDiv {
-			// position: absolute;
-			color: var(--color_white);
+			color: rgba(255, 255, 255, 0.511);
 			top: -25px;
-			padding: 1%;
-
+			padding: 0.5% 2%;
 			width: 80%;
 			background-color: #3c1654;
 			border-radius: 30px;
@@ -18,30 +17,35 @@
 			&:hover {
 				cursor: pointer;
 			}
+
 			:global {
 				.swiper-slide-active {
 					background-color: var(--color_white);
 					color: var(--color_primary);
 					border-radius: 20px;
+					transform: scale(1.05);
+					transition: transform 0.3s ease;
 				}
 			}
+
 			div {
 				h3 {
 				}
 			}
 		}
+
 		.ClubDiv {
 			padding: 2% 0;
 			position: relative;
-
 			transition: var(--transition);
+
 			.nth_match {
 				@extend %rel_y_center;
 				right: 50%;
+				border-radius: 5px;
 				transform: translate(50%, -45%);
 				top: 0;
 				background-color: var(--color_primary);
-
 				color: var(--color_secondary);
 				width: auto;
 				transition: var(--transition);
@@ -49,6 +53,7 @@
 				padding: 5px 50px;
 				border: 1px solid rgba(255, 255, 255, 0.283);
 			}
+
 			.MatchSchedule {
 				width: 100%;
 				margin-top: -20px;
@@ -56,34 +61,39 @@
 				transition: var(--transition);
 				@extend %f_r_a_center;
 				justify-content: space-evenly;
-				.team1 {
+
+				.team1,
+				.team2 {
 					@extend %f_r_aj_center;
 					padding: 40px 0;
 					width: 40%;
 					gap: 10px;
+					text-align: center;
+					transition: var(--transition);
+				}
 
+				.team1 {
 					text-align: left;
 				}
 
 				.team2 {
-					@extend %f_r_aj_center;
-					width: 40%;
-					padding: 40px 0;
-					gap: 10px;
 					text-align: right;
 				}
 			}
+
 			.liveTxt {
 				width: 100%;
 				display: grid;
 				justify-content: center;
 				border-bottom: 1px solid #ffffff22;
+
 				p {
 					background: var(--color_white);
 					padding: 0px 10px;
 					border-radius: 5px 5px 0px 0px;
 				}
 			}
+
 			.Place {
 				display: grid;
 				justify-items: center;
@@ -94,34 +104,70 @@
 					padding: 2%;
 					color: var(--color_white);
 					font-weight: 100;
-					font-size: 20;
+					font-size: 20px;
 				}
 			}
+
 			.Booking {
-				display: flex;
-				justify-content: center;
-				width: 100%;
+				@extend %f_r_aj_center;
+
+				gap: 20px;
+
 				padding-top: 2%;
 
-				button {
+				button:nth-child(1) {
 					padding: 10px;
-					border-radius: 10px;
+					border-radius: 5px;
 					color: var(--color_primary);
 					font-size: 20px;
 					font-weight: 400;
 					border: 1px solid;
+					transition: var(--transition);
+
 					&:hover {
 						background-color: var(--color_tertiary);
-						transition: var(--transition);
+					}
+				}
+				button:nth-child(2) {
+					padding: 10px;
+					border-radius: 5px;
+					color: var(--color_secondary);
+					font-size: 20px;
+					font-weight: 400;
+					border: 1px solid;
+					transition: var(--transition);
+					background: transparent;
+					border: 1px solid var(--color_secondary);
+					&:hover {
+						border: 1px solid var(--color_tertiary);
+						color: var(--color_tertiary);
 					}
 				}
 			}
 		}
+
 		:global {
 			.swiper-slide-active {
-				padding-left: 20px;
+				padding-left: 15px;
 			}
-			.swiper-button-prev {
+
+			.swiper-button-prev:after {
+				font-size: 20px;
+			}
+			.swiper-button-next:after {
+				font-size: 20px;
+			}
+			.swiper-wrapper {
+				padding-left: 5%;
+			}
+			.swiper-button-prev,
+			.swiper-button-next {
+				color: var(--color_white);
+				font-size: 20px;
+				&:hover {
+					color: var(--color_secondary);
+					transition: background-color 0.3s ease;
+				}
 			}
 
 			.swiper-pagination-bullet {
@@ -132,6 +178,10 @@
 				opacity: 0.5;
 				border-radius: 50%;
 				transition: all 0.3s ease;
+
+				&:hover {
+					opacity: 0.8;
+				}
 			}
 
 			.swiper-pagination-bullet-active {
@@ -140,6 +190,7 @@
 				background-color: var(--color_white);
 				opacity: 1;
 				border-radius: 20px;
+				transition: width 0.3s ease;
 			}
 		}
 	}

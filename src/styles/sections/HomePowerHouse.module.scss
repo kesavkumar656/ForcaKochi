@@ -1,44 +1,43 @@
 @import "../helpers/helpers.scss";
-			
-.HomePowerHouse{
-    .playerTable{
-       .tableWrapper{ 
 
-        .BackgroundIMG{
-            display: none;
-            position: absolute;
-            top: 0;
-            z-index: -1;
-        }
-        .BackgroundIMG:hover{
-            background:linear-gradient(180deg,#dfa41b00,#c96c98);
-                }
-    //     :global {
-    //         .swiper-slide {
-    //         border: 1px solid red;
-    //         position: relative;
-    //         }
-       
-    //    }
-    }
-    .tableWrapper:hover{
-        background:linear-gradient(180deg,#dfa41b00,#c96c98);
-    }
+.HomePowerHouse {
+	.playerTable {
+		.tableWrapper {
+			position: relative;
+			.nameIMG {
+				z-index: 2;
+				position: absolute;
+			}
+			.playerIMG {
+				position: absolute;
+				z-index: 23;
+			}
+			.BackgroundIMG {
+				// display: none;
+				position: absolute;
+				top: 0;
+				z-index: 3;
+			}
 
-    :global{
-        .swiper-slide{
-            margin-right:0 ; 
-        .swiper-slide-active{
-            margin: 20px 20px 20px 20px;
-        } }
-       
-    }
- 
+			//     :global {
+			//         .swiper-slide {
+			//         border: 1px solid red;
+			//         position: relative;
+			//         }
+
+			//    }
+		}
+		.tableWrapper:hover {
+			background: linear-gradient(180deg, #dfa41b00, #c96c98);
+		}
+
+		:global {
+			.swiper-slide {
+				margin-right: 0;
+				.swiper-slide-active {
+					margin: 20px 20px 20px 20px;
+				}
+			}
+		}
+	}
 }
-        
-.BackgroundIMG:hover{
-    background:linear-gradient(180deg,#dfa41b00,#c96c98);
-        }
-
-}
-  
