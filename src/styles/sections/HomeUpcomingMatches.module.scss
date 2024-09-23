@@ -10,10 +10,14 @@
 			color: var(--color_white);
 			top: -25px;
 			padding: 1%;
+
 			width: 80%;
 			background-color: #3c1654;
 			border-radius: 30px;
 
+			&:hover {
+				cursor: pointer;
+			}
 			:global {
 				.swiper-slide-active {
 					background-color: var(--color_white);

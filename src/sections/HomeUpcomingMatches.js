@@ -152,7 +152,7 @@ export default function HomeUpcomingMatches() {
 						pagination={true}
 						navigation={true}
 						modules={[FreeMode, Thumbs, Controller]}
-						onSlideChange={handleSlideChange(handleSlideClick)}
+						onSlideChange={handleSlideChange}
 					>
 						{Data.map((slide, index) => (
 							<SwiperSlide key={slide.id} onClick={() => handleSlideClick(index)}>
