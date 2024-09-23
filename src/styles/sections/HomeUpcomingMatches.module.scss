@@ -31,36 +31,45 @@
 			}
 		}
 		.ClubDiv {
+			position: relative;
 			display: grid;
 			justify-items: center;
 			padding: 2%;
+			transition: var(--transition);
 			.nth_match {
-				display: grid;
-				justify-items: center;
+				// display: grid;
+
+				// justify-items: center;
 				padding: 2%;
 				color: var(--color_secondary);
-				width: 90%;
-
-				padding: 10px 0px;
-				border-bottom: 1px solid;
-				p {
-					padding: 0px 15px;
-					border: 1px solid rgba(255, 255, 255, 0.283);
-				}
+				width: auto;
+				transition: var(--transition);
+				position: absolute;
+				padding: 0px 15px;
+				border: 1px solid rgba(255, 255, 255, 0.283);
 			}
 			.MatchSchedule {
 				width: 100%;
+
+				border-top: solid var(--color_secondary);
 				transition: var(--transition);
 				@extend %f_r_a_center;
 				justify-content: space-evenly;
 				.team1 {
-					@extend %f_r_a_center;
-					width: 40%;
+					@extend %f_r_aj_center;
+					padding: 40px 0;
+					width: 50%;
+					gap: 10px;
+
+					text-align: left;
 				}
 
 				.team2 {
-					@extend %f_r_a_center;
-					width: 40%;
+					@extend %f_r_aj_center;
+					width: 50%;
+					padding: 40px 0;
+					gap: 10px;
+					text-align: right;
 				}
 			}
 			.liveTxt {

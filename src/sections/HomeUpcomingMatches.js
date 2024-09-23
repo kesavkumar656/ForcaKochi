@@ -30,8 +30,8 @@ export default function HomeUpcomingMatches() {
 			NthMatch: "1",
 			date: "Sep 7th, Sat",
 			team1: "Forca Kochi",
-			team1Img: Team2Image,
-			team2Img: Team1Image,
+			team1Img: Team1Image,
+			team2Img: Team2Image,
 			team2: "Thiruvanthapuram kombans fc",
 		},
 		{
@@ -177,22 +177,22 @@ export default function HomeUpcomingMatches() {
 									src={CurrentMatch.team1Img}
 									alt=""
 								></Image>
-								<h1 className="  color_white text_uppercase font_primary">
+								<h1 className=" text_700 color_white text_uppercase font_primary">
 									{CurrentMatch.team1}
 								</h1>
 							</div>
 
 							<h2 className="color_secondary text_500 ">VS</h2>
 							<div className={`${styles.team2} `}>
+								<h1 className="text_700 color_white text_uppercase font_primary">
+									{CurrentMatch.team2}
+								</h1>
 								<Image
 									width={100}
 									height={100}
 									src={CurrentMatch.team2Img}
 									alt=""
 								></Image>
-								<h1 className="color_white text_uppercase font_primary">
-									{CurrentMatch.team2}
-								</h1>
 							</div>
 						</div>
 						<div className={`${styles.liveTxt}`}>
