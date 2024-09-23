@@ -166,10 +166,10 @@ export default function HomeUpcomingMatches() {
 					{/* Second Swiper to control the first one */}
 
 					<div className={`${styles.ClubDiv}`}>
-						<div className={`${styles.nth_match}`}>
+						<div className={`${styles.nth_match} `}>
 							<p>Match {CurrentMatch.NthMatch}</p>
 						</div>
-						<div className={`${styles.MatchSchedule}`}>
+						<div className={`${styles.MatchSchedule} `}>
 							<div className={`${styles.team1} `}>
 								<Image
 									width={100}
