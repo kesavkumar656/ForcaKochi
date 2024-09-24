@@ -127,7 +127,7 @@ export default function HomePointsTable() {
 							<tr key={index} className={`${styles.TableData} `}>
 								<td>{data.no}</td>
 								<td>
-									<Image width={60} height={60} src={data.Img} alt="" />{" "}
+									<Image width={60} height={60} src={data.Img} alt="" />
 									<p>{data.ClubName}</p>
 								</td>
 								<td>{data.P}</td>

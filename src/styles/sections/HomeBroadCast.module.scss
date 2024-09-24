@@ -1,5 +1,26 @@
 @import "../helpers/helpers.scss";
-			
-.HomeBroadCast{
-    
+
+.HomeBroadCast {
+	.wrapper {
+		@extend %d_flex;
+		.heading {
+		}
+		.country {
+			height: 200px;
+			display: flex;
+			flex-flow: wrap;
+			flex-direction: column;
+			align-items: center;
+			align-content: space-evenly;
+			width: 30%;
+
+			.MapDiv {
+				margin: 2%;
+				padding: 5px;
+				font-size: 14px;
+				gap: 10px;
+				@extend %f_r_a_center;
+			}
+		}
+	}
 }

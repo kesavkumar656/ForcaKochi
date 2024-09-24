@@ -19,7 +19,7 @@ import HomeSuperLeague from "../src/sections/HomeSuperLeague";
 import HomePowerHouse from "../src/sections/HomePowerHouse";
 import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
 import HomePointsTable from "../src/sections/HomePointsTable";
-// import HomeBroadCast from "../src/sections/HomeBroadCast";
+import HomeBroadCast from "../src/sections/HomeBroadCast";
 // IMAGES //
 
 // DATA //
@@ -42,7 +42,7 @@ export default function HomePage() {
 				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>
 				<HomePointsTable></HomePointsTable>
-				{/* <HomeBroadCast></HomeBroadCast> */}
+				<HomeBroadCast></HomeBroadCast>
 			</main>
 			{/* Page Content ends here */}
 
