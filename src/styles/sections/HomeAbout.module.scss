@@ -8,6 +8,7 @@
 		@extend %relative_box;
 
 		.textDiv {
+			width: 100%;
 			position: absolute;
 			@extend %rel_xy_center;
 			top: 40%;
@@ -34,6 +35,7 @@
 				}
 			}
 			.Para {
+				width: 50%;
 				font-size: 20px;
 				line-height: 1.5;
 				max-width: 90%;

@@ -20,23 +20,28 @@ export default function HomePointsTable() {
 	const tableData = [
 		{
 			no: "1",
+			ClubName: "Forca KochI fc",
+
 			Img: "/img/HomePointsTable/forca.png",
 			P: "2",
 			D: "1",
 			L: "0",
 			GF: "4",
 			GA: "1",
+			W: "1",
 			GD: "+3",
 			PTS: "4",
 		},
 		{
 			no: "2",
 			Img: "/img/HomePointsTable/calicut.png",
+			ClubName: "Calicut Football Club",
 
 			P: "2",
 			D: "1",
 			L: "0",
 			GF: "4",
+			W: "1",
 			GA: "1",
 			GD: "+3",
 			PTS: "4",
@@ -44,6 +49,7 @@ export default function HomePointsTable() {
 		{
 			no: "3",
 			Img: "/img/HomePointsTable/kannur.png",
+			ClubName: "Kannur Squad FC",
 
 			P: "2",
 			D: "1",
@@ -51,11 +57,13 @@ export default function HomePointsTable() {
 			GF: "4",
 			GA: "1",
 			GD: "+3",
+			W: "1",
 			PTS: "4",
 		},
 		{
 			no: "4",
 			Img: "/img/HomePointsTable/malappuram.png",
+			ClubName: "Thiruvanthapuram kombans fc",
 
 			P: "2",
 			D: "1",
@@ -64,14 +72,17 @@ export default function HomePointsTable() {
 			GA: "1",
 			GD: "+3",
 			PTS: "4",
+			W: "1",
 		},
 		{
 			no: "5",
 			Img: "/img/HomePointsTable/kombans.png",
+			ClubName: "Malappuram FC",
 
 			P: "2",
 			D: "1",
 			L: "0",
+			W: "1",
 			GF: "4",
 			GA: "1",
 			GD: "+3",
@@ -79,10 +90,12 @@ export default function HomePointsTable() {
 		},
 		{
 			no: "6",
-			Img: "/img/HomePointsTable/thrissur.png",
+			ClubName: "Thrissur Roar FC",
 
+			Img: "/img/HomePointsTable/thrissur.png",
 			P: "2",
 			D: "1",
+			W: "1",
 			L: "0",
 			GF: "4",
 			GA: "1",
@@ -92,8 +105,8 @@ export default function HomePointsTable() {
 	];
 	return (
 		<section className={styles.HomePointsTable}>
-			<div className="container section_spacing text_uppercase font_secondary">
-				<table className={`${styles.blueTable}`}>
+			<div className="container section_spacing text_uppercase ">
+				<table>
 					<thead>
 						<tr>
 							<th>Pos</th>
@@ -111,12 +124,15 @@ export default function HomePointsTable() {
 
 					<tbody>
 						{tableData.map((data, index) => (
-							<tr key={index} className={`${styles.TableData } `}>
+							<tr key={index} className={`${styles.TableData} `}>
 								<td>{data.no}</td>
 								<td>
 									<Image width={60} height={60} src={data.Img} alt="" />{" "}
+									<p>{data.ClubName}</p>
 								</td>
 								<td>{data.P}</td>
+								<td>{data.W}</td>
+
 								<td>{data.D}</td>
 								<td>{data.L}</td>
 								<td>{data.GF}</td>

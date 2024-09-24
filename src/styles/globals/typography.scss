@@ -1,5 +1,5 @@
 .text_xxs {
-	font-size: 14px
+	font-size: 14px;
 }
 .text_xs {
 	font-size: 16px;
@@ -9,8 +9,6 @@
 	@include md-down {
 		font-size: 15px;
 	}
-	
-
 }
 
 // For default body copy font
@@ -63,7 +61,7 @@
 .text_xxxxl {
 	font-size: 18px;
 }
-.textTable{
+.textTable {
 	font-size: 100px;
 	@include md-down {
 		font-size: 80px;
