@@ -116,7 +116,13 @@ export default function HomePowerHouse() {
 								<div>
 									<Image src={slide.name} width={150} height={100} alt="" />
 
-									<Image src={slide.playerimg} width={200} height={300} alt={slide.id} />
+									<Image
+										className={styles.playerIMG}
+										src={slide.playerimg}
+										width={200}
+										height={300}
+										alt={slide.id}
+									/>
 								</div>
 								<div className={styles.BackgroundIMG}>
 									<Image

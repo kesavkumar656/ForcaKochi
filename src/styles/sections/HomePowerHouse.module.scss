@@ -5,18 +5,18 @@
 		.tableWrapper {
 			position: relative;
 			.nameIMG {
-				z-index: 2;
+				z-index: 5;
 				position: absolute;
 			}
 			.playerIMG {
-				position: absolute;
-				z-index: 23;
+				position: relative;
+				z-index: 4;
 			}
 			.BackgroundIMG {
 				// display: none;
 				position: absolute;
-				top: 0;
-				z-index: 3;
+				top: 5%;
+				z-index: 1;
 			}
 
 			//     :global {

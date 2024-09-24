@@ -30,7 +30,7 @@ export default function HomeAbout() {
 						<h1
 							className={`${styles.Heading} text_xxl color_secondary text_uppercase  font_primary text_700 `}
 						>
-							Nammude Forca, Nammude Kochi
+							Nammude <br></br> Forca, <br></br> Nammude <br></br> Kochi
 						</h1>
 						<p className={`${styles.Para} text_center  color_white  text_200`}>
 							Kerala is home to some of the most die-hard football fans in India. You
