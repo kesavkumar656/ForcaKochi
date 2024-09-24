@@ -19,6 +19,7 @@ import HomeSuperLeague from "../src/sections/HomeSuperLeague";
 import HomePowerHouse from "../src/sections/HomePowerHouse";
 import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
 import HomePointsTable from "../src/sections/HomePointsTable";
+// import HomeBroadCast from "../src/sections/HomeBroadCast";
 // IMAGES //
 
 // DATA //
@@ -34,13 +35,14 @@ export default function HomePage() {
 			<Header />
 
 			{/* Page Content starts here */}
-			<main className={`${styles.HomePage} bg_primary` }>
+			<main className={`${styles.HomePage} bg_primary`}>
 				<HomeHero className="container"></HomeHero>
 				<HomeAbout className="container-fluid "></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
 				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>
 				<HomePointsTable></HomePointsTable>
+				{/* <HomeBroadCast></HomeBroadCast> */}
 			</main>
 			{/* Page Content ends here */}
 
