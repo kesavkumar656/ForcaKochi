@@ -46,7 +46,7 @@ export default function HomeBroadCast() {
 		},
 	];
 	return (
-		<section className={styles.HomeBroadCast}>
+		<section className={`${styles.HomeBroadCast} section_spacing`}>
 			<div className="container">
 				<div className={styles.wrapper}>
 					<div>
