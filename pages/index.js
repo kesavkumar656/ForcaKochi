@@ -20,6 +20,7 @@ import HomePowerHouse from "../src/sections/HomePowerHouse";
 import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
 import HomePointsTable from "../src/sections/HomePointsTable";
 import HomeBroadCast from "../src/sections/HomeBroadCast";
+import HomeKochiMoment from "../src/sections/HomeKochiMoment";
 // IMAGES //
 
 // DATA //
@@ -43,12 +44,12 @@ export default function HomePage() {
 				<HomePowerHouse></HomePowerHouse>
 				<HomePointsTable></HomePointsTable>
 				<HomeBroadCast></HomeBroadCast>
+				<HomeKochiMoment></HomeKochiMoment>
 			</main>
 			{/* Page Content ends here */}
 
 			{/* Footer */}
 			<Footer />
-			{/* <Table></Table> */}
 		</div>
 	);
 }
