@@ -1,7 +1,9 @@
 // MODULES //
-import { useRef, useState } from "react";
+import { useEffect } from "react";
 // COMPONENTS //
 import { Swiper, SwiperSlide } from "swiper/react";
+import SliderArrow from "../components/SliderArrow";
+
 // SECTIONS //
 import { Navigation } from "swiper/modules";
 import { EffectCards } from "swiper/modules";
@@ -10,14 +12,11 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import Image from "next/image";
 import img1 from "@/../../public/img/HomeKochiMoment/img1.jpg";
-// UTILS //
+import LArrow from "@/../../public/img/HomeKochiMoment/leftArrow.png";
+import RArrow from "@/../../public/img/HomeKochiMoment/rightArrow.png";
 
 // STYLES //
 import styles from "@/styles/sections/HomeKochiMoment.module.scss";
-
-// IMAGES //
-
-// DATA //
 
 /** HomeKochiMoment Section */
 export default function HomeKochiMoment() {
@@ -28,7 +27,10 @@ export default function HomeKochiMoment() {
 					The Forca Kochi moments
 				</h1>
 				<Swiper
-					navigation={true}
+					navigation={{
+						prevEl: ".custom-prev", // Class selector for the custom "prev" button
+						nextEl: ".custom-next", // Class selector for the custom "next" button
+					}}
 					effect={"cards"}
 					slideShadows={false}
 					grabCursor={true}
@@ -55,6 +57,15 @@ export default function HomeKochiMoment() {
 						<Image src={img1} alt=""></Image>
 					</SwiperSlide>
 				</Swiper>
+
+				<div className="slider_arrows">
+					<button className="custom-prev">
+						<Image src={LArrow} alt=""></Image>
+					</button>
+					<button className="custom-next">
+						<Image src={RArrow} alt=""></Image>
+					</button>
+				</div>
 			</div>
 		</section>
 	);

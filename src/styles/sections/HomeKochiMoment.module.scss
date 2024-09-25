@@ -3,21 +3,35 @@
 .HomeKochiMoment {
 	:global {
 		.swiper {
-			width: 40%;
-			.swiper-wrapper {
-				position: relative;
+			width: 30%;
+			padding: 2% 0;
 
+			.swiper-wrapper {
 				.swiper-slide-shadow {
 					display: none;
 				}
-				.swiper-button-prev,
-				.swiper-button-next {
-					position: absolute;
-					top: 90% !important;
+			}
 
-					width: auto;
+			.swiper-button-prev,
+			.swiper-button-next {
+				position: relative;
+				&::after {
+					position: absolute;
+				}
+			}
+			.swiper-button-next {
+				&::after {
+					right: 0 !important;
 				}
 			}
 		}
+	}
+}
+.slider_arrows {
+	margin: 0 auto;
+	width: 10%;
+	.custom-prev,
+	.custom-next {
+		background-color: transparent;
 	}
 }
