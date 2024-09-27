@@ -58,7 +58,7 @@ export default function HomeBroadCast() {
 						<div className={styles.country}>
 							{Data.map((CountryData, index) => (
 								<div key={index} className={`${styles.MapDiv} color_white`}>
-									<Image alt="" src={CountryData.imgData} width={50} height={50} />
+									<Image alt="" src={CountryData.imgData} width={80} height={50} />
 
 									<div className="">
 										<p className="text_500">{CountryData.country}</p>
