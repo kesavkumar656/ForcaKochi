@@ -41,7 +41,7 @@ export default function HomeContactUs() {
 						</h1>
 						<p>Lorem Ipsum sub-copy here.</p>
 						<div>
-							<Image src={} alt=""></Image>
+							<Image src={Logo	} alt=""></Image>
 							<p>@forcakochi</p>
 						</div>
 						<p>
