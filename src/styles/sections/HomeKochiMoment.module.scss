@@ -1,6 +1,9 @@
 @import "../helpers/helpers.scss";
 
 .HomeKochiMoment {
+	background-color: #583060;
+	.Wrapper {
+	}
 	:global {
 		.swiper {
 			width: 30%;
@@ -24,14 +27,16 @@
 					right: 0 !important;
 				}
 			}
+			.slider_arrows {
+				width: 115px;
+
+				margin: 50px auto;
+				.custom-prev,
+				.custom-next {
+					border: 0;
+					background-color: transparent;
+				}
+			}
 		}
-	}
-}
-.slider_arrows {
-	margin: 0 auto;
-	width: 10%;
-	.custom-prev,
-	.custom-next {
-		background-color: transparent;
 	}
 }

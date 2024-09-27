@@ -21,50 +21,52 @@ import styles from "@/styles/sections/HomeKochiMoment.module.scss";
 /** HomeKochiMoment Section */
 export default function HomeKochiMoment() {
 	return (
-		<section className={styles.HomeKochiMoment}>
+		<section className={`${styles.HomeKochiMoment} bg_terinary`}>
 			<div className="container">
 				<h1 className="color_secondary font_primary text_lg text_uppercase text_700">
 					The Forca Kochi moments
 				</h1>
-				<Swiper
-					navigation={{
-						prevEl: ".custom-prev", // Class selector for the custom "prev" button
-						nextEl: ".custom-next", // Class selector for the custom "next" button
-					}}
-					effect={"cards"}
-					slideShadows={false}
-					grabCursor={true}
-					perSlideOffset={10}
-					modules={[EffectCards, Navigation]}
-					className={styles.cardSlider}
-				>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-					<SwiperSlide>
-						<Image src={img1} alt=""></Image>
-					</SwiperSlide>
-				</Swiper>
-
-				<div className="slider_arrows">
-					<button className="custom-prev">
-						<Image src={LArrow} alt=""></Image>
-					</button>
-					<button className="custom-next">
-						<Image src={RArrow} alt=""></Image>
-					</button>
+				<div className={styles.Wrapper}>
+					<Swiper
+						className={styles.SliderDiv}
+						navigation={{
+							prevEl: ".custom-prev", // Class selector for the custom "prev" button
+							nextEl: ".custom-next", // Class selector for the custom "next" button
+						}}
+						loop={true}
+						effect={"cards"}
+						slideShadows={false}
+						grabCursor={true}
+						perSlideOffset={10}
+						modules={[EffectCards, Navigation]}
+					>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<SwiperSlide>
+							<Image src={img1} alt=""></Image>
+						</SwiperSlide>
+						<div className="slider_arrows">
+							<button className="custom-prev">
+								<Image src={LArrow} alt=""></Image>
+							</button>
+							<button className="custom-next">
+								<Image src={RArrow} alt=""></Image>
+							</button>
+						</div>
+					</Swiper>
 				</div>
 			</div>
 		</section>

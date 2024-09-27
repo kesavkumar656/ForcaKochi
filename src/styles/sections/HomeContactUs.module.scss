@@ -1,0 +1,17 @@
+@import "../helpers/helpers.scss";
+
+.HomeContactUs {
+	background-color: #583060;
+	.Wrapper {
+		padding: 2%;
+		@extend %f_r_aj_center;
+		border-radius: 10px;
+		background-color: var(--color_primary);
+		.ContactUs {
+			width: 50%;
+		}
+		.rightClm {
+			width: 50%;
+		}
+	}
+}

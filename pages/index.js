@@ -21,6 +21,9 @@ import HomeUpcomingMatches from "../src/sections/HomeUpcomingMatches";
 import HomePointsTable from "../src/sections/HomePointsTable";
 import HomeBroadCast from "../src/sections/HomeBroadCast";
 import HomeKochiMoment from "../src/sections/HomeKochiMoment";
+import HomeStayHooked from "../src/sections/HomeStayHooked";
+import HomeDrivingForce from "../src/sections/HomeDrivingForce";
+import HomeContactUs from "../src/sections/HomeContactUs";
 // IMAGES //
 
 // DATA //
@@ -36,7 +39,7 @@ export default function HomePage() {
 			<Header />
 
 			{/* Page Content starts here */}
-			<main className={`${styles.HomePage} bg_primary`}>
+			<main className={`${styles.HomePage} `}>
 				<HomeHero className="container"></HomeHero>
 				<HomeAbout className="container-fluid "></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
@@ -45,6 +48,9 @@ export default function HomePage() {
 				<HomePointsTable></HomePointsTable>
 				<HomeBroadCast></HomeBroadCast>
 				<HomeKochiMoment></HomeKochiMoment>
+				<HomeStayHooked></HomeStayHooked>
+				<HomeDrivingForce></HomeDrivingForce>
+				<HomeContactUs></HomeContactUs>
 			</main>
 			{/* Page Content ends here */}
 

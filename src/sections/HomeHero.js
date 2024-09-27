@@ -30,7 +30,7 @@ import { Pagination, Navigation } from "swiper/modules";
 /** HomeHero Section */
 export default function HomeHero() {
 	return (
-		<div className=" section_spacing color_white">
+		<div className=" section_spacing color_white bg_primary">
 			<div className={`${styles.hero_wrap}  container `}>
 				<div className={`${styles.heading}`}>
 					<h1
@@ -60,15 +60,12 @@ export default function HomeHero() {
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 					<SwiperSlide>
-						
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 					<SwiperSlide>
-						
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 					<SwiperSlide>
-						
 						<Image alt=" " src={Stadium}></Image>
 					</SwiperSlide>
 				</Swiper>

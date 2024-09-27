@@ -1,0 +1,42 @@
+@import "../helpers/helpers.scss";
+
+.HomeStayHooked {
+	background-color: #583060;
+	.wrapper {
+		overflow-y: hidden;
+		position: relative;
+		background-color: var(--color_primary);
+
+		padding: 3% 5%;
+		border-radius: 10px;
+
+		.textDiv {
+			position: relative;
+			z-index: 10;
+			p {
+				width: 50%;
+			}
+			.SocialDiv {
+				margin: 1% 0;
+				padding: 1% 2%;
+				background-color: rgb(255, 255, 255, 5%);
+				border-radius: 5px;
+			}
+		}
+		.background {
+			img {
+				position: absolute;
+			}
+			img:nth-child(1) {
+				right: 0;
+				top: 0;
+				opacity: .1;
+			}
+
+			img:nth-child(2) {
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}
