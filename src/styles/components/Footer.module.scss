@@ -1,5 +1,13 @@
 @import "../helpers/helpers.scss";
 
 .main_footer {
-  // height: 100px;
+	margin-bottom: 1px;
+	@extend %f_r_a_center;
+	justify-content: space-around;
+	border-top: 2px solid #dfa41b;
+	border-bottom: 2px solid #dfa41b;
+	height: 80px;
+	div {
+		@extend %f_r_aj_center;
+	}
 }
