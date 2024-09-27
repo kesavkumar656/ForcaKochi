@@ -20,7 +20,7 @@ export default function HomeContactUs() {
 	return (
 		<section className={styles.HomeContactUs}>
 			<div className="container section_spacing">
-				<div className={`${styles.Wrapper}`}>
+				<div className={`${styles.Wrapper} `}>
 					<div className={styles.ContactUs}>
 						<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
 							Contact Us
@@ -41,7 +41,7 @@ export default function HomeContactUs() {
 						</h1>
 						<p>Lorem Ipsum sub-copy here.</p>
 						<div>
-							<Image src={Logo	} alt=""></Image>
+							<Image src={Logo} alt=""></Image>
 							<p>@forcakochi</p>
 						</div>
 						<p>

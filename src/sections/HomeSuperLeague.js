@@ -34,9 +34,9 @@ export default function HomeSuperLeague() {
 						</p>
 					</div>
 				</div>
-			</div>
-			<div className={`${styles.backgroundDiv}`}>
-				<Image className="next_image" src={Background} alt=""></Image>
+				<div className={`${styles.backgroundDiv}`}>
+					<Image className="next_image" src={Background} alt=""></Image>
+				</div>
 			</div>
 		</section>
 	);

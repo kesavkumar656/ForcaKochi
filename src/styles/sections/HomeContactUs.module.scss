@@ -2,16 +2,33 @@
 
 .HomeContactUs {
 	background-color: #583060;
+
 	.Wrapper {
-		padding: 2%;
-		@extend %f_r_aj_center;
+		width: 80%;
+		margin: 0 auto;
+		padding: 1.5%;
+		@extend %f_r_a_center;
+		justify-content: space-between;
 		border-radius: 10px;
 		background-color: var(--color_primary);
 		.ContactUs {
 			width: 50%;
+
+			input {
+				background-color: transparent;
+				border: 0;
+				&::placeholder {
+					color: var(--color_white);
+				}
+			}
 		}
 		.rightClm {
-			width: 50%;
+			// padding: 10% 5%;
+			color: var(--color_white);
+			padding: 2%;
+			width: 40%;
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.1);
 		}
 	}
 }

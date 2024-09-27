@@ -30,14 +30,15 @@ export default function HomeKochiMoment() {
 					<Swiper
 						className={styles.SliderDiv}
 						navigation={{
-							prevEl: ".custom-prev", // Class selector for the custom "prev" button
-							nextEl: ".custom-next", // Class selector for the custom "next" button
+							prevEl: ".custom-prev",
+							nextEl: ".custom-next",
 						}}
 						loop={true}
+						rotate={true}
 						effect={"cards"}
 						slideShadows={false}
 						grabCursor={true}
-						perSlideOffset={10}
+						perSlideOffset={15}
 						modules={[EffectCards, Navigation]}
 					>
 						<SwiperSlide>
