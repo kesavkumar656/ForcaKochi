@@ -23,9 +23,11 @@ import styles from "@/styles/components/Footer.module.scss";
 /** Footer Component */
 export default function Footer() {
 	return (
-		<footer className={`${styles.main_footer} bg_primary color_white`}>
+		<footer
+			className={`${styles.main_footer} font_secondary bg_primary color_white`}
+		>
 			<p>© {new Date().getFullYear()} Copyright</p>
-			<div>
+			<div className={styles.social}>
 				<Image alt="" src={fb} width={20}></Image>
 				<Image alt="" src={insta} width={20}></Image>
 				<Image alt="" src={linkedin} width={20}></Image>
