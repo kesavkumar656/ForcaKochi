@@ -1,0 +1,24 @@
+@import "../helpers/helpers.scss";
+
+.HomeSponsors {
+	background-color: #583060;
+	color: rgba(255, 255, 255, 0.71);
+	.OfficialPartner,
+	.AssociatePartners,
+	.PrincipalPartners {
+		@extend %d_flex;
+		width: 80%;
+		padding: 2% 0;
+		gap: 20px;
+	}
+	.PrincipalPartners {
+		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
+	}
+	.AssociatePartners {
+		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
+	}
+	.OfficialPartner {
+		width: 60%;
+		flex-wrap: wrap;
+	}
+}

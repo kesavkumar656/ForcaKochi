@@ -14,11 +14,38 @@
 		.ContactUs {
 			width: 50%;
 
-			input {
-				background-color: transparent;
-				border: 0;
-				&::placeholder {
-					color: var(--color_white);
+			div:nth-child(1) {
+				margin: 2% 0;
+			}
+			.inputDiv {
+				div {
+				}
+				div:nth-child(2) {
+					display: flex;
+					gap: 20px;
+				}
+				div:nth-child(4) {
+					input {
+						padding: 8% 0;
+					}
+				}
+				.button {
+					padding: 1% 4%;
+					// margin: 3% 0;
+				}
+				input {
+					padding: 2% 1%;
+
+					width: 90%;
+					background-color: transparent;
+					border: 0;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+					&::placeholder {
+						color: rgba(255, 255, 255, 0.4);
+					}
+					&:active {
+						border: 1px solid rgba(255, 255, 255, 0.178);
+					}
 				}
 			}
 		}

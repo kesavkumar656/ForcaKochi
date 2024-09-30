@@ -24,6 +24,7 @@ import HomeKochiMoment from "../src/sections/HomeKochiMoment";
 import HomeStayHooked from "../src/sections/HomeStayHooked";
 import HomeDrivingForce from "../src/sections/HomeDrivingForce";
 import HomeContactUs from "../src/sections/HomeContactUs";
+import HomeSponsors from "../src/sections/HomeSponsors";
 // IMAGES //
 
 // DATA //
@@ -51,6 +52,7 @@ export default function HomePage() {
 				<HomeStayHooked></HomeStayHooked>
 				<HomeDrivingForce></HomeDrivingForce>
 				<HomeContactUs></HomeContactUs>
+				<HomeSponsors></HomeSponsors>
 			</main>
 			{/* Page Content ends here */}
 

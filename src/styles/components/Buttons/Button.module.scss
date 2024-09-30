@@ -34,10 +34,10 @@
 	// Filled Secondary Button
 	&.btn_secondary {
 		background-color: var(--color_secondary);
-		color: var(--color_white);
+		color: var(--color_primary);
 
 		&:hover {
-			background-color: var(--color_secondary_light);
+			background-color: var(--color_tertiary);
 		}
 	}
 
