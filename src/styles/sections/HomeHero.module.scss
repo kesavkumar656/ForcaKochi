@@ -6,9 +6,19 @@
 
 	.heading {
 		position: relative;
+
 		.FootbalTxt {
 			line-height: 1;
-			
+
+			@include md-down {
+				width: 80%;
+				font-size: 32px;
+			}
+
+			@include lg-down {
+				width: 50%;
+				font-size: 32px;
+			}
 		}
 		.text {
 			position: absolute;
@@ -16,15 +26,17 @@
 			bottom: 5%;
 			width: 30%;
 			line-height: 1.5;
-			@include lg-down {
 
+			@include lg-down {
+				position: initial;
 				right: 15%;
-			bottom: 5%;
+				bottom: 5%;
+				font-size: 14px;
+				width: 90%;
 			}
 			@include sm-down {
-
 				right: 5%;
-			bottom: 5%;
+				bottom: 5%;
 			}
 		}
 		.Image {
@@ -33,7 +45,7 @@
 			bottom: 5%;
 			@include lg-down {
 				right: 10%;
-				bottom: 7%;
+				bottom: 5%;
 			}
 			@include sm-down {
 				right: 1%;

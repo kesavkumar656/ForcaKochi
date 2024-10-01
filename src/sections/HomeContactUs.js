@@ -3,13 +3,18 @@
 // COMPONENTS //
 import Image from "next/image";
 // SECTIONS //
-
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 // PLUGINS //
+import { Pagination, Navigation } from "swiper/modules";
+
 import Logo from "@/../../public/img/logo.png";
 // UTILS //
 import Button from "../components/Buttons/Button";
 // STYLES //
 import styles from "@/styles/sections/HomeContactUs.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 
 // IMAGES //
 
@@ -55,20 +60,47 @@ export default function HomeContactUs() {
 						</div>
 					</div>
 					<div className={styles.rightClm}>
-						<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
-							Lorem
-						</h1>
-						<p>Lorem Ipsum sub-copy here.</p>
-						<div>
-							<Image src={Logo} alt=""></Image>
-							<p>@forcakochi</p>
-						</div>
-						<p>
-							ഒരു പുതിയ അധ്യായം കുറിക്കാൻ “ഫോഴ്സാ കൊച്ചി” 😍⚽️ കാൽപന്തിന്റെ
-							ലോകത്തിലേക്ക് വിജയം നേടാൻ ഞങ്ങൾ കളത്തിൽ ഇറങ്ങുകയാണ്. പലനാടുകളിലെ ലോകോത്തര
-							പ്രതിഭകളെയും കൊച്ചിയുടെ സ്വന്തം ആവേശം നിറഞ്ഞ ആരാധകരെയും ഒന്നിപ്പിക്കാൻ,
-							ഒരു പുത്തൻ ചരിത്രം തുടങ്ങാൻ! #ForcaKochiFC #SuperLeagueKerala #SLK
-						</p>
+						<Swiper
+							slidesPerView={1}
+							loop={true}
+							pagination={true}
+							modules={[Pagination]}
+						>
+							<SwiperSlide>
+								<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
+									Lorem
+								</h1>
+								<p>Lorem Ipsum sub-copy here.</p>
+								<div>
+									<Image src={Logo} alt=""></Image>
+									<p>@forcakochi</p>
+								</div>
+								<p>
+									ഒരു പുതിയ അധ്യായം കുറിക്കാൻ “ഫോഴ്സാ കൊച്ചി” 😍⚽️ കാൽപന്തിന്റെ
+									ലോകത്തിലേക്ക് വിജയം നേടാൻ ഞങ്ങൾ കളത്തിൽ ഇറങ്ങുകയാണ്. പലനാടുകളിലെ
+									ലോകോത്തര പ്രതിഭകളെയും കൊച്ചിയുടെ സ്വന്തം ആവേശം നിറഞ്ഞ ആരാധകരെയും
+									ഒന്നിപ്പിക്കാൻ, ഒരു പുത്തൻ ചരിത്രം തുടങ്ങാൻ! #ForcaKochiFC
+									#SuperLeagueKerala #SLK
+								</p>
+							</SwiperSlide>
+							<SwiperSlide>
+								<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
+									Lorem
+								</h1>
+								<p>Lorem Ipsum sub-copy here.</p>
+								<div>
+									<Image src={Logo} alt=""></Image>
+									<p>@forcakochi</p>
+								</div>
+								<p>
+									ഒരു പുതിയ അധ്യായം കുറിക്കാൻ “ഫോഴ്സാ കൊച്ചി” 😍⚽️ കാൽപന്തിന്റെ
+									ലോകത്തിലേക്ക് വിജയം നേടാൻ ഞങ്ങൾ കളത്തിൽ ഇറങ്ങുകയാണ്. പലനാടുകളിലെ
+									ലോകോത്തര പ്രതിഭകളെയും കൊച്ചിയുടെ സ്വന്തം ആവേശം നിറഞ്ഞ ആരാധകരെയും
+									ഒന്നിപ്പിക്കാൻ, ഒരു പുത്തൻ ചരിത്രം തുടങ്ങാൻ! #ForcaKochiFC
+									#SuperLeagueKerala #SLK
+								</p>
+							</SwiperSlide>
+						</Swiper>
 					</div>
 				</div>
 			</div>

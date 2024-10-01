@@ -105,44 +105,44 @@ export default function HomePointsTable() {
 	];
 	return (
 		<section className={`${styles.HomePointsTable} bg_primary`}>
-			<div className="container section_spacing text_uppercase ">
-				<table>
-					<thead>
-						<tr>
-							<th>Pos</th>
-							<th>Team</th>
-							<th>P</th>
-							<th>W</th>
-							<th>D</th>
-							<th>L</th>
-							<th>GF</th>
-							<th>GA</th>
-							<th>GD</th>
-							<th>PTS</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						{tableData.map((data, index) => (
-							<tr key={index} className={`${styles.TableData} `}>
-								<td>{data.no}</td>
-								<td>
-									<Image width={60} height={60} src={data.Img} alt="" />
-									<p>{data.ClubName}</p>
-								</td>
-								<td>{data.P}</td>
-								<td>{data.W}</td>
-
-								<td>{data.D}</td>
-								<td>{data.L}</td>
-								<td>{data.GF}</td>
-								<td>{data.GA}</td>
-								<td>{data.GD}</td>
-								<td>{data.PTS}</td>
+			<div className="container section_spacing text_uppercase">
+				<div className="table-container">
+					<table>
+						<thead>
+							<tr>
+								<th>Pos</th>
+								<th>Team</th>
+								<th>P</th>
+								<th>W</th>
+								<th>D</th>
+								<th>L</th>
+								<th>GF</th>
+								<th>GA</th>
+								<th>GD</th>
+								<th>PTS</th>
 							</tr>
-						))}
-					</tbody>
-				</table>
+						</thead>
+						<tbody>
+							{tableData.map((data, index) => (
+								<tr key={index} className={`${styles.TableData}`}>
+									<td>{data.no}</td>
+									<td>
+										<Image width={60} height={60} src={data.Img} alt="" />
+										<p>{data.ClubName}</p>
+									</td>
+									<td>{data.P}</td>
+									<td>{data.W}</td>
+									<td>{data.D}</td>
+									<td>{data.L}</td>
+									<td>{data.GF}</td>
+									<td>{data.GA}</td>
+									<td>{data.GD}</td>
+									<td>{data.PTS}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</section>
 	);

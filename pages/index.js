@@ -34,15 +34,15 @@ export default function HomePage() {
 	return (
 		<div>
 			{/* Metatags */}
-			<MetaTags Title={"Home"} Desc={"Home Desc"} OgImg={""} Url={"/"} />
+			<MetaTags Title={"Forca Kochi"} Desc={"Home Desc"} OgImg={""} Url={"/"} />
 
 			{/* Header */}
 			<Header />
 
 			{/* Page Content starts here */}
-			<main className={`${styles.HomePage} `}>
-				<HomeHero className="container"></HomeHero>
-				<HomeAbout className="container-fluid "></HomeAbout>
+			<main className={`${styles.HomePage} 	 `}>
+				<HomeHero></HomeHero>
+				<HomeAbout></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
 				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>

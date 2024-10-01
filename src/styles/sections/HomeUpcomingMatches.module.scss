@@ -2,6 +2,9 @@
 
 .HomeUpcomingMatches {
 	margin-top: -400px;
+	@include md-down {
+		margin-top: 0;
+	}
 
 	.table {
 		border-radius: 20px;

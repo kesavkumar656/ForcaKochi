@@ -23,9 +23,9 @@ import yellow from "@/../public/img/homeAbout/Yellow.png";
 export default function HomeAbout() {
 	return (
 		<section className={`${styles.HomeAbout} bg_primary `}>
+			<Image className={styles.BGLight} src={Background} alt=" "></Image>
 			<div className={`${styles.Background} container`}>
-				<div className="next_image">
-					<Image src={Background} alt=" "></Image>
+				<div>
 					<div className={`${styles.textDiv}  `}>
 						<h1
 							className={`${styles.Heading} text_xxl color_secondary text_uppercase  font_primary text_700 `}
@@ -43,7 +43,7 @@ export default function HomeAbout() {
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.groundDiv} container`}>
+			<div className={`${styles.groundDiv} container `}>
 				<div className="next_image">
 					<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
 				</div>
