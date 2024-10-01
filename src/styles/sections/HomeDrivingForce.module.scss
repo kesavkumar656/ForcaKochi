@@ -20,7 +20,9 @@
 		}
 		.OwnerInfo {
 			width: 50%;
+			padding: 2%;
 			.MapDiv {
+				padding: 1% 0;
 				min-width: 300px;
 				background-color: var(--color_primary);
 				position: absolute;
@@ -28,9 +30,12 @@
 
 				.animation {
 					@extend %d_flex;
-					width: 80%;
-					background-color: var(--color_primary);
-					padding: 1% 2%;
+					align-items: center;
+					justify-content: space-around;
+
+					width: 100%;
+					background: var(--color_primary_light);
+					padding: 4% 2%;
 				}
 			}
 			.MapDiv:nth-child(1) {

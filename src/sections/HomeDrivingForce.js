@@ -69,7 +69,7 @@ export default function HomeDrivingForce() {
 									<p className={`${styles.para} `}>
 										{OwnerInfo.Name} {OwnerInfo.position}
 									</p>
-									<Image width={50} height={50} src={OwnerInfo.button} alt=""></Image>
+									<Image width={30} height={30} src={OwnerInfo.button} alt=""></Image>
 								</div>
 							</div>
 						))}
