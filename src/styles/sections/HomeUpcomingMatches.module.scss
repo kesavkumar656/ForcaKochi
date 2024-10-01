@@ -50,7 +50,7 @@
 			transition: var(--transition);
 
 			.nth_match {
-				@extend %rel_xy_center;
+				text-align: center;
 				right: 50%;
 				border-radius: 5px;
 				transform: translate(50%, -45%);
@@ -96,6 +96,7 @@
 				.Versus {
 					width: 10%;
 					margin: 0 auto;
+					text-align: center;
 				}
 				.team1 {
 					text-align: left;
@@ -124,7 +125,7 @@
 				justify-items: center;
 				width: 90%;
 				border-bottom: 1px solid #ffffff21;
-
+				text-align: center;
 				h1 {
 					padding: 2%;
 					color: var(--color_white);

@@ -23,13 +23,11 @@
 	  color: #ffffffab;
 	  font-size: 20px;
   
-	  @media (max-width: 768px) {
-		font-size: 16px;
-	  }
+		
   
 	  @media (max-width: 576px) {
-		font-size: 14px;
-		display: block;
+		// font-size: 14px;
+		// display: block;
   
 		thead {
 		  display: none;
