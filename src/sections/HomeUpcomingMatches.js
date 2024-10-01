@@ -37,16 +37,16 @@ const Data = [
 		team1Img: Team2Image,
 		team2Img: Team1Image,
 	},
-	{
-		id: "3",
-		NthMatch: "3",
+	// {
+	// 	id: "3",
+	// 	NthMatch: "3",
 
-		date: "Sep 18th, Wed",
-		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
-		team1Img: Team1Image,
-		team2Img: Team2Image,
-	},
+	// 	date: "Oct 18th, Wed",
+	// 	team1: "Forca Kochi",
+	// 	team2: "Thiruvanthapuram kombans fc",
+	// 	team1Img: Team1Image,
+	// 	team2Img: Team2Image,
+	// },
 	{
 		id: "10",
 		NthMatch: "10",
@@ -154,6 +154,22 @@ export default function HomeUpcomingMatches() {
 						navigation
 						initialSlide={ActiveTab}
 						onSlideChange={handleSlideChange}
+						breakpoints={{
+							320: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+
+							480: {
+								slidesPerView: 3,
+								spaceBetween: 30,
+							},
+
+							640: {
+								slidesPerView: 4,
+								spaceBetween: 40,
+							},
+						}}
 					>
 						{Data.map((slide, index) => (
 							<SwiperSlide key={slide.id}>
@@ -181,8 +197,9 @@ export default function HomeUpcomingMatches() {
 								</h1>
 							</div>
 
-							<h2 className="color_secondary text_500">VS</h2>
-
+							<div className={`${styles.Versus} color_secondary text_500`}>
+								<h2>VS</h2>
+							</div>
 							<div className={`${styles.team2}`}>
 								<h1 className="text_700 color_white text_uppercase font_primary">
 									{CurrentMatch.team2}

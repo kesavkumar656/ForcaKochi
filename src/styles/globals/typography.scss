@@ -7,11 +7,11 @@
 .text_sm {
 	font-size: 20px;
 	@include md-down {
-		font-size: 15px;
+		font-size: 14px;
 	}
 }
 
-// For default body copy font
+
 .text_reg {
 	font-size: 14px;
 }

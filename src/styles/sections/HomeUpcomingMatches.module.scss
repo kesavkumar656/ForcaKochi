@@ -20,8 +20,15 @@
 			&:hover {
 				cursor: pointer;
 			}
-
+			@include sm-down {
+				font-size: 14px;
+			}
 			:global {
+				.swiper {
+					@include sm-down {
+						font-size: 14px;
+					}
+				}
 				.swiper-slide-active {
 					background-color: var(--color_white);
 					color: var(--color_primary);
@@ -43,7 +50,7 @@
 			transition: var(--transition);
 
 			.nth_match {
-				@extend %rel_y_center;
+				@extend %rel_xy_center;
 				right: 50%;
 				border-radius: 5px;
 				transform: translate(50%, -45%);
@@ -64,7 +71,9 @@
 				transition: var(--transition);
 				@extend %f_r_a_center;
 				justify-content: space-evenly;
-
+				@include sm-down {
+					display: initial;
+				}
 				.team1,
 				.team2 {
 					@extend %f_r_aj_center;
@@ -73,8 +82,21 @@
 					gap: 10px;
 					text-align: center;
 					transition: var(--transition);
+					@include sm-down {
+						font-size: 14px !important;
+						flex-direction: column;
+						justify-content: center;
+						font-size: 14px;
+						flex-direction: column;
+						width: 50%;
+						margin: 0 auto;
+						text-align: center !important;
+					}
 				}
-
+				.Versus {
+					width: 10%;
+					margin: 0 auto;
+				}
 				.team1 {
 					text-align: left;
 				}

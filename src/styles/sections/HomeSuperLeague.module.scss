@@ -3,10 +3,12 @@
 .HomeSuperLeague {
 	background-color: var(--color_white);
 	.textDiv {
+		margin: 2%;
 		.heading {
 			line-height: 1;
 		}
 		@extend %full_overlay;
+
 		p {
 			width: 50%;
 		}
