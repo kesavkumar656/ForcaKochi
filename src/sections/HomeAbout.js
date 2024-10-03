@@ -43,7 +43,7 @@ export default function HomeAbout() {
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.groundDiv} container `}>
+			<div className={`${styles.groundDiv} e `}>
 				<div className="next_image">
 					<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
 				</div>
