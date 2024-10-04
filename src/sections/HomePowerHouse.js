@@ -103,10 +103,10 @@ export default function HomePowerHouse() {
 				>
 					Meet the Powerhouse of Forca Kochi
 				</div>
-				<div className={`${styles.playerTable} section_spacing`}>
+				<div className={`${styles.playerTable}`}>
 					<Swiper
 						spaceBetween={0}
-						slidesPerView={5}
+						slidesPerView={4}
 						navigation={false}
 						pagination={{ clickable: true }}
 						// modules={(Navigation, Pagination, Scrollbar)}

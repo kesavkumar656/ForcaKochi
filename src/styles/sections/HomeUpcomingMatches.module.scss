@@ -1,9 +1,16 @@
 @import "../helpers/helpers.scss";
 
 .HomeUpcomingMatches {
-	margin-top: -400px;
+	margin-top: -600px;
+	z-index: 4;
 	@include md-down {
-		margin-top: 0;
+		margin-top: -200px;
+	}
+	@include sm-down {
+		margin-top: -100px;
+	}
+	@include lg-down {
+		margin-top: -300px;
 	}
 
 	.table {
@@ -176,9 +183,9 @@
 			.swiper-slide-active {
 				padding-left: 15px;
 			}
-			.swiper-slide{
-			 justify-content: center;
-			 border: 1px solid var(--color_primary);
+			.swiper-slide {
+				justify-content: center;
+				border: 1px solid var(--color_primary);
 			}
 
 			.swiper-button-prev:after {

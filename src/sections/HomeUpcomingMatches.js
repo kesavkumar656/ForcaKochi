@@ -138,7 +138,7 @@ export default function HomeUpcomingMatches() {
 	};
 
 	return (
-		<section className={`${styles.HomeUpcomingMatches} bg_white`}>
+		<section className={`${styles.HomeUpcomingMatches} `}>
 			<div className="container">
 				<h1 className="text_uppercase color_secondary font_primary text_700 text_lg section_spacing">
 					Upcoming Matches

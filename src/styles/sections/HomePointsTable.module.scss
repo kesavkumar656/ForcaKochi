@@ -1,97 +1,99 @@
 .HomePointsTable {
 	td:first-child {
-	  border-radius: 10px 0 0 10px;
+		border-radius: 10px 0 0 10px;
 	}
 	td:last-child {
-	  border-radius: 0px 10px 10px 0px;
+		border-radius: 0px 10px 10px 0px;
 	}
 	th:first-child {
-	  border-radius: 5px 0 0 5px;
+		border-radius: 5px 0 0 5px;
 	}
 	th:last-child {
-	  border-radius: 0px 5px 5px 0px;
+		border-radius: 0px 5px 5px 0px;
 	}
-  
+
 	.table-container {
-	  width: 100%;
-	  overflow-x: auto;
+		width: 100%;
+		overflow-x: auto;
 	}
-  
+
 	table {
-	  width: 100%;
-	  border-spacing: 0px 10px;
-	  color: #ffffffab;
-	  font-size: 20px;
-  
-		
-  
-	  @media (max-width: 576px) {
-		// font-size: 14px;
-		// display: block;
-  
-		thead {
-		  display: none;
-		}
-  
-		tbody,
+		width: 100%;
+		border-spacing: 0px 10px;
+		color: #ffffffab;
+		font-size: 20px;
+
 		tr {
-		  display: block;
-		  width: 100%;
+			td:nth-child(2) {
+				display: flex;
+				align-items: center;
+				gap: 2%;
+			}
 		}
-  
-		td {
-		  display: block;
-		  text-align: right;
-		  padding-left: 50%;
-		  position: relative;
-		  border: none;
-  
-		  &:first-child {
-			text-align: center;
-			padding-left: 0;
-		  }
-  
-		  &:nth-child(2) {
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-		  }
-  
-		  &::before {
-			content: attr(data-label);
-			position: absolute;
-			left: 10px;
-			text-align: left;
-			font-weight: bold;
-			color: var(--color_secondary);
-		  }
+		@media (max-width: 576px) {
+			thead {
+				display: none;
+			}
+
+			tbody,
+			tr {
+				display: block;
+				width: 100%;
+			}
+
+			td {
+				display: block;
+				text-align: right;
+				padding-left: 50%;
+				position: relative;
+				text-align: center;
+				border: none;
+
+				&:first-child {
+					text-align: center;
+					padding-left: 0;
+				}
+
+				&:nth-child(2) {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 10px;
+					text-align: left;
+					font-weight: bold;
+					color: var(--color_secondary);
+				}
+			}
 		}
-	  }
 	}
-  
+
 	tbody td {
-	  padding: 20px;
-	  text-align: center;
-  
-	  @media (max-width: 576px) {
-		padding: 10px;
-	  }
+		padding: 20px;
+		text-align: center;
+
+		@media (max-width: 576px) {
+			padding: 10px;
+		}
 	}
-  
+
 	tbody tr {
-	  background-color: #ffffff07;
-	  border-radius: 20px;
-	  transition: background-color 0.3s ease;
-  
-	  &:hover {
-		background-color: #ffffff10;
-	  }
-  
-	  @media (max-width: 576px) {
-		margin-bottom: 10px;
-		border-radius: 10px;
-		background-color: #ffffff08;
-	  }
+		background-color: #ffffff07;
+		border-radius: 20px;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #ffffff10;
+		}
+
+		@media (max-width: 576px) {
+			margin-bottom: 10px;
+			border-radius: 10px;
+			background-color: #ffffff08;
+		}
 	}
-  }
-  
+}

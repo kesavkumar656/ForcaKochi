@@ -46,8 +46,8 @@ export default function HomeBroadCast() {
 		},
 	];
 	return (
-		<section className={`${styles.HomeBroadCast} bg_primary`}>
-			<div className="container">
+		<section className={`${styles.HomeBroadCast} section_spacing bg_primary`}>
+			<div className="container ">
 				<div className={styles.wrapper}>
 					<div>
 						<h1
