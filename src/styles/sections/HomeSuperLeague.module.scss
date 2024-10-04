@@ -4,7 +4,6 @@
 	background-color: var(--color_white);
 	.wrapper {
 		.textDiv {
-		
 			@extend %full_overlay;
 			.heading {
 				line-height: 1;
@@ -14,12 +13,12 @@
 				width: 50%;
 			}
 		}
-		.backgroundDiv {
-			@extend %relative_box;
-
-			img {
-				margin-left: 0;
-			}
+	}
+	.BackgroundDiv {
+		@extend %relative_box;
+		width: 100%;
+		.BackgroundImg {
+			margin-left: auto;
 		}
 	}
 }
