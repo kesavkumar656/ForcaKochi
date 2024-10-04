@@ -97,7 +97,7 @@ export default function HomePowerHouse() {
 	];
 	return (
 		<section className={`${styles.HomePowerHouse} bg_white`}>
-			<div className="container-fluid section_spacing">
+			<div className="container-fluid ">
 				<div
 					className={`${styles.heading} color_secondary text_700  font_primary text_lg text_uppercase text_center`}
 				>

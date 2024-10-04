@@ -7,13 +7,15 @@
 	.BGLight {
 		width: 100%;
 		position: absolute;
+		z-index: 10;
 	}
 	.Background {
 		@extend %relative_box;
 
 		.textDiv {
 			width: 100%;
-
+			position: relative;
+			z-index: 10;
 			text-align: center;
 
 			.Heading {
@@ -30,7 +32,7 @@
 				}
 			}
 			.Para {
-				width: 50%;
+				// width: 50%;
 				font-size: 20px;
 				line-height: 1.5;
 				max-width: 90%;
@@ -50,6 +52,7 @@
 	}
 	.groundDiv {
 		position: relative;
+		z-index: 10;
 		.parentImage {
 			width: 100%;
 		}
@@ -100,7 +103,6 @@
 			transform: translate(-50%, -35%);
 			z-index: 1;
 			@include lg-down {
-				
 				width: 10%;
 			}
 		}

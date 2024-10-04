@@ -26,14 +26,14 @@ export default function HomeAbout() {
 			<Image className={styles.BGLight} src={Background} alt=" "></Image>
 			<div className={`${styles.Background} container`}>
 				<div>
-					<div className={`${styles.textDiv}  `}>
+					<div className={`${styles.textDiv} section_spacing `}>
 						<h1
 							className={`${styles.Heading} text_xxl color_secondary text_uppercase  font_primary text_700 `}
 						>
 							Nammude <br></br> Forca, <br></br> Nammude <br></br> Kochi
 						</h1>
 						<p
-							className={`${styles.Para} text_lg text_center  color_white  text_200`}
+							className={`${styles.Para} col-xs-7 text_lg text_center  color_white  text_200`}
 						>
 							Kerala is home to some of the most die-hard football fans in India. You
 							can feel the passion for the sport in every nook and corner of the State.
@@ -43,7 +43,7 @@ export default function HomeAbout() {
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.groundDiv} e `}>
+			<div className={`${styles.groundDiv}  `}>
 				<div className="next_image">
 					<Image className={`${styles.parentImage}`} src={Ground} alt=" "></Image>
 				</div>

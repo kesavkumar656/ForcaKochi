@@ -5,12 +5,9 @@
 	.wrapper {
 		.textDiv {
 			@extend %full_overlay;
+			padding-top: 40%;
 			.heading {
 				line-height: 1;
-			}
-
-			p {
-				width: 50%;
 			}
 		}
 	}
@@ -19,6 +16,8 @@
 		width: 100%;
 		.BackgroundImg {
 			margin-left: auto;
+			margin-top: -15%;
+			
 		}
 	}
 }
