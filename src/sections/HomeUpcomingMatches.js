@@ -25,7 +25,7 @@ const Data = [
 		team1: "Forca Kochi",
 		team1Img: Team1Image,
 		team2Img: Team2Image,
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Calicut FC",
 	},
 	{
 		id: "2",
@@ -33,7 +33,7 @@ const Data = [
 
 		date: "Sep 13th, Fri",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Calicut FC",
 		team1Img: Team2Image,
 		team2Img: Team1Image,
 	},
@@ -43,7 +43,7 @@ const Data = [
 
 	// 	date: "Oct 18th, Wed",
 	// 	team1: "Forca Kochi",
-	// 	team2: "Thiruvanthapuram kombans fc",
+	// 	team2: "Calicut FC",
 	// 	team1Img: Team1Image,
 	// 	team2Img: Team2Image,
 	// },
@@ -53,7 +53,7 @@ const Data = [
 
 		date: "Sep 27th, Fri",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Calicut FC",
 		team1Img: Team2Image,
 		team2Img: Team1Image,
 	},
@@ -63,7 +63,7 @@ const Data = [
 
 		date: "Sep 7th, Sat",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Calicut FC",
 		team1Img: Team1Image,
 		team2Img: Team2Image,
 	},
@@ -73,7 +73,7 @@ const Data = [
 
 		date: "Sep 13th, Fri",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Malappuram FC",
 		team1Img: Team2Image,
 		team2Img: Team1Image,
 	},
@@ -83,7 +83,7 @@ const Data = [
 
 		date: "Sep 18th, Wed",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Malappuram FC",
 		team1Img: Team2Image,
 		team2Img: Team2Image,
 	},
@@ -94,7 +94,7 @@ const Data = [
 
 		date: "Sep 27th, Fri",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Malappuram FC",
 		team1Img: Team1Image,
 		team2Img: Team1Image,
 	},
@@ -104,7 +104,7 @@ const Data = [
 
 		date: "Oct 1st, Tues",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Malappuram FC",
 		team1Img: Team1Image,
 		team2Img: Team2Image,
 	},
@@ -114,7 +114,7 @@ const Data = [
 
 		date: "Oct 9th, Wed",
 		team1: "Forca Kochi",
-		team2: "Thiruvanthapuram kombans fc",
+		team2: "Malappuram FC",
 		team1Img: Team2Image,
 		team2Img: Team1Image,
 	},
@@ -150,7 +150,7 @@ export default function HomeUpcomingMatches() {
 						onSwiper={setSwiperInstance}
 						className={`${styles.DateDiv}`}
 						spaceBetween={50}
-						slidesPerView={4}
+						slidesPerView={5}
 						navigation
 						initialSlide={ActiveTab}
 						onSlideChange={handleSlideChange}

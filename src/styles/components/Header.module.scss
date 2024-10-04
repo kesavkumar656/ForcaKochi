@@ -12,11 +12,11 @@
 	background-color: transparent;
 	
 	.header_inside {
-		padding: 25px 20px;
+		padding: 20px 20px;
 		border: 1px solid var(--color_secondary);
 		width: 100%;
 		border-radius: 40px;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-self: stretch;
 		background-color: var(--color_primary);
 		@include lg-down {
@@ -35,12 +35,19 @@
 		}
 		.links_wrap {
 			@extend %d_flex;
-			width: 90%;
+			
 			justify-content: space-between;
 			align-self: stretch;
 			padding-inline-start: 0;
+			.leftDiv{
+				width: 40%;
+			}
+			.rightDiv{
+				width: 40%;
+			}
 			div {
 				display: flex;
+				justify-content: space-evenly;
 			}
 			// The menu is transformed as per sidebar on click of hamburger icon
 			@include sm-down {

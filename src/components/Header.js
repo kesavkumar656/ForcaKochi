@@ -51,7 +51,7 @@ export default function Header() {
 
 					{/* Links Wrap */}
 					<div className={`${styles.links_wrap}`}>
-						<div>
+						<div className={styles.leftDiv}>
 							<div className={styles.links}>
 								<Link href="">
 									<div className={styles.link_title}>Contact</div>
@@ -69,15 +69,20 @@ export default function Header() {
 							</div>
 						</div>
 
-						<div>
+						<div className={styles.rightDiv}>
 							<div className={styles.links}>
 								<Link href="">
-									<div className={styles.link_title}>Career</div>
+									<div className={styles.link_title}>Community</div>
 								</Link>
 							</div>
 							<div className={styles.links}>
 								<Link href="">
-									<div className={styles.link_title}>Contact</div>
+									<div className={styles.link_title}>Owners</div>
+								</Link>
+							</div>
+							<div className={styles.links}>
+								<Link href="">
+									<div className={styles.link_title}>Get in Touch</div>
 								</Link>
 							</div>
 						</div>
