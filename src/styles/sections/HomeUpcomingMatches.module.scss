@@ -176,6 +176,10 @@
 			.swiper-slide-active {
 				padding-left: 15px;
 			}
+			.swiper-slide{
+			 justify-content: center;
+			 border: 1px solid var(--color_primary);
+			}
 
 			.swiper-button-prev:after {
 				font-size: 20px;

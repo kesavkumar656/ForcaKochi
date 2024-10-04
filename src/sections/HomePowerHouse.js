@@ -103,7 +103,7 @@ export default function HomePowerHouse() {
 				</div>
 				<div className={`${styles.playerTable} section_spacing`}>
 					<Swiper
-						spaceBetween={50}
+						spaceBetween={0}
 						slidesPerView={5}
 						navigation={false}
 						pagination={{ clickable: true }}
@@ -113,8 +113,8 @@ export default function HomePowerHouse() {
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
-								<div>
-									<Image src={slide.name} width={150} height={100} alt="" />
+								<div className={styles.playerDiv}>
+									<Image className={styles.playerName} src={slide.name} width={100} height={100} alt="" />
 
 									<Image
 										className={styles.playerIMG}
