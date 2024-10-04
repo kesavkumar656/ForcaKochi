@@ -19,8 +19,8 @@ import styles from "@/styles/sections/HomeSuperLeague.module.scss";
 export default function HomeSuperLeague() {
 	return (
 		<section className={styles.HomeSuperLeague}>
-			<div className="container">
-				<div className={`${styles.textDiv} section_spacing`}>
+			<div className={`${styles.wrapper} container`}>
+				<div className={`${styles.textDiv}  section_spacing`}>
 					<div
 						className={`${styles.heading} font_primary text_xl text_800  color_secondary text_uppercase`}
 					>
@@ -35,8 +35,12 @@ export default function HomeSuperLeague() {
 					</div>
 				</div>
 			</div>
-			<div className={`${styles.backgroundDiv}`}>
-				<Image className="next_image" src={Background} alt=""></Image>
+			<div className="">
+				<Image
+					className={`${styles.backgroundDiv}  `}
+					src={Background}
+					alt=""
+				></Image>
 			</div>
 		</section>
 	);

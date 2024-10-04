@@ -2,20 +2,20 @@
 
 .HomeSuperLeague {
 	background-color: var(--color_white);
-	width: 100%;
-	height: 100%;
-	.textDiv {
-		
-		.heading {
-			line-height: 1;
-		}
-		@extend %full_overlay;
+	.wrapper {
+		.textDiv {
+			@extend %full_overlay;
+			.heading {
+				line-height: 1;
+			}
 
-		p {
-			width: 50%;
+			p {
+				width: 50%;
+			}
 		}
-	}
-	.backgroundDiv {
-		@extend %relative_box;
+		.backgroundDiv {
+			@extend %relative_box;
+			margin-left: auto;
+		}
 	}
 }

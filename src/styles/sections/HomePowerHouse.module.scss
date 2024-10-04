@@ -1,6 +1,11 @@
 @import "../helpers/helpers.scss";
 
 .HomePowerHouse {
+	overflow: hidden;
+	.heading {
+		// width: 50%;
+		// margin: 0 auto;
+	}
 	.playerTable {
 		.tableWrapper {
 			position: relative;
@@ -8,59 +13,63 @@
 				z-index: 5;
 				position: absolute;
 			}
-			.playerDiv{
-				.playerName{
-					padding: 5% 0;
+			.playerDiv {
+				.playerName {
+					padding: 0% 0;
 					z-index: 5;
 				}
-					display: grid;
-					border-left: 0;
-					// padding: 2%;
-					justify-items: center;
-					justify-content: center;
-				
-}
-				.playerIMG {
-					position: relative;
-					z-index: 4;
-				}
+				display: grid;
+				border-left: 0;
+				// padding: 2%;
+				justify-items: center;
+				justify-content: center;
 			}
-			.BackgroundIMG {
-				// display: none;
-				position: absolute;
-				top: 5%;
-				z-index: 1;
+			.playerIMG {
+				position: relative;
+				z-index: 4;
 			}
-
-			//     :global {
-			//         .swiper-slide {
-			//         border: 1px solid red;
-			//         position: relative;
-			//         }
-
-			//    }
 		}
-		.tableWrapper:hover {
-			background: linear-gradient(180deg, #dfa41b00, #c96c98);
+		.BackgroundIMG {
+			// display: none;
+			position: absolute;
+			top: 5%;
+			z-index: 1;
 		}
 
-		:global {
-			.swiper{
-				border-bottom:5px solid #DFA41B ;
-				.swiper-scrollbar {
-					display: none;
-				}
-				.swiper-slide {
-					border: 1px solid var(--color_primary);
-border-bottom:0 ;
-border-left:0 ;
-					margin-right: 0;
-					.swiper-slide-active {
-						margin: 20px 20px 20px 20px;
-					}
-				}
-			}
-			
-		}
+		//     :global {
+		//         .swiper-slide {
+		//         border: 1px solid red;
+		//         position: relative;
+		//         }
+
+		//    }
+	}
+	.tableWrapper:hover {
+		background: linear-gradient(180deg, #dfa41b00, #c96c98);
 	}
 
+	:global {
+		.swiper {
+			border-bottom: 5px solid #dfa41b;
+			.swiper-scrollbar {
+				display: none;
+			}
+			.swiper-slide {
+				color: white;
+				border-width: 1px;
+				max-width: 300px;
+				border-style: solid;
+				border-image: linear-gradient(
+						to top,
+						var(--color_primary),
+						rgba(255, 255, 255, 0.007)
+					)
+					1 100%;
+				margin-right: 0;
+				.swiper-slide-active {
+					margin: 20px 20px 20px 20px;
+				}
+			}
+		}
+	}
+}

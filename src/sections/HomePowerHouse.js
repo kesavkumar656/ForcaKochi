@@ -19,7 +19,7 @@ import { Navigation, Pagination, Scrollbar } from "swiper";
 
 // IMAGES //
 import BG from "@/../public/img/homePowerHouse/cardBG.png";
-import Player from "@/../public/img/homePowerHouse/player.png";
+import Player from "@/../public/img/homePowerHouse/player1.png";
 import PlayerInfo from "@/../public/img/homePowerHouse/playerinfo2.png";
 import PlayerInfo1 from "@/../public/img/homePowerHouse/playerinfo1.png";
 
@@ -97,8 +97,10 @@ export default function HomePowerHouse() {
 	];
 	return (
 		<section className={`${styles.HomePowerHouse} bg_white`}>
-			<div className=" section_spacing">
-				<div className="color_secondary text_700  font_primary text_lg text_uppercase text_center">
+			<div className="container-fluid section_spacing">
+				<div
+					className={`${styles.heading} color_secondary text_700  font_primary text_lg text_uppercase text_center`}
+				>
 					Meet the Powerhouse of Forca Kochi
 				</div>
 				<div className={`${styles.playerTable} section_spacing`}>
@@ -114,7 +116,13 @@ export default function HomePowerHouse() {
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>
 								<div className={styles.playerDiv}>
-									<Image className={styles.playerName} src={slide.name} width={100} height={100} alt="" />
+									<Image
+										className={styles.playerName}
+										src={slide.name}
+										width={100}
+										height={100}
+										alt=""
+									/>
 
 									<Image
 										className={styles.playerIMG}
