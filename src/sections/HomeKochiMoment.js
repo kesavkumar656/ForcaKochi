@@ -23,7 +23,7 @@ import Marquee from "react-fast-marquee";
 export default function HomeKochiMoment() {
 	return (
 		<section className={`${styles.HomeKochiMoment} bg_terinary`}>
-			<Marquee>
+			<Marquee className={styles.Marquee}>
 				<h1 className="color_secondary font_primary text_lg text_uppercase text_700">
 					The Forca Kochi moments
 				</h1>

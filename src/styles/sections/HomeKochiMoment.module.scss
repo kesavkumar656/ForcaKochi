@@ -2,8 +2,9 @@
 
 .HomeKochiMoment {
 	background-color: #583060;
-	.Marquee{
+	.Marquee {
 		position: absolute;
+		@extend %rel_xy_center;
 	}
 	.Wrapper {
 		position: relative;
@@ -15,7 +16,7 @@
 
 			.swiper-wrapper {
 				.swiper-slide-shadow {
-					display: none; 
+					display: none;
 				}
 			}
 
