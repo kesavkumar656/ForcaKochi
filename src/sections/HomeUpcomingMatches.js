@@ -140,7 +140,7 @@ export default function HomeUpcomingMatches() {
 	return (
 		<section className={`${styles.HomeUpcomingMatches} `}>
 			<div className="container">
-				<h1 className="text_uppercase color_secondary font_primary text_700 text_lg section_spacing">
+				<h1 className="text_center text_uppercase color_secondary font_primary text_700 text_lg section_spacing">
 					Upcoming Matches
 				</h1>
 				<div className={`${styles.table} bg_primary`}>

@@ -104,10 +104,10 @@ export default function HomePointsTable() {
 		},
 	];
 	return (
-		<section className={`${styles.HomePointsTable} bg_primary`}>
+		<section className={`${styles.HomePointsTable} section_spacing bg_primary`}>
 			<div className="container  text_uppercase">
 				<div>
-					<h1 className=" text_lg text_uppercase font_primary  color_secondary text_700">
+					<h1 className=" text_center text_lg text_uppercase font_primary  color_secondary text_700">
 						Points table
 					</h1>
 				</div>
