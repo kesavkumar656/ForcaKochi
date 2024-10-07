@@ -17,15 +17,18 @@ import RArrow from "@/../../public/img/HomeKochiMoment/rightArrow.png";
 
 // STYLES //
 import styles from "@/styles/sections/HomeKochiMoment.module.scss";
+import Marquee from "react-fast-marquee";
 
 /** HomeKochiMoment Section */
 export default function HomeKochiMoment() {
 	return (
 		<section className={`${styles.HomeKochiMoment} bg_terinary`}>
-			<div className="container">
+			<Marquee>
 				<h1 className="color_secondary font_primary text_lg text_uppercase text_700">
 					The Forca Kochi moments
 				</h1>
+			</Marquee>
+			<div className="container">
 				<div className={styles.Wrapper}>
 					<Swiper
 						className={styles.SliderDiv}

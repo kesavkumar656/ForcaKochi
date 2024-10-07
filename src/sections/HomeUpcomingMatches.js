@@ -10,6 +10,7 @@ import "swiper/css/controller";
 // STYLES //
 import styles from "@/styles/sections/HomeUpcomingMatches.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
+import location from "@/../public/img/homeUpcomingMatches/location.png";
 import { FreeMode, Navigation, Thumbs, Controller } from "swiper/modules";
 
 // IMAGES //
@@ -140,10 +141,10 @@ export default function HomeUpcomingMatches() {
 	return (
 		<section className={`${styles.HomeUpcomingMatches} `}>
 			<div className="container">
-				<h1 className="text_center text_uppercase color_secondary font_primary text_700 text_lg section_spacing">
+				<h1 className="text_center text_uppercase color_secondary font_primary text_700 text_lg">
 					Upcoming Matches
 				</h1>
-				<div className={`${styles.table} bg_primary`}>
+				<div className={`${styles.table} bg_primary `}>
 					<Swiper
 						loop={true}
 						modules={[Navigation]}
@@ -213,6 +214,7 @@ export default function HomeUpcomingMatches() {
 							</div>
 						</div>
 						<div className={`${styles.Place}`}>
+							<Image alt="" src={location}></Image>
 							<h1 className="color_white text_sm text_100">
 								Jawaharlal Nehru International Stadium Kochi | {CurrentMatch.date} 2024
 								at 01:00pm

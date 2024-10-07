@@ -1,25 +1,26 @@
 @import "../helpers/helpers.scss";
 
 .HomeBroadCast {
+	border-bottom: 5px solid var(--color_secondary);
 	.wrapper {
+		// @extend %f_r_a_center;
 		@extend %d_flex;
+		// align-items: center;
 		.heading {
 		}
 		.country {
-			height: 200px;
-			display: flex;
-			flex-flow: wrap;
-			flex-direction: column;
-			align-items: center;
-			align-content: space-evenly;
-			width: 30%;
+			margin-top: 4%;
+			display: grid;
+			width: 70%;
+			grid-template-columns: repeat(2, 1fr);
 
 			.MapDiv {
-				margin: 3% 10% ;
-			
+				margin: 3% 0%;
+
 				font-size: 14px;
 				gap: 15px;
 				@extend %f_r_a_center;
+				line-height: 1.2;
 			}
 		}
 	}

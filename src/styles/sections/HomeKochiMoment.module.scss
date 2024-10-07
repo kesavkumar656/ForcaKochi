@@ -2,7 +2,11 @@
 
 .HomeKochiMoment {
 	background-color: #583060;
+	.Marquee{
+		position: absolute;
+	}
 	.Wrapper {
+		position: relative;
 	}
 	:global {
 		.swiper {

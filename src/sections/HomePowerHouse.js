@@ -96,14 +96,14 @@ export default function HomePowerHouse() {
 		},
 	];
 	return (
-		<section className={`${styles.HomePowerHouse} bg_white`}>
+		<section className={`${styles.HomePowerHouse}  bg_white`}>
 			<div className="container-fluid ">
 				<div
-					className={`${styles.heading} color_secondary text_700  font_primary text_lg text_uppercase text_center`}
+					className={`${styles.heading} col-xs-10   color_secondary text_700  font_primary text_lg text_uppercase text_center`}
 				>
 					Meet the Powerhouse of Forca Kochi
 				</div>
-				<div className={`${styles.playerTable}`}>
+				<div className={`${styles.playerTable}  `}>
 					<Swiper
 						spaceBetween={0}
 						slidesPerView={4}
