@@ -5,9 +5,9 @@
 import background from "@/../../public/img/HomeDrivingForce/background.png";
 
 // SECTIONS //
-
 // PLUGINS //
 import Image from "next/image";
+import Modal from "../components/Modal";
 // UTILS //
 
 // STYLES //
@@ -61,15 +61,39 @@ export default function HomeDrivingForce() {
 					>
 						Meet the driving force of Kochi
 					</h1>
+
 					<div className={`${styles.OwnerInfo}`}>
 						{Data.map((OwnerInfo, index) => (
 							<div key={index} className={`${styles.MapDiv} color_white`}>
-								<Image width={300} height={600} alt="" src={OwnerInfo.ownerIMG} />
-								<div className={styles.animation}>
-									<p className={`${styles.para} `}>
-										{OwnerInfo.Name} {OwnerInfo.position}
+								<div className={`${styles.wrapper}`}>
+									<div className={`${styles.card}`}>
+										<Image
+											className={`${styles.Image}`}
+											width={300}
+											height={600}
+											alt=""
+											src={OwnerInfo.ownerIMG}
+										/>
+										<div className={styles.animation}>
+											<p className={`${styles.para} `}>
+												{OwnerInfo.Name} {OwnerInfo.position}
+											</p>
+										</div>
+									</div>
+									<p>
+										Sumant Bahl started his career in 1994 as part of the pioneering team
+										of Pay TV distribution in India. He was an integral part of the
+										transformational journey of Indian television with the launch of major
+										channels, including Star Movies, Zee Cinema and Star World. Following
+										this, he joined Time Warner and was involved in the launch of HBO and
+										Cartoon Network channels in India. In 2004, Mr Bahl moved to the UK as
+										Head of Distribution & Marketing for Zee Europe. Mr Bahl began his
+										entrepreneurial journey in 2008 by setting up a TV Media consultancy,
+										and an advertising agency specialising in marketing Ethnic Asian
+										brands in the UK. In 2015 Sumant Bahl along with Jaspal Bahra founded
+										Grace Entertainment which has orchestrated several mega shows in the
+										UK, Europe, New Zealand, and Australia.
 									</p>
-									<Image width={30} height={30} src={OwnerInfo.button} alt=""></Image>
 								</div>
 							</div>
 						))}
