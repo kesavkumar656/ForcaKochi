@@ -70,6 +70,9 @@
 		}
 	}
 	:global {
+		span {
+			color: #c96c98;
+		}
 		.swiper-pagination-bullet {
 			right: 0;
 			width: 10px;
@@ -92,5 +95,8 @@
 			opacity: 1;
 			border-radius: 20px;
 		}
+	}
+	.terinary {
+		color: #c96c98;
 	}
 }
