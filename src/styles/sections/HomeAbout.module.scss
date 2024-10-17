@@ -70,17 +70,15 @@
 				width: 10%;
 			}
 		}
-		.greenPlayer,
-		.yellowPlayer {
-		}
+		
 		.yellowPlayer {
 			// @extend %rel_x_center;
 			left: 0;
-			bottom: 0;
-			transform: translate(50%, -19%);
+			bottom: 50%;
+			transform: translate(50%, 0%);
 			z-index: 1;
 			@include lg-down {
-				transform: translate(50%, -15%);
+				transform: translate(50%, 0%);
 				width: 10%;
 			}
 		}
@@ -88,11 +86,11 @@
 			// @extend %rel_x_center;
 			// right: 50%;
 			right: 0;
-			transform: translate(-50%, -19%);
+			transform: translate(-50%, 0%);
 			z-index: 1;
-			bottom: 0;
+			bottom: 50%;
 			@include lg-down {
-				transform: translate(-50%, -15%);
+				transform: translate(-50%, 0%);
 				width: 10%;
 			}
 		}

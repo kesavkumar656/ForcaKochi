@@ -4,9 +4,8 @@
 	background-color: #583060;
 
 	.Wrapper {
-		width: 80%;
 		margin: 0 auto;
-		padding: 1.5%;
+		padding: 2%;
 		@extend %f_r_a_center;
 		justify-content: space-between;
 		border-radius: 10px;
@@ -15,7 +14,7 @@
 			width: 50%;
 
 			div:nth-child(1) {
-				margin: 2% 0;
+				margin: 3% 0;
 			}
 			.inputDiv {
 				div {
@@ -26,8 +25,8 @@
 				}
 				div:nth-child(4) {
 					input {
-						margin: 2%;
-						padding: 8% 0;
+						margin: 2% 0;
+						padding-bottom: 7%;
 					}
 				}
 				.button {
@@ -35,8 +34,8 @@
 					// margin: 3% 0;
 				}
 				input {
-					padding: 2% 1%;
-					margin: 1%;
+					padding: 2% 0%;
+					margin: 2% 0;
 					width: 90%;
 					background-color: transparent;
 					border: 0;
@@ -55,6 +54,8 @@
 		}
 		.rightClm {
 			// padding: 10% 5%;
+			position: relative;
+			height: 55vh;
 			color: var(--color_white);
 			padding: 2%;
 			width: 40%;
@@ -66,6 +67,13 @@
 			.rowTwo {
 				@extend %f_r_a_center;
 				gap: 4%;
+			}
+			p {
+				font-weight: 300;
+				padding: 5% 0;
+				span {
+					padding-top: 5%;
+				}
 			}
 		}
 	}
@@ -85,8 +93,7 @@
 		.swiper-pagination {
 			position: absolute;
 			left: -2%;
-			bottom: -5px;
-			text-align: right;
+			bottom: 0px;
 		}
 		.swiper-pagination-bullet-active {
 			width: 30px;
@@ -94,6 +101,11 @@
 			background-color: var(--color_white);
 			opacity: 1;
 			border-radius: 20px;
+		}
+		.swiper-wrapper {
+			height: 100%;
+			padding: 2%;
+			transform: translate3d(1px, 0, 0);
 		}
 	}
 	.terinary {

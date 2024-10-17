@@ -55,6 +55,9 @@ export default function HomeSponsors() {
 	return (
 		<section className={`${styles.HomeSponsors} section_spacing `}>
 			<div className="container">
+				<h1  className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase`}>
+					Our Sponsors
+				</h1>
 				<p className="text_400 text_sm "> Principal Partners</p>
 				<div className={`${styles.PrincipalPartners}`}>
 					{PrincipalPartnersData.map((logo, index) => (
@@ -79,7 +82,6 @@ export default function HomeSponsors() {
 						</div>
 					))}
 				</div>
-				
 			</div>
 		</section>
 	);

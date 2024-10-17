@@ -28,7 +28,7 @@ export default function HomeContactUs() {
 				<div className={`${styles.Wrapper} `}>
 					<div className={styles.ContactUs}>
 						<div>
-							<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
+							<h1 className="color_secondary text_500 text_md font_primary text_uppercase">
 								Contact Us
 							</h1>
 							<p className="color_white text_300 text_sm">
@@ -81,30 +81,30 @@ export default function HomeContactUs() {
 									ലോകോത്തര പ്രതിഭകളെയും കൊച്ചിയുടെ സ്വന്തം ആവേശം നിറഞ്ഞ ആരാധകരെയും a
 									ഒന്നിപ്പിക്കാൻ, ഒരു പുത്തൻ ചരിത്രം തുടങ്ങാൻ!
 									<br></br>
-									<span className="color_secondary">
-										#ForcaKochiFC #SuperLeagueKerala #SLK
-									</span>
 								</p>
+								<span className="color_secondary">
+									#ForcaKochiFC #SuperLeagueKerala #SLK
+								</span>
 							</SwiperSlide>
 							<SwiperSlide>
 								<h1 className="color_secondary text_700 text_md font_primary text_uppercase">
 									Lorem
 								</h1>
 								<p>Lorem Ipsum sub-copy here.</p>
-								<div>
-									<Image src={Logo} alt=""></Image>
+								<div className={`${styles.rowTwo}`}>
+									<Image width={80} height={80} src={Logo} alt=""></Image>
 									<p>@forcakochi</p>
 								</div>
 								<p>
-									ഒരു പുതിയ അധ്യായം കുറിക്കാൻ “ഫോഴ്സാ കൊച്ചി” 😍⚽️ കാൽപന്തിന്റെ
+									ഒരു പുതിയ അധ്യായം കുറിക്കാൻ “ഫോഴ്സാ കൊച്ചി”😍⚽️ കാൽപന്തിന്റെ
 									ലോകത്തിലേക്ക് വിജയം നേടാൻ ഞങ്ങൾ കളത്തിൽ ഇറങ്ങുകയാണ്. പലനാടുകളിലെ
 									ലോകോത്തര പ്രതിഭകളെയും കൊച്ചിയുടെ സ്വന്തം ആവേശം നിറഞ്ഞ ആരാധകരെയും
 									ഒന്നിപ്പിക്കാൻ, ഒരു പുത്തൻ ചരിത്രം തുടങ്ങാൻ!
-									
-									<span className="color_secondary">
-										<br></br> #ForcaKochiFC #SuperLeagueKerala #SLK
-									</span>
+									<br></br>
 								</p>
+								<span className="color_secondary">
+									#ForcaKochiFC #SuperLeagueKerala #SLK
+								</span>
 							</SwiperSlide>
 						</Swiper>
 					</div>
