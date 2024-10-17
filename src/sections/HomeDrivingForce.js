@@ -80,7 +80,7 @@ export default function HomeDrivingForce() {
 											</p>
 										</div>
 									</div>
-									<p>
+									<p className={styles.AboutInfo}>
 										Sumant Bahl started his career in 1994 as part of the pioneering team
 										of Pay TV distribution in India. He was an integral part of the
 										transformational journey of Indian television with the launch of major

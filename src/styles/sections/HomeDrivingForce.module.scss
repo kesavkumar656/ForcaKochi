@@ -23,7 +23,8 @@
 			padding: 2%;
 
 			.MapDiv {
-				width: 100%;
+				width: auto;
+				min-width: fit-content;
 				border-radius: 10px;
 				width: 20%;
 				padding: 1% 0;
@@ -35,10 +36,14 @@
 				}
 				display: flex;
 				.wrapper {
-					width: 100%;
+					width: auto;
+					padding: 5% 3%;
 					@extend %d_flex;
 					background-color: #c96c98;
-					padding: 10%;
+					.AboutInfo {
+						width: auto;
+						display: none;
+					}
 					.card {
 						background-color: var(--color_primary);
 						.Image {
