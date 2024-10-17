@@ -3,7 +3,7 @@
 // COMPONENTS //
 
 import background from "@/../../public/img/HomeDrivingForce/background.png";
-
+import Button from "../components/Buttons/Button";
 // SECTIONS //
 // PLUGINS //
 import Image from "next/image";
@@ -14,11 +14,17 @@ import Modal from "../components/Modal";
 import styles from "@/styles/sections/HomeDrivingForce.module.scss";
 
 // IMAGES //
-
+import buttonImg from "@/../../public/img/HomeDrivingForce/plusButton.png";
+import { useState } from "react";
 // DATA //
 
 /** HomeDrivingForce Section */
 export default function HomeDrivingForce() {
+	const [PopUpMenu, setPopUpMenu] = useState(false);
+	// eslint-disable-next-line require-jsdoc
+	const handlePopup = () => {
+		setPopUpMenu(!PopUpMenu);
+	};
 	const Data = [
 		{
 			ownerIMG: "/img/HomeDrivingForce/Actor1.png",
@@ -78,6 +84,10 @@ export default function HomeDrivingForce() {
 											<p className={`${styles.para} `}>
 												{OwnerInfo.Name} {OwnerInfo.position}
 											</p>
+
+											<Button>
+												<Image src={buttonImg} width={30} alt="" height={30}></Image>
+											</Button>
 										</div>
 									</div>
 									<p className={styles.AboutInfo}>
