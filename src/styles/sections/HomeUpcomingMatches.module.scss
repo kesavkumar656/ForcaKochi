@@ -4,13 +4,13 @@
 	margin-top: -600px;
 	z-index: 4;
 	@include md-down {
-		margin-top: -200px;
+		margin-top: 0px;
 	}
 	@include sm-down {
-		margin-top: -100px;
+		margin-top: 0px;
 	}
 	@include lg-down {
-		margin-top: -300px;
+		margin-top: 0px;
 	}
 
 	.table {
@@ -188,7 +188,6 @@
 			}
 			.swiper-slide {
 				justify-content: center;
-			
 			}
 
 			.swiper-button-prev:after {
