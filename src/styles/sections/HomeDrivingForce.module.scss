@@ -1,8 +1,7 @@
-@import "../helpers/helpers.scss";
-
 .HomeDrivingForce {
 	background-color: #583060;
 	padding-bottom: 25%;
+
 	.background {
 		margin: 0 auto;
 	}
@@ -19,6 +18,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
+
 		.OwnerInfo {
 			width: 100%;
 			padding: 2%;
@@ -32,38 +32,43 @@
 				min-width: 300px;
 				background-color: var(--color_primary);
 				position: absolute;
-				@include sm-down {
-					position: initial;
-				}
+
 				display: flex;
+
 				.wrapper {
 					width: auto;
-					// padding: 5% 3%;
-					@extend %d_flex;
+					display: flex;
 					background-color: #c96c98;
+
 					p:nth-child(2) {
 						display: none;
 					}
+
 					.PopUpMenu {
 						transition: var(--transition);
 					}
+
 					.card {
 						background-color: var(--color_primary);
+
 						.Image {
 							min-width: 250px;
 						}
+
 						.text {
 							padding: 10%;
 						}
+
 						.animation {
 							width: 90%;
 							margin: 0 auto;
-							@extend %d_flex;
+							display: flex;
 							align-items: center;
 							justify-content: space-around;
 							background: var(--color_primary_light);
 							padding: 4% 2%;
 							border-radius: 5px;
+
 							button {
 								background-color: transparent;
 								border: none;
@@ -72,56 +77,186 @@
 					}
 				}
 			}
+
+			// Active state styling
+			.active {
+				padding: 3%;
+				width: 400px;
+				display: block !important;
+				animation: fadeIn 0.5s ease-in-out;
+
+				
+				border: 2px solid var(--color_highlight);
+			}
+
+			.inactive {
+				display: none;
+			}
+
+			// Animation keyframes
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+					transform: scale(0.95);
+				}
+				100% {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			// Individual MapDiv styling
 			.MapDiv:nth-child(1) {
-				width: auto;
 				left: 50%;
 				bottom: 25%;
 				transform: translate(-50%, 50%);
-				.active {
-					display: none;
-				}
-				@include sm-down {
-					transform: translate(0);
-				}
 			}
-			.MapDiv:nth-child(2) {
-				width: auto;
 
+			.MapDiv:nth-child(2) {
 				right: 20%;
 				bottom: 5%;
 				transform: translate(50%, 50%);
-				.active {
-					display: none;
-				}
-				@include sm-down {
-					transform: translate(0);
-				}
 			}
-			.MapDiv:nth-child(3) {
-				width: auto;
 
+			.MapDiv:nth-child(3) {
 				left: 25%;
 				bottom: -35%;
 				transform: translate(50%, -50%);
-				.active {
-					display: none;
-				}
-				@include sm-down {
-					transform: translate(0);
-				}
 			}
+
 			.MapDiv:nth-child(4) {
-				width: auto;
 				left: 7%;
 				bottom: 5%;
 				transform: translate(0%, 50%);
-				.active {
-					display: none;
-				}
-				@include sm-down {
-					transform: translate(0);
-				}
 			}
 		}
 	}
 }
+
+// @import "../helpers/helpers.scss";
+
+// .HomeDrivingForce {
+// 	background-color: #583060;
+// 	padding-bottom: 25%;
+// 	.background {
+// 		margin: 0 auto;
+// 	}
+
+// 	.Wrapper {
+// 		position: relative;
+
+// 		.heading {
+// 			position: absolute;
+// 			top: 50%;
+// 			width: 90%;
+// 			max-width: 90%;
+// 			text-transform: uppercase;
+// 			left: 50%;
+// 			transform: translate(-50%, -50%);
+// 		}
+// 		.OwnerInfo {
+// 			width: 100%;
+// 			padding: 2%;
+
+// 			.MapDiv {
+// 				width: auto;
+// 				min-width: fit-content;
+// 				border-radius: 10px;
+// 				width: 20%;
+// 				padding: 1% 0;
+// 				min-width: 300px;
+// 				background-color: var(--color_primary);
+// 				position: absolute;
+// 				@include sm-down {
+// 					position: initial;
+// 				}
+// 				display: flex;
+// 				.wrapper {
+// 					width: auto;
+// 					// padding: 5% 3%;
+// 					@extend %d_flex;
+// 					background-color: #c96c98;
+// 					p:nth-child(2) {
+// 						display: none;
+// 					}
+// 					.PopUpMenu {
+// 						transition: var(--transition);
+// 					}
+// 					.card {
+// 						background-color: var(--color_primary);
+// 						.Image {
+// 							min-width: 250px;
+// 						}
+// 						.text {
+// 							padding: 10%;
+// 						}
+// 						.animation {
+// 							width: 90%;
+// 							margin: 0 auto;
+// 							@extend %d_flex;
+// 							align-items: center;
+// 							justify-content: space-around;
+// 							background: var(--color_primary_light);
+// 							padding: 4% 2%;
+// 							border-radius: 5px;
+// 							button {
+// 								background-color: transparent;
+// 								border: none;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 			.MapDiv:nth-child(1) {
+// 				width: auto;
+// 				left: 50%;
+// 				bottom: 25%;
+// 				transform: translate(-50%, 50%);
+// 				.active {
+// 					display: none;
+// 				}
+// 				@include sm-down {
+// 					transform: translate(0);
+// 				}
+// 			}
+// 			.MapDiv:nth-child(2) {
+// 				width: auto;
+
+// 				right: 20%;
+// 				bottom: 5%;
+// 				transform: translate(50%, 50%);
+// 				.active {
+// 					display: none;
+// 				}
+// 				@include sm-down {
+// 					transform: translate(0);
+// 				}
+// 			}
+// 			.MapDiv:nth-child(3) {
+// 				width: auto;
+
+// 				left: 25%;
+// 				bottom: -35%;
+// 				transform: translate(50%, -50%);
+// 				.active {
+// 					display: none;
+// 				}
+// 				@include sm-down {
+// 					transform: translate(0);
+// 				}
+// 			}
+// 			.MapDiv:nth-child(4) {
+// 				width: auto;
+// 				left: 7%;
+// 				bottom: 5%;
+// 				transform: translate(0%, 50%);
+// 				.active {
+// 					display: none;
+// 				}
+// 				@include sm-down {
+// 					transform: translate(0);
+// 				}
+// 			}
+// 		}
+// 	}
+// }

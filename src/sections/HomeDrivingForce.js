@@ -22,9 +22,10 @@ import { useState } from "react";
 export default function HomeDrivingForce() {
 	const [activeCard, setActiveCard] = useState(null);
 
+	// Toggle the active card when the button is clicked
 	// eslint-disable-next-line require-jsdoc
 	const handlePopup = (index) => {
-		setActiveCard(activeCard === index ? null : index);
+		setActiveCard(activeCard === index ? null : index); // Toggles between active and inactive
 	};
 
 	const Data = [
@@ -84,8 +85,14 @@ export default function HomeDrivingForce() {
 												{OwnerInfo.Name} {OwnerInfo.position}
 											</p>
 
-											<button  onClick={() => handlePopup(index)}>
-												<Image src={buttonImg} width={30} alt="" height={30} />
+											<button onClick={() => handlePopup(index)}>
+												<Image
+													src={buttonImg}
+													width={30}
+													alt=""
+													height={30}
+													className={`${activeCard === index ? styles.buttonActive : ""}`}
+												/>
 											</button>
 										</div>
 									</div>
