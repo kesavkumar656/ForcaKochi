@@ -84,14 +84,12 @@ export default function HomeDrivingForce() {
 												{OwnerInfo.Name} {OwnerInfo.position}
 											</p>
 
-											{/* Pass the index of the card to the handlePopup function */}
 											<button onClick={() => handlePopup(index)}>
 												<Image src={buttonImg} width={30} alt="" height={30} />
 											</button>
 										</div>
 									</div>
 
-									{/* Show or hide details based on activeCard state */}
 									<p
 										className={`${
 											activeCard === index ? styles.active : styles.inactive
