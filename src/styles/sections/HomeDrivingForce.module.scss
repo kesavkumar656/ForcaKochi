@@ -9,6 +9,7 @@
 
 	.Wrapper {
 		position: relative;
+
 		.heading {
 			position: absolute;
 			top: 50%;
@@ -40,6 +41,10 @@
 					// padding: 5% 3%;
 					@extend %d_flex;
 					background-color: #c96c98;
+					p:nth-child(2)  {
+						
+						display: none;
+					}
 					.PopUpMenu {
 						transition: var(--transition);
 					}
@@ -69,7 +74,7 @@
 				left: 50%;
 				bottom: 25%;
 				transform: translate(-50%, 50%);
-				.active{
+				.active {
 					display: none;
 				}
 				@include sm-down {
@@ -82,7 +87,7 @@
 				right: 20%;
 				bottom: 5%;
 				transform: translate(50%, 50%);
-				.active{
+				.active {
 					display: none;
 				}
 				@include sm-down {
@@ -95,7 +100,7 @@
 				left: 25%;
 				bottom: -35%;
 				transform: translate(50%, -50%);
-				.active{
+				.active {
 					display: none;
 				}
 				@include sm-down {
@@ -107,7 +112,7 @@
 				left: 7%;
 				bottom: 5%;
 				transform: translate(0%, 50%);
-				.active{
+				.active {
 					display: none;
 				}
 				@include sm-down {
