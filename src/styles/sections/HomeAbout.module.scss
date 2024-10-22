@@ -70,7 +70,7 @@
 				width: 10%;
 			}
 		}
-		
+
 		.yellowPlayer {
 			// @extend %rel_x_center;
 			left: 0;
@@ -95,10 +95,11 @@
 			}
 		}
 		.football {
-			@extend %rel_xy_center;
-			// right: 0;
-
-			transform: translate(-52%, -15%);
+		
+	left: 50%;
+	bottom: 50%;
+			height: fit-content;
+			transform: translate(-53%, 60%);
 			z-index: 1;
 			@include lg-down {
 				width: 10%;
