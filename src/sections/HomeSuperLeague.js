@@ -26,7 +26,7 @@ export default function HomeSuperLeague() {
 					>
 						Super League Kerala
 					</div>
-					<div className={`${styles.para} col-xs-6 text_primary text_100 text_sm`}>
+					<div className={`${styles.para}  text_primary text_100 text_sm`}>
 						<p>
 							Designed to support, promote and boost football across Kerala, SLK opens
 							new doors and creates endless opportunities for professional footballers
