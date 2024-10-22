@@ -84,7 +84,7 @@ export default function HomeDrivingForce() {
 												{OwnerInfo.Name} {OwnerInfo.position}
 											</p>
 
-											<button onClick={() => handlePopup(index)}>
+											<button  onClick={() => handlePopup(index)}>
 												<Image src={buttonImg} width={30} alt="" height={30} />
 											</button>
 										</div>
