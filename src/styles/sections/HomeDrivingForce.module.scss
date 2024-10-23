@@ -19,12 +19,20 @@
 			text-transform: uppercase;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			@include sm-down {
+				top: 10%;
+				font-size: 25px;
+			}
 		}
 
 		.OwnerInfo {
 			width: 100%;
 			padding: 2%;
-
+			@include sm-down {
+				display: grid;
+				gap: 20px;
+				justify-content: center;
+			}
 			.MapDiv {
 				width: auto;
 				min-width: fit-content;
@@ -45,7 +53,10 @@
 					width: auto;
 					display: flex;
 					background-color: #c96c98;
-
+					border-radius:10px;
+					@include sm-down {
+						display: unset;
+					}
 					p:nth-child(2) {
 						display: none;
 					}
@@ -95,7 +106,10 @@
 				display: block !important;
 				animation: fadeIn 0.5s ease-in-out;
 
-				border: 2px solid var(--color_highlight);
+				@include sm-down {
+					padding: 10px;
+					width: auto;
+				}
 			}
 
 			.inactive {
@@ -118,6 +132,9 @@
 				bottom: 25%;
 				transform: translate(-50%, 50%);
 				z-index: 10;
+				@include sm-down {
+					margin-top: -100px;
+				}
 			}
 
 			.MapDiv:nth-child(2) {

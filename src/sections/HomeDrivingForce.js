@@ -7,7 +7,7 @@ import Button from "../components/Buttons/Button";
 // SECTIONS //
 // PLUGINS //
 import Image from "next/image";
-import Modal from "../components/Modal";
+
 // UTILS //
 
 // STYLES //
