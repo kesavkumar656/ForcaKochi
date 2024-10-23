@@ -36,6 +36,7 @@ export default function HomeKochiMoment() {
 							prevEl: ".custom-prev",
 							nextEl: ".custom-next",
 						}}
+						// width={300}
 						loop={true}
 						rotate={true}
 						effect={"cards"}

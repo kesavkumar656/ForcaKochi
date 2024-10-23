@@ -44,6 +44,11 @@ export default function HomeBroadCast() {
 			country: "India",
 			TimeZone: "(GMT +5:30)",
 		},
+		{
+			imgData: "/img/HomeBroadcast/img6.png",
+			country: "India",
+			TimeZone: "(GMT +5:30)",
+		},
 	];
 	return (
 		<section className={`${styles.HomeBroadCast} section_spacing bg_primary`}>
@@ -51,7 +56,7 @@ export default function HomeBroadCast() {
 				<div className={styles.wrapper}>
 					<div>
 						<h1
-							className={`${styles.heading}  text_md font_primary text_500 color_secondary text_uppercase`}
+							className={`${styles.heading} text_center  text_md font_primary text_500 color_secondary text_uppercase`}
 						>
 							Our Broadcast Partners
 						</h1>
@@ -60,9 +65,11 @@ export default function HomeBroadCast() {
 								<div key={index} className={`${styles.MapDiv} color_white`}>
 									<Image alt="" src={CountryData.imgData} width={90} height={50} />
 
-									<div className="">
-										<p className="text_500">{CountryData.country}</p>
-										<p className="text_300 ">{CountryData.TimeZone}</p>
+									<div>
+										<p className={`${styles.countryName} text_center text_500`}>
+											{CountryData.country}
+										</p>
+										<p className={`${styles.TimeZone} `}>{CountryData.TimeZone}</p>
 									</div>
 								</div>
 							))}

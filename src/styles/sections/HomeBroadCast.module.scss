@@ -6,20 +6,34 @@
 		// @extend %f_r_a_center;
 		@extend %d_flex;
 		// align-items: center;
+		@include sm-down {
+			flex-direction: column;
+		}
 		.heading {
 		}
 		.country {
-			margin-top: 4%;
+			margin-top: 4% !important;
 			display: grid;
 			width: 70%;
 			grid-template-columns: repeat(2, 1fr);
+			@include sm-down {
+				margin: 0 auto;
 
+				width: 80%;
+			}
 			.MapDiv {
-				margin: 3% 0%;
+				margin: 5% 0%;
 
 				font-size: 14px;
 				gap: 15px;
 				@extend %f_r_a_center;
+				@include sm-down {
+					flex-direction: column;
+					align-items: center;
+				}
+				.TimeZone{
+				font-weight: 100;
+				}
 				line-height: 1.2;
 				:hover {
 					scale: 1.05;
