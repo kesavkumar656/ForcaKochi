@@ -24,7 +24,7 @@ export default function HomeDrivingForce() {
 
 	// eslint-disable-next-line require-jsdoc
 	const handlePopup = (index) => {
-		setActiveCard(activeCard === index ? null : index); // Toggles between active and inactive
+		setActiveCard(activeCard === index ? null : index); 
 	};
 
 	const Data = [
