@@ -6,8 +6,8 @@
 		overflow-y: hidden;
 		position: relative;
 		background-color: var(--color_primary);
-
-		padding: 3% 5%;
+		padding-top: 3% !important;
+		padding: 0 5%;
 		border-radius: 10px;
 
 		.textDiv {
@@ -27,6 +27,9 @@
 				padding: 1.5% 2%;
 				background-color: rgb(255, 255, 255, 5%);
 				border-radius: 5px;
+				@include sm-down {
+					width: 80%;
+				}
 				img:hover {
 					scale: 1.2;
 					transition: var(--transition);
