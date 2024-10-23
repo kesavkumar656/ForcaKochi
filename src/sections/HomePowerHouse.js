@@ -112,6 +112,22 @@ export default function HomePowerHouse() {
 						// modules={(Navigation, Pagination, Scrollbar)}
 						scrollbar={{ draggable: true }}
 						// button={true}
+						breakpoints={{
+							320: {
+								slidesPerView: 2,
+						
+							},
+
+							480: {
+								slidesPerView: 3,
+						
+							},
+
+							640: {
+								slidesPerView: 4,
+							
+							},
+						}}
 					>
 						{Data.map((slide) => (
 							<SwiperSlide key={slide.id} className={`${styles.tableWrapper}`}>

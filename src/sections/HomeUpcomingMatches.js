@@ -139,7 +139,7 @@ export default function HomeUpcomingMatches() {
 	};
 
 	return (
-		<section className={`${styles.HomeUpcomingMatches} `}>
+		<section className={`${styles.HomeUpcomingMatches}  section_spacing`}>
 			<div className="container">
 				<h1 className="text_center text_uppercase color_secondary font_primary text_700 text_lg">
 					Upcoming Matches
@@ -192,7 +192,13 @@ export default function HomeUpcomingMatches() {
 						</div>
 						<div className={`${styles.MatchSchedule}`}>
 							<div className={`${styles.team1}`}>
-								<Image width={100} height={100} src={CurrentMatch.team1Img} alt="" />
+								<Image
+									className={styles.team1IMG}
+									width={100}
+									height={100}
+									src={CurrentMatch.team1Img}
+									alt=""
+								/>
 								<h1 className="text_700 color_white text_uppercase font_primary">
 									{CurrentMatch.team1}
 								</h1>
@@ -205,7 +211,13 @@ export default function HomeUpcomingMatches() {
 								<h1 className="text_700 color_white text_uppercase font_primary">
 									{CurrentMatch.team2}
 								</h1>
-								<Image width={100} height={100} src={CurrentMatch.team2Img} alt="" />
+								<Image
+									className={styles.team2IMG}
+									width={100}
+									height={100}
+									src={CurrentMatch.team2Img}
+									alt=""
+								/>
 							</div>
 						</div>
 						<div className={`${styles.liveTxt}`}>

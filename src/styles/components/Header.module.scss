@@ -32,7 +32,8 @@
 			@extend %rel_xy_center;
 			@extend %f_r_a_center;
 			@include sm-down {
-				transform: translate(-50%, -50%);
+				left: 20%;
+				width: 60px;
 			}
 		}
 		.links_wrap {
@@ -53,17 +54,18 @@
 			}
 			// The menu is transformed as per sidebar on click of hamburger icon
 			@include sm-down {
-				padding-top: 5%;
+				// padding-top: 5%;
 				background-color: var(--color_primary);
 				transition: ease all 300ms;
-				transform: translateX(-100%);
-				flex-direction: column;
-				justify-content: flex-start;
+				transform: translateY(-150%);
+				// flex-direction: row;
+				display: grid !important;
+				// justify-content: flex-start;
 				width: 100%;
 				position: absolute;
 				top: 100%;
 				left: 0;
-				height: 55vh;
+				height: 35vh;
 			}
 			.links {
 				@extend %relative_box;
@@ -163,6 +165,11 @@
 
 			@extend %f_d_column;
 			justify-content: space-between;
+			@include md-down {
+				right: 0;
+				width: 20px;
+				height: 20px;
+			}
 			.hamburger_line {
 				transform-origin: left;
 				display: inline-block;
@@ -184,12 +191,18 @@
 			.hamburger_line {
 				&:first-child {
 					transform: rotate(45deg);
+					@include sm-down {
+						transform: rotate(50deg);
+					}
 				}
 				&:nth-child(2) {
 					opacity: 0;
 				}
 				&:last-child {
 					transform: rotate(-45deg);
+					@include sm-down {
+						transform: rotate(-55deg);
+					}
 				}
 			}
 		}

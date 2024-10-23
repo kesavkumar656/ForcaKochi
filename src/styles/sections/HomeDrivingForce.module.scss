@@ -105,11 +105,12 @@
 			}
 
 			.active {
-				z-index: 10;
+				z-index: 14;
 
 				width: 400px;
 				display: block !important;
 				padding: 3%;
+				transition: var(--transition);
 				@include sm-down {
 					padding: 10px;
 					width: auto;
@@ -136,6 +137,7 @@
 				bottom: 25%;
 				transform: translate(-50%, 50%);
 				z-index: 10;
+
 				@include sm-down {
 					margin-top: -100px;
 				}
@@ -158,6 +160,7 @@
 				bottom: 5%;
 				transform: translate(0%, 50%);
 				z-index: 11;
+				flex-direction: row-reverse !important;
 			}
 		}
 	}

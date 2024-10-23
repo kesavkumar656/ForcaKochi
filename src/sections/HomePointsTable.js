@@ -128,22 +128,67 @@ export default function HomePointsTable() {
 								<th>PTS</th>
 							</tr>
 						</thead>
+						{/* <tbody>
+							{tableData.map((data, index) => (
+								<tr key={index} className={`${styles.TableData}`}>
+									<td className={styles.no}>{data.no}</td>
+									<td>
+										<Image width={60} height={60} src={data.Img} alt="" />
+										<p className={styles.ClubName}>{data.ClubName}</p>
+									</td>
+									<td className={styles.points}>{data.P}</td>
+									<td className={styles.points}>{data.W}</td>
+									<td className={styles.points}>{data.D}</td>
+									<td className={styles.points}>{data.L}</td>
+									<td className={styles.points}>{data.GF}</td>
+									<td className={styles.points}>{data.GA}</td>
+									<td className={styles.points}>{data.GD}</td>
+									<td className={styles.points}>{data.PTS}</td>
+								</tr>
+							))}
+						</tbody> */}
 						<tbody>
 							{tableData.map((data, index) => (
 								<tr key={index} className={`${styles.TableData}`}>
-									<td>{data.no}</td>
-									<td>
-										<Image width={60} height={60} src={data.Img} alt="" />
+									<td className={styles.no} data-label="Pos">
+										{data.no}
+									</td>
+									<td data-label="Team">
+										<Image
+											className={styles.ClubImage}
+											width={100}
+											height={60}
+											src={data.Img}
+											alt=""
+										/>
+									</td>
+									<td className={`${styles.ClubName} `}>
 										<p>{data.ClubName}</p>
 									</td>
-									<td>{data.P}</td>
-									<td>{data.W}</td>
-									<td>{data.D}</td>
-									<td>{data.L}</td>
-									<td>{data.GF}</td>
-									<td>{data.GA}</td>
-									<td>{data.GD}</td>
-									<td>{data.PTS}</td>
+									<td className={styles.points} data-label="P">
+										{data.P}
+									</td>
+									<td className={styles.points} data-label="W">
+										{data.W}
+									</td>
+									<td className={styles.points} data-label="D">
+										{data.D}
+									</td>
+									<td className={styles.points} data-label="L">
+										{data.L}
+									</td>
+									<td className={styles.points} data-label="GF">
+										{data.GF}
+									</td>
+									<td className={styles.points} data-label="GA">
+										{data.GA}
+									</td>
+									<td className={styles.points} data-label="GD">
+										{data.GD}
+									</td>
+									<td className={styles.points} data-label="PTS">
+										{data.PTS}
+									</td>
 								</tr>
 							))}
 						</tbody>
