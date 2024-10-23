@@ -29,8 +29,8 @@ export default function HomeSuperLeague() {
 					<div className={`${styles.para}  text_primary text_100 text_sm`}>
 						<p>
 							Designed to support, promote and boost football across Kerala, SLK opens
-							new doors and creates endless opportunities for professional footballers
-							at the grassroots level.
+							new doors and <br></br> creates endless opportunities for professional
+							footballers at the grassroots level.
 						</p>
 					</div>
 				</div>

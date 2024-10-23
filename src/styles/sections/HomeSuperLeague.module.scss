@@ -6,6 +6,7 @@
 
 	.wrapper {
 		.textDiv {
+			
 			height: 70vh;
 			.heading {
 				line-height: 1;
@@ -13,9 +14,11 @@
 		}
 	}
 	.BackgroundDiv {
-		@extend %rel_y_center;
-		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-40%);
 		right: 0;
+
 		@include sm-down {
 			position: unset;
 		}
