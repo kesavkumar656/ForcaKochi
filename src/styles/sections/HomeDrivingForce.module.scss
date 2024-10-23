@@ -28,6 +28,7 @@
 		.OwnerInfo {
 			width: 100%;
 			padding: 2%;
+
 			@include sm-down {
 				display: grid;
 				gap: 20px;
@@ -38,8 +39,9 @@
 				min-width: fit-content;
 				border-radius: 10px;
 				width: 20%;
-				padding: 1% 0;
-				min-width: 300px;
+				// padding: 1% 0;
+
+				// min-width: 300px;
 				background-color: var(--color_primary);
 				position: absolute;
 
@@ -51,11 +53,13 @@
 
 				.wrapper {
 					width: auto;
-					display: flex;
+					display: flex !important;
 					background-color: #c96c98;
-					border-radius:10px;
+					border-radius: 10px;
+
 					@include sm-down {
 						display: unset;
+						flex-direction: column;
 					}
 					p:nth-child(2) {
 						display: none;
@@ -67,7 +71,8 @@
 
 					.card {
 						background-color: var(--color_primary);
-
+						border-radius: inherit;
+						padding: 2%;
 						.Image {
 							min-width: 250px;
 						}
@@ -101,11 +106,10 @@
 
 			.active {
 				z-index: 10;
-				padding: 3%;
+
 				width: 400px;
 				display: block !important;
-				animation: fadeIn 0.5s ease-in-out;
-
+				padding: 3%;
 				@include sm-down {
 					padding: 10px;
 					width: auto;

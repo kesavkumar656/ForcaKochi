@@ -24,7 +24,7 @@ export default function HomeDrivingForce() {
 
 	// eslint-disable-next-line require-jsdoc
 	const handlePopup = (index) => {
-		setActiveCard(activeCard === index ? null : index); 
+		setActiveCard(activeCard === index ? null : index);
 	};
 
 	const Data = [
@@ -70,7 +70,11 @@ export default function HomeDrivingForce() {
 					<div className={`${styles.OwnerInfo}`}>
 						{Data.map((OwnerInfo, index) => (
 							<div key={index} className={`${styles.MapDiv} color_white`}>
-								<div className={`${styles.wrapper}`}>
+								<div
+									className={`${styles.wrapper} ${
+										activeCard === index ? styles.active : styles.inactive
+									}`}
+								>
 									<div className={`${styles.card}`}>
 										<Image
 											className={`${styles.Image}`}
@@ -93,7 +97,7 @@ export default function HomeDrivingForce() {
 									<p
 										className={`${
 											activeCard === index ? styles.active : styles.inactive
-										}`}
+										} color_primary`}
 									>
 										Sumant Bahl started his career in 1994 as part of the pioneering team
 										of Pay TV distribution in India. He was an integral part of the
