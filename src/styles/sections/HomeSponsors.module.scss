@@ -16,12 +16,21 @@
 	}
 	.PrincipalPartners {
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
+		:hover {
+			scale: 1.05;
+			transition: var(--transition);
+		}
 	}
 	.AssociatePartners {
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
+	
 	}
 	.OfficialPartner {
 		width: 60%;
 		flex-wrap: wrap;
+		:hover {
+			scale: 1.05;
+			transition: var(--transition);
+		}
 	}
 }

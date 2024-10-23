@@ -40,6 +40,10 @@
 				.custom-next {
 					border: 0;
 					background-color: transparent;
+					:hover {
+						scale: 1.05;
+						transition: var(--transition);
+					}
 				}
 			}
 		}

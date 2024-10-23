@@ -55,13 +55,15 @@ export default function HomeSponsors() {
 	return (
 		<section className={`${styles.HomeSponsors} section_spacing `}>
 			<div className="container">
-				<h1  className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase`}>
+				<h1
+					className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase`}
+				>
 					Our Sponsors
 				</h1>
 				<p className="text_400 text_sm "> Principal Partners</p>
 				<div className={`${styles.PrincipalPartners}`}>
 					{PrincipalPartnersData.map((logo, index) => (
-						<div key={index}>
+						<div key={index} className={styles.PrincipalPartnersDiv}>
 							<Image width={100} height={80} alt="" src={logo.principal}></Image>
 						</div>
 					))}
@@ -69,15 +71,15 @@ export default function HomeSponsors() {
 				<p className="text_sm">Associate Partners</p>
 				<div className={`${styles.AssociatePartners}`}>
 					{AssociatePartnerData.map((logo, index) => (
-						<div key={index}>
-							<Image width={100} height={80} alt="" src={logo.associate}></Image>
+						<div key={index} className={styles.AssociatePartnersDiv}>
+							<Image  alt="" width={100} height={80} src={logo.associate}></Image>
 						</div>
 					))}
 				</div>
 				<p className="text_sm">Official Partners</p>
 				<div className={`${styles.OfficialPartner}`}>
 					{OfficialData.map((logo, index) => (
-						<div key={index}>
+						<div key={index} className={styles.OfficialPartnerDiv}>
 							<Image width={100} height={80} alt="" src={logo.official}></Image>
 						</div>
 					))}

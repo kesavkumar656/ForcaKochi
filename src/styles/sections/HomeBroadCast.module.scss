@@ -21,6 +21,10 @@
 				gap: 15px;
 				@extend %f_r_a_center;
 				line-height: 1.2;
+				:hover {
+					scale: 1.05;
+					transition: var(--transition);
+				}
 			}
 		}
 	}
