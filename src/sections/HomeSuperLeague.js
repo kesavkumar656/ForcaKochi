@@ -18,25 +18,25 @@ import styles from "@/styles/sections/HomeSuperLeague.module.scss";
 /** HomeSuperLeague Section */
 export default function HomeSuperLeague() {
 	return (
-		<section className={styles.HomeSuperLeague}>
+		<section className={`${styles.HomeSuperLeague} section_spacing`}>
 			<div className={`${styles.wrapper} container`}>
-				<div className={`${styles.textDiv}  section_spacing`}>
+				<div className={`${styles.textDiv}  `}>
 					<div
 						className={`${styles.heading} font_primary text_xl text_800  color_secondary text_uppercase`}
 					>
 						Super League Kerala
 					</div>
-					<div className={`${styles.para}  text_primary text_100 text_sm`}>
-						<p>
+					<div>
+						<p className={`${styles.para}  text_primary text_100 text_sm`}>
 							Designed to support, promote and boost football across Kerala, SLK opens
-							new doors and <br></br> creates endless opportunities for professional
-							footballers at the grassroots level.
+							new doors and creates endless opportunities for professional footballers
+							at the grassroots level.
 						</p>
 					</div>
 				</div>
-			</div>
-			<div className={`${styles.BackgroundDiv}  `}>
-				<Image className={styles.BackgroundImg} src={Background} alt=""></Image>
+				<div className={`${styles.BackgroundDiv}  `}>
+					<Image className={styles.BackgroundImg} src={Background} alt=""></Image>
+				</div>
 			</div>
 		</section>
 	);

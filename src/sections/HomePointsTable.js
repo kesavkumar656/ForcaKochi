@@ -114,9 +114,10 @@ export default function HomePointsTable() {
 
 				<div className="table-container">
 					<table>
-						<thead>
-							<tr>
+						<tbody>
+							<tr className={styles.heading}>
 								<th>Pos</th>
+								<th></th>
 								<th>Team</th>
 								<th>P</th>
 								<th>W</th>
@@ -127,26 +128,8 @@ export default function HomePointsTable() {
 								<th>GD</th>
 								<th>PTS</th>
 							</tr>
-						</thead>
-						{/* <tbody>
-							{tableData.map((data, index) => (
-								<tr key={index} className={`${styles.TableData}`}>
-									<td className={styles.no}>{data.no}</td>
-									<td>
-										<Image width={60} height={60} src={data.Img} alt="" />
-										<p className={styles.ClubName}>{data.ClubName}</p>
-									</td>
-									<td className={styles.points}>{data.P}</td>
-									<td className={styles.points}>{data.W}</td>
-									<td className={styles.points}>{data.D}</td>
-									<td className={styles.points}>{data.L}</td>
-									<td className={styles.points}>{data.GF}</td>
-									<td className={styles.points}>{data.GA}</td>
-									<td className={styles.points}>{data.GD}</td>
-									<td className={styles.points}>{data.PTS}</td>
-								</tr>
-							))}
-						</tbody> */}
+						</tbody>
+
 						<tbody>
 							{tableData.map((data, index) => (
 								<tr key={index} className={`${styles.TableData}`}>

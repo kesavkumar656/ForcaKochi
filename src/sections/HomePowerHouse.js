@@ -105,6 +105,7 @@ export default function HomePowerHouse() {
 				</div>
 				<div className={`${styles.playerTable}  `}>
 					<Swiper
+						loop={true}
 						spaceBetween={0}
 						slidesPerView={4}
 						navigation={false}
@@ -115,17 +116,14 @@ export default function HomePowerHouse() {
 						breakpoints={{
 							320: {
 								slidesPerView: 2,
-						
 							},
 
 							480: {
 								slidesPerView: 3,
-						
 							},
 
 							640: {
 								slidesPerView: 4,
-							
 							},
 						}}
 					>
