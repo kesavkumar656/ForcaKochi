@@ -13,7 +13,9 @@
 		width: 80%;
 		padding: 2% 0;
 		gap: 20px;
-
+img{
+	min-width: 100px;
+}
 		@include sm-down {
 			width: 70%;
 			margin: 0 auto;
@@ -29,6 +31,9 @@
 	}
 	.AssociatePartners {
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
+		@include sm-down{
+			width: 100%;
+		}
 	}
 	.OfficialPartner {
 		width: 70%;
