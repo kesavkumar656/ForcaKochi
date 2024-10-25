@@ -61,7 +61,12 @@
 		}
 
 		.heading {
-			border: 1px solid red;
+			th {
+				border: 1px solid var(--color_secondary);
+				border-left: 0;
+				border-right: 0;
+				padding: 3% 0;
+			}
 		}
 
 		// Media query to hide thead on smaller screens
