@@ -18,7 +18,7 @@ import Social3 from "@public/../../public/img/HomeStayHooked/social3.png";
 import Social4 from "@public/../../public/img/HomeStayHooked/social4.png";
 import Social5 from "@public/../../public/img/HomeStayHooked/social5.png";
 import background from "@public/../../public/img/HomeStayHooked/diamond.png";
-import football from "@public/../../public/img/HomeStayHooked/football.png";
+import football from "@public/../../public/img/HomeStayHooked/football1.png";
 // DATA //
 
 /** HomeStayHooked Section */
@@ -29,6 +29,7 @@ export default function HomeStayHooked() {
 		>
 			<div className="container ">
 				<div className={`${styles.wrapper} `}>
+					
 					<div className={styles.textDiv}>
 						<h1 className="color_secondary font_primary text_500 text_lg text_uppercase">
 							Stay Hooked
@@ -45,10 +46,21 @@ export default function HomeStayHooked() {
 							<Image alt="" src={Social5}></Image>
 						</div>
 					</div>
-
 					<div className={styles.background}>
-						<Image alt="" src={background} width={600} height={200}></Image>
-						<Image alt="" src={football} width={500} height={200}></Image>
+						<Image
+							className={styles.diamond}
+							alt=""
+							src={background}
+							width={600}
+							height={200}
+						></Image>
+						<Image
+							className={styles.football}
+							alt=""
+							src={football}
+							width={500}
+							height={200}
+						></Image>
 					</div>
 				</div>
 			</div>

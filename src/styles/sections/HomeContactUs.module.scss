@@ -4,16 +4,21 @@
 	background-color: #583060;
 
 	.Wrapper {
-		
 		margin: 0 auto;
 		padding: 2%;
 		@extend %f_r_a_center;
 		justify-content: space-between;
 		border-radius: 10px;
 		background-color: var(--color_primary);
+		@include sm-down {
+			flex-direction: column;
+			gap: 30px;
+		}
 		.ContactUs {
 			width: 50%;
-
+			@include sm-down {
+				width: 90%;
+			}
 			div:nth-child(1) {
 				margin: 3% 0;
 			}
@@ -33,6 +38,8 @@
 				.button {
 					// padding: 1% 4%;
 					// margin: 3% 0;
+					margin: 2% 0;
+
 				}
 				input {
 					padding: 2% 0%;
@@ -54,14 +61,17 @@
 			}
 		}
 		.rightClm {
-			// padding: 10% 5%;
+		
 			position: relative;
-			
+
 			color: var(--color_white);
 			padding: 2%;
 			width: 40%;
 			border-radius: 10px;
 			background-color: rgba(255, 255, 255, 0.1);
+			@include sm-down {
+				width: 90%;
+			}
 			div {
 				margin: 2% 0;
 			}
@@ -70,8 +80,12 @@
 				gap: 4%;
 			}
 			p {
+				
 				font-weight: 300;
 				padding: 5% 0;
+				@include sm-down{
+					font-size: 14px;
+				}
 				span {
 					padding-top: 5%;
 				}

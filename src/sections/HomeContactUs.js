@@ -48,15 +48,11 @@ export default function HomeContactUs() {
 							<div>
 								<input className="Message" placeholder="Message"></input>
 							</div>
-
-							<Button
-								className={styles.button}
-								shape="square"
-								color="secondary"
-								variant="filled"
-							>
-								<p className="text_reg ">Submit</p>
-							</Button>
+							<div className={styles.button}>
+								<Button shape="square" color="secondary" variant="filled">
+									<p className="text_reg ">Submit</p>
+								</Button>
+							</div>
 						</div>
 					</div>
 					<div className={styles.rightClm}>

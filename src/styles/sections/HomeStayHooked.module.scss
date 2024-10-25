@@ -3,19 +3,28 @@
 .HomeStayHooked {
 	background-color: #583060;
 	.wrapper {
-		overflow-y: hidden;
+		overflow: hidden;
 		position: relative;
 		background-color: var(--color_primary);
 		padding-top: 3% !important;
 		padding: 0 5%;
 		border-radius: 10px;
-
+		min-height: 280px;
+		padding-right: 0;
+		@include sm-down {
+			
+			min-height: 290px;
+		}
 		.textDiv {
 			position: relative;
 			z-index: 10;
+			@include sm-down{
+				margin: 20px auto;
+			}
 			p {
 				width: 50%;
 				@include md-down {
+					margin: 10px auto;
 					width: 100%;
 				}
 			}
@@ -37,37 +46,55 @@
 			}
 		}
 		.background {
+			position: relative;
+			@include sm-down{
+				margin-top: 20px;
+			}
 			img {
-				position: absolute;
+				// position: absolute;
+
 				@include md-down {
 					bottom: 0;
 					right: 0;
-
-					width: 60%;
-				}
-				@include lg-down {
+					width: 90%;
 					bottom: 0;
 					right: 0;
-					width: 70%;
 				}
 			}
-			img:nth-child(1) {
-				right: 0;
-				top: 0;
+			.diamond {
 				opacity: 0.1;
-				@include md-down {
-					margin-top: 30px;
-					position: initial;
+				@include sm-down {
+					right: 15%;
+					opacity: 0.1;
+
+					bottom: 0;
+				}
+				@include sm-up {
+					position: absolute;
+					width: 40%;
+					right: -2%;
+					top: 0%;
+					transform: translateY(-77%);
 				}
 			}
 
-			img:nth-child(2) {
-				right: 0;
+			.football {
+				width: 40%;
+				position: absolute;
 				top: 0;
-				@include md-down {
-					top: initial;
-					bottom: 0;
+				right: 0;
+				transform: translate(-0%, -30%);
+				@include sm-down {
+					width:90%;
 					right: 0;
+					top: 0;
+					transform: translate(0%, -7%);
+				}
+				@include sm-up {
+					width: 37%;
+					right: -1%;
+					top: 0%;
+					transform: translateY(-84%);
 				}
 			}
 		}
