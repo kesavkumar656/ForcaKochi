@@ -7,6 +7,11 @@
 	border-top: 2px solid #dfa41b;
 	border-bottom: 2px solid #dfa41b;
 	padding: 1%;
+	@include sm-down {
+		flex-direction: column;
+   
+        gap: 10px;
+	}
 	.social {
 		filter: invert(1);
 		gap: 10px;
