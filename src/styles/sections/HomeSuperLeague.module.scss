@@ -4,10 +4,10 @@
 	overflow-x: hidden;
 
 	background-color: var(--color_white);
-	height: 95vh;
+	height: 90vh;
 	@include sm-down {
 		overflow: hidden;
-		height: 500px;
+		height: 800px;
 	}
 	.wrapper {
 		.textDiv {
@@ -32,9 +32,9 @@
 		transform: translate(15%, -10%);
 
 		@include sm-down {
-			scale: 2;
+			// scale: 2;
 
-			transform: translate(-12.1%, 26%);
+			transform: translate(-12.1%, 36%);
 		}
 	}
 }
