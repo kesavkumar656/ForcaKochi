@@ -157,7 +157,7 @@
 		border-radius: 10px 0 0 10px;
 	}
 	td:last-child {
-		border-radius: 0px 10px 10px 0px;
+		// border-radius: 0px 10px 10px 0px;
 	}
 	th:first-child {
 		border-radius: 5px 0 0 5px;
@@ -169,9 +169,7 @@
 	.table-container {
 		width: 100%;
 	}
-	.heading {
-		border: 1px solid var(--color_secondary);
-	}
+	
 	table {
 		width: 100%;
 		border-spacing: 0px 10px;
