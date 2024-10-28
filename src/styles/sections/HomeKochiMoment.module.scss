@@ -11,9 +11,9 @@
 	}
 	:global {
 		.swiper {
-			width: 30%;
+			width: 70%;
 
-			padding: 2% 0;
+			// padding: 2% 0;
 
 			.swiper-wrapper {
 				.swiper-slide-shadow {
@@ -36,7 +36,8 @@
 			.slider_arrows {
 				width: 115px;
 
-				margin: 50px auto;
+				margin: 0 auto;
+				margin-top: 20px;
 				.custom-prev,
 				.custom-next {
 					border: 0;
