@@ -19,9 +19,7 @@
 		justify-content: space-evenly;
 		align-self: stretch;
 		background-color: var(--color_primary);
-		@include lg-down {
-			padding: 10px 10px;
-		}
+
 		.image_wrap {
 			padding: 10px 0;
 			max-width: 120px;
@@ -42,11 +40,16 @@
 			justify-content: space-between;
 			align-self: stretch;
 			padding-inline-start: 0;
-			.leftDiv {
-				width: 40%;
-			}
+			.leftDiv,
 			.rightDiv {
 				width: 40%;
+			}
+			.leftDiv,
+			.rightDiv {
+				width: 40%;
+				@include sm-down {
+					flex-direction: column;
+				}
 			}
 			div {
 				display: flex;
@@ -55,19 +58,21 @@
 			// The menu is transformed as per sidebar on click of hamburger icon
 			@include sm-down {
 				// padding-top: 5%;
-				background-color: var(--color_primary);
+				background-color: var(--color_secondary);
 				transition: ease all 300ms;
 				transform: translateY(-150%);
-				// flex-direction: row;
-				display: grid !important;
-				// justify-content: flex-start;
-				width: 100%;
+				display: flex !important;
+				flex-direction: column;
+				width: auto;
 				position: absolute;
-				top: 100%;
+				top: 10%;
 				left: 0;
-				height: 35vh;
+				align-content: center;
+				align-items: center;
 			}
 			.links {
+				color: var(--color_primary);
+
 				@extend %relative_box;
 				@extend %f_r_a_center;
 				list-style-type: none;
@@ -78,6 +83,7 @@
 					padding: 15px;
 					flex-direction: column;
 					align-items: stretch;
+					color: var(--color_primary);
 				}
 				&:last-child {
 					margin-right: 0;
@@ -180,6 +186,10 @@
 				transition: ease all 300ms;
 			}
 			@include sm-down {
+				right: 10%;
+				bottom: 28%;
+				position: absolute;
+
 				display: flex;
 			}
 		}

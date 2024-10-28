@@ -15,14 +15,12 @@ import Logo from "@/../public/img/logo.png";
 import styles from "@/styles/components/Header.module.scss";
 
 // IMAGES //
-import Arrow from "@/../public/img/icons/arrow.svg";
 
 // DATA //
 
 /** Header Component */
 export default function Header() {
 	const [openSidebar, setOpenSidebar] = useState(false);
-	const [openDropdown, setOpenDropdown] = useState(null);
 
 	/** Open sidebar on click of hamburger */
 	const toggleSidebar = () => {
@@ -31,6 +29,7 @@ export default function Header() {
 
 	/** Function to toggle dropdown */
 	const toggleDropdown = (dropdownKey) => {
+		// eslint-disable-next-line no-undef
 		setOpenDropdown((prevOpenDropdown) =>
 			prevOpenDropdown === dropdownKey ? null : dropdownKey
 		);
@@ -45,7 +44,7 @@ export default function Header() {
 			<div className="container ">
 				<div className={`${styles.header_inside} ${styles.border}`}>
 					{/* Logo wrap */}
-					<Link href="/" >
+					<Link href="/">
 						<Image className={styles.image_wrap} src={Logo} alt="Logo" />
 					</Link>
 

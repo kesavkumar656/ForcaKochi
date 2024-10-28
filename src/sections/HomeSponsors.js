@@ -24,9 +24,6 @@ export default function HomeSponsors() {
 		{
 			associate: "/img/HomeSponsors/AssociatePartners/2.png",
 		},
-		{
-			associate: "/img/HomeSponsors/AssociatePartners/3.png",
-		},
 	];
 	const PrincipalPartnersData = [
 		{ principal: "/img/HomeSponsors/PrincipalPartners/1.png" },
@@ -72,7 +69,7 @@ export default function HomeSponsors() {
 				<div className={`${styles.AssociatePartners}`}>
 					{AssociatePartnerData.map((logo, index) => (
 						<div key={index} className={styles.AssociatePartnersDiv}>
-							<Image  alt="" width={100} height={80} src={logo.associate}></Image>
+							<Image alt="" width={100} height={80} src={logo.associate}></Image>
 						</div>
 					))}
 				</div>

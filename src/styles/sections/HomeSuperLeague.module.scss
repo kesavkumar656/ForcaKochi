@@ -1,14 +1,19 @@
 @import "../helpers/helpers.scss";
 
 .HomeSuperLeague {
-	overflow: hidden	;
-	background-color: var(--color_white);
-	// height: 100dvh;
+	overflow-x: hidden;
 
+	background-color: var(--color_white);
+	height: 90vh;
+	@include sm-down {
+		overflow: hidden;
+	height: 50vh;
+		
+	}
 	.wrapper {
-		display: flex;
 		.textDiv {
 			// position: absolute;
+			position: relative;
 			// height: 70vh;
 			.heading {
 				line-height: 1;
@@ -23,11 +28,14 @@
 	}
 	.BackgroundDiv {
 		position: absolute;
-		bottom: 0;
-		transform: translate(-0%, 40%);
+		top: 0;
+		right: 0;
+		transform: translate(15%, -10%);
 
 		@include sm-down {
-			position: absolute;
+			// scale: 2;
+		
+			transform: translate(-12.1%, 36%);
 		}
 	}
 }

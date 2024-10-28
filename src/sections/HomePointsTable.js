@@ -115,7 +115,7 @@ export default function HomePointsTable() {
 				<div className="table-container">
 					<table>
 						<tbody>
-							<tr className={styles.heading}>
+							<tr className={`${styles.heading} `}>
 								<th>Pos</th>
 								<th></th>
 								<th>Team</th>

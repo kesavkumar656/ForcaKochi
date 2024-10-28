@@ -1,6 +1,7 @@
 @import "../helpers/helpers.scss";
 
 .HomeSponsors {
+	
 	.heading {
 		margin: 2% 0;
 	}
@@ -13,13 +14,14 @@
 		width: 80%;
 		padding: 2% 0;
 		gap: 20px;
-img{
-	min-width: 100px;
-}
+		img {
+			min-width: 100px;
+		}
 		@include sm-down {
-			width: 70%;
+			text-align: center;
+			width: 100%;
 			margin: 0 auto;
-			justify-content: space-between;
+			justify-content: space-evenly;
 		}
 	}
 	.PrincipalPartners {
@@ -31,12 +33,11 @@ img{
 	}
 	.AssociatePartners {
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
-		@include sm-down{
-			width: 100%;
+		@include sm-down {
 		}
 	}
 	.OfficialPartner {
-		width: 70%;
+		width: 100% !important;
 		flex-wrap: wrap;
 
 		:hover {
