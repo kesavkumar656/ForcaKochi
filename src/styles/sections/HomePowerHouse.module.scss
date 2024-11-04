@@ -5,8 +5,12 @@
 	padding: 0;
 
 	.heading {
-		// width: 50%;
+		width: 50%;
+		text-align: center;
 		margin: 0 auto;
+		@include sm-down {
+			width: 100%;
+		}
 	}
 	.playerTable {
 		.tableWrapper {
@@ -38,13 +42,7 @@
 			z-index: 1;
 		}
 
-		//     :global {
-		//         .swiper-slide {
-		//         border: 1px solid red;
-		//         position: relative;
-		//         }
-
-		//    }
+	
 	}
 	.tableWrapper:hover {
 		background: linear-gradient(180deg, #dfa41b00, #c96c98);

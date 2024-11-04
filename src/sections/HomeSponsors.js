@@ -53,11 +53,11 @@ export default function HomeSponsors() {
 		<section className={`${styles.HomeSponsors} section_spacing `}>
 			<div className="container">
 				<h1
-					className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase`}
+					className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase `}
 				>
 					Our Sponsors
 				</h1>
-				<p className="text_400 text_sm "> Principal Partners</p>
+				<p className={`${styles.wrapper} text_sm`}> Principal Partners</p>
 				<div className={`${styles.PrincipalPartners}`}>
 					{PrincipalPartnersData.map((logo, index) => (
 						<div key={index} className={styles.PrincipalPartnersDiv}>
@@ -65,7 +65,7 @@ export default function HomeSponsors() {
 						</div>
 					))}
 				</div>
-				<p className="text_sm">Associate Partners</p>
+				<p className={`${styles.wrapper} text_sm`}>Associate Partners</p>
 				<div className={`${styles.AssociatePartners}`}>
 					{AssociatePartnerData.map((logo, index) => (
 						<div key={index} className={styles.AssociatePartnersDiv}>
@@ -73,7 +73,7 @@ export default function HomeSponsors() {
 						</div>
 					))}
 				</div>
-				<p className="text_sm">Official Partners</p>
+				<p className={`${styles.wrapper} text_sm`}>Official Partners</p>
 				<div className={`${styles.OfficialPartner}`}>
 					{OfficialData.map((logo, index) => (
 						<div key={index} className={styles.OfficialPartnerDiv}>

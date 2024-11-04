@@ -3,18 +3,13 @@
 .HomeUpcomingMatches {
 	// margin-top: -600px;
 	z-index: 4;
-	@include md-down {
-		margin-top: 0px;
-	}
+
 	@include sm-down {
-		margin-top: 0px;
-	}
-	@include lg-down {
-		margin-top: 0px;
+		margin-top: -100px;
 	}
 
 	.table {
-		margin: 10% 0;
+		margin: 5% 0;
 		border-radius: 10px;
 
 		.DateDiv {
@@ -58,7 +53,11 @@
 			padding: 2% 0;
 			position: relative;
 			transition: var(--transition);
-
+			@include sm-down {
+				border-top: 1px solid rgba(255, 255, 255, 0.178);
+		
+        margin-top: 20px;
+			}
 			.nth_match {
 				text-align: center;
 				right: 50%;
@@ -72,6 +71,10 @@
 				position: absolute;
 				padding: 5px 50px;
 				border: 1px solid rgba(255, 255, 255, 0.283);
+				@include sm-down{
+					transform: translate(50%, -53%);
+
+				}
 			}
 
 			.MatchSchedule {

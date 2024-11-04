@@ -146,12 +146,15 @@
 
 .HomePointsTable {
 	.heading {
+		.HeadingTeam {
+			text-align: left;
+		}
 		th {
 			border: 1px solid var(--color_secondary);
 			border-left: 0;
 			border-right: 0;
-			padding: 3% 0;
-			@include sm-down{
+			padding: 4% 2%;
+			@include sm-down {
 				border: 0;
 			}
 		}
@@ -160,7 +163,7 @@
 		border-radius: 10px 0 0 10px;
 	}
 	td:last-child {
-		// border-radius: 0px 10px 10px 0px;
+		// border-radius: 10px 0 0 10px;
 	}
 	th:first-child {
 		border-radius: 5px 0 0 5px;
@@ -202,6 +205,7 @@
 				display: flex;
 				align-items: center;
 				gap: 2%;
+				justify-content: center;
 			}
 		}
 		thead {
@@ -233,9 +237,7 @@
 					gap: 10px;
 				}
 
-				&::before {
-					content: none;
-				}
+				
 			}
 		}
 	}

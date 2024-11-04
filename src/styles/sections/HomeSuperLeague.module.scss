@@ -7,13 +7,12 @@
 	height: 90vh;
 	@include sm-down {
 		overflow: hidden;
-		height: 800px;
 	}
 	.wrapper {
 		.textDiv {
-			// position: absolute;
+	
 			position: relative;
-			// height: 70vh;
+			
 			.heading {
 				line-height: 1;
 			}
@@ -27,14 +26,14 @@
 	}
 	.BackgroundDiv {
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		right: 0;
-		transform: translate(15%, -10%);
+		transform: translate(0, 32%);
 
 		@include sm-down {
-			// scale: 2;
-
-			transform: translate(-12.1%, 36%);
+			
+			transform: translate(6.9%, 24%);
+			min-width: 500px;
 		}
 	}
 }

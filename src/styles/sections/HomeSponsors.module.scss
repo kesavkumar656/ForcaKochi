@@ -1,9 +1,11 @@
 @import "../helpers/helpers.scss";
 
 .HomeSponsors {
-	
 	.heading {
 		margin: 2% 0;
+		@include sm-down {
+			text-align: center;
+		}
 	}
 	background-color: #583060;
 	color: rgba(255, 255, 255, 0.71);
@@ -34,6 +36,7 @@
 	.AssociatePartners {
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.231);
 		@include sm-down {
+			display: none;
 		}
 	}
 	.OfficialPartner {
@@ -44,5 +47,11 @@
 			scale: 1.05;
 			transition: var(--transition);
 		}
+		@include sm-down {
+			display: none;
+		}
+	}
+	.wrapper {
+		display: none;
 	}
 }

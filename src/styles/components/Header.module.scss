@@ -25,7 +25,6 @@
 			max-width: 120px;
 			right: 0;
 			position: absolute;
-
 			// transform: translate(50%, -50%);
 			@extend %rel_xy_center;
 			@extend %f_r_a_center;
@@ -218,6 +217,8 @@
 		}
 		.links_wrap {
 			transform: translateX(0) !important;
+			width: 100%;
+			transition: var(--transition);
 		}
 	}
 }
