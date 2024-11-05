@@ -52,6 +52,7 @@
 		}
 	}
 	.wrapper {
+		padding-top: 1% ;
 		@include sm-down {
 			display: none;
 		}
