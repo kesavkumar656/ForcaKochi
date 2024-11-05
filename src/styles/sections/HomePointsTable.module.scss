@@ -176,7 +176,7 @@
 			}
 			th:nth-child(2) {
 				@include sm-down {
-					display: none;
+					visibility: hidden;
 				}
 			}
 			th {
@@ -188,7 +188,7 @@
 					border: 0;
 				}
 				@include md-down {
-					padding: 2%;
+					padding: 2% 0;
 					border: 0;
 				}
 			}
