@@ -10,9 +10,8 @@
 	}
 	.wrapper {
 		.textDiv {
-	
 			position: relative;
-			
+
 			.heading {
 				line-height: 1;
 			}
@@ -31,9 +30,8 @@
 		transform: translate(0, 32%);
 
 		@include sm-down {
-			
-			transform: translate(6.9%, 24%);
-			min-width: 500px;
+			transform: translate(6.9%, 19%);
+			min-width: 700px;
 		}
 	}
 }

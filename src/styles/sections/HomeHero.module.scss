@@ -35,7 +35,8 @@
 				width: 90%;
 			}
 			@include sm-down {
-			width: 60%;
+				padding: 2% 0;
+				width: 60%;
 			}
 		}
 		.Image {
@@ -47,6 +48,7 @@
 				bottom: 5%;
 			}
 			@include sm-down {
+				padding: 2% 0;
 				right: 1%;
 				bottom: 7%;
 			}

@@ -52,6 +52,8 @@
 		}
 	}
 	.wrapper {
-		display: none;
+		@include sm-down {
+			display: none;
+		}
 	}
 }

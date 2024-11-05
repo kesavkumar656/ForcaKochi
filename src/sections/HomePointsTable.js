@@ -132,7 +132,7 @@ export default function HomePointsTable() {
 
 						<tbody>
 							{tableData.map((data, index) => (
-								<tr key={index} className={`${styles.TableData}`}>
+								<tr key={index} className={styles.TableData}>
 									<td className={styles.no} data-label="Pos">
 										{data.no}
 									</td>

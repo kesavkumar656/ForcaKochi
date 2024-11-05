@@ -55,8 +55,8 @@
 			transition: var(--transition);
 			@include sm-down {
 				border-top: 1px solid rgba(255, 255, 255, 0.178);
-		
-        margin-top: 20px;
+
+				margin-top: 20px;
 			}
 			.nth_match {
 				text-align: center;
@@ -65,15 +65,14 @@
 				transform: translate(50%, -45%);
 				top: 0;
 				background-color: var(--color_primary);
-				color: var(--color_secondary);
+				color: var(--color_white);
 				width: auto;
 				transition: var(--transition);
 				position: absolute;
 				padding: 5px 50px;
 				border: 1px solid rgba(255, 255, 255, 0.283);
-				@include sm-down{
+				@include sm-down {
 					transform: translate(50%, -53%);
-
 				}
 			}
 
@@ -163,6 +162,9 @@
 				width: 90%;
 				border-bottom: 1px solid #ffffff21;
 				text-align: center;
+				@include sm-down {
+					align-items: baseline;
+				}
 				h1 {
 					padding: 2%;
 					color: var(--color_white);

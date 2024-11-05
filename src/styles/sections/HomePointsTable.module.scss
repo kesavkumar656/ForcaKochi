@@ -104,6 +104,7 @@
 
 .HomePointsTable {
 	position: relative;
+
 	&:before,
 	td:first-child {
 		border-radius: 10px 0 0 10px;
@@ -112,12 +113,48 @@
 		border-radius: 0px 10px 10px 0px;
 	}
 	th:first-child {
-		border-radius: 5px 0 0 5px;
+		border-radius: 10px 0 0 10px;
+		border-left: 1px solid var(--color_secondary);
 	}
 	th:last-child {
-		border-radius: 0px 5px 5px 0px;
+		border-radius: 0 10px 10px 0;
+		border-right: 1px solid var(--color_secondary);
 	}
-
+	.TableData {
+		position: relative;
+		td:first-child {
+			&::before {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 2px;
+				height: 20px;
+				left: 0px;
+				background-color: var(--color_secondary);
+				top: 45%;
+				border-radius: 10px;
+				@include sm-down {
+					top: 35%;
+				}
+			}
+		}
+		td:last-child {
+			&::before {
+				position: absolute;
+				content: "";
+				display: block;
+				width: 2px;
+				height: 20px;
+				right: 0;
+				background-color: var(--color_secondary);
+				top: 45%;
+				border-radius: 10px;
+				@include sm-down {
+					top: 35%;
+				}
+			}
+		}
+	}
 	.table-container {
 		width: 100%;
 		overflow-x: auto;
@@ -143,18 +180,20 @@
 				}
 			}
 			th {
-				padding: 30px 0;
+				padding: 30px;
 				border-bottom: 1px solid var(--color_secondary);
 				border-top: 1px solid var(--color_secondary);
 				@include sm-down {
 					padding: 0;
 					border: 0;
 				}
+				@include md-down {
+					padding: 2%;
+					border: 0;
+				}
 			}
 			.HeadingTeam {
 				text-align: left;
-			}
-			tr {
 			}
 		}
 		@include sm-down {
@@ -175,6 +214,9 @@
 		.ClubName {
 			text-align: left;
 			@include sm-down {
+				display: none;
+			}
+			@include md-down {
 				display: none;
 			}
 		}
@@ -220,18 +262,6 @@
 				background-color: #ffffff17;
 				margin-bottom: 10px;
 				border-radius: 10px;
-
-				&::before {
-					content: "";
-					position: absolute;
-					left: 0;
-					height: 10px;
-					top: 10px;
-					bottom: 10px;
-					width: 5px; // Adjust the thickness of the line
-					background-color: var(--color_secondary); // Set line color
-					border-radius: 10px 0 0 10px;
-				}
 			}
 
 			tbody td {

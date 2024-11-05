@@ -18,8 +18,10 @@
 			grid-template-columns: repeat(2, 1fr);
 			@include sm-down {
 				margin: 0 auto;
-
 				width: 80%;
+			}
+			@include md-down {
+				width: 100%;
 			}
 			.MapDiv {
 				margin: 5% 0%;
@@ -31,8 +33,8 @@
 					flex-direction: column;
 					align-items: center;
 				}
-				.TimeZone{
-				font-weight: 100;
+				.TimeZone {
+					font-weight: 100;
 				}
 				line-height: 1.2;
 				:hover {

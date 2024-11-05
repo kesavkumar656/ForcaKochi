@@ -8,7 +8,9 @@
 		width: 50%;
 		text-align: center;
 		margin: 0 auto;
+
 		@include sm-down {
+			padding: 5%;
 			width: 100%;
 		}
 	}
@@ -41,8 +43,6 @@
 			top: 5%;
 			z-index: 1;
 		}
-
-	
 	}
 	.tableWrapper:hover {
 		background: linear-gradient(180deg, #dfa41b00, #c96c98);
@@ -58,6 +58,7 @@
 				color: white;
 				border-width: 1px;
 				max-width: 300px;
+				border-top: 0;
 				border-style: solid;
 				border-image: linear-gradient(
 						to top,
