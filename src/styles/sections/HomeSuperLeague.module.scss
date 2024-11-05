@@ -1,7 +1,7 @@
 @import "../helpers/helpers.scss";
 
 .HomeSuperLeague {
-	overflow-x: hidden;
+	overflow: hidden;
 
 	background-color: var(--color_white);
 	height: 90vh;
@@ -10,15 +10,25 @@
 	}
 	.wrapper {
 		.textDiv {
+			width: 80%;
 			position: relative;
-
+			font-weight: 600;
 			.heading {
 				line-height: 1;
+				@include mdl-down {
+					font-size: 60px;
+				}
 			}
 			.para {
 				width: 80%;
+				font-weight: 300;
+				padding: 2% 0;
 				@include sm-down {
-					width: 100%;
+					width: 100% !important;
+				}
+				@include mdl-down {
+					width: 70% ;
+					font-size: 16px;
 				}
 			}
 		}
@@ -30,8 +40,14 @@
 		transform: translate(0, 32%);
 
 		@include sm-down {
-			transform: translate(6.9%, 19%);
+			transform: translate(10%, 15%) !important;
 			min-width: 700px;
+		}
+		@include mdl-down {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			transform: translate(0, -7%);
 		}
 	}
 }

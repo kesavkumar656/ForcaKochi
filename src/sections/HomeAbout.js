@@ -30,7 +30,7 @@ export default function HomeAbout() {
 						<h1
 							className={`${styles.Heading} text_xxl color_secondary text_uppercase  font_primary text_700 `}
 						>
-							Nammude <br></br> Forca, <br></br> Nammude <br></br> Kochi
+							Nammude Forca, Nammude Kochi
 						</h1>
 						<p
 							className={`${styles.Para} col-xs-7 text_lg text_center  color_white  text_200`}

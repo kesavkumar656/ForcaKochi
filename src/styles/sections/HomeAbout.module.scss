@@ -2,8 +2,11 @@
 
 .HomeAbout {
 	padding-top: 6%;
-
+overflow: hidden;
 	width: 100%;
+	@include mdl-down {
+		padding-top: 0;
+	}
 	.BGLight {
 		width: 100%;
 		position: absolute;
@@ -19,34 +22,38 @@
 			text-align: center;
 
 			.Heading {
+				font-size: 90px;
+				width: 90%;
 				line-height: 1;
 				margin: 0 auto;
 
 				text-align: center;
 
 				@include sm-down {
-					font-size: 14px;
+					font-size: 30px;
 					margin: 10px 0;
-				}
-				@include lg-down {
+					width: auto;
 					font-size: 30px;
 				}
 			}
 			.Para {
-				// width: 50%;
+				width: 100%;
 				font-size: 20px;
 				line-height: 1.5;
 				max-width: 90%;
 				margin: 0 auto;
-				@include lg-down {
-					font-size: 14px;
+				@include sm-down {
+					font-size: 16px;
+					font-weight: 300;
+					width: 80% !important;
+					margin: 20px auto;
+				}
+
+				@include mdl-down {
+					font-size: 16px;
 					font-weight: 300;
 					width: 50%;
-				}
-				@include xl-down {
-					font-size: 14px;
-					width: 70%;
-					margin-bottom: 3%;
+					margin: 20px auto;
 				}
 			}
 		}

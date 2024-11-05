@@ -7,11 +7,14 @@
 	.heading {
 		width: 50%;
 		text-align: center;
-		margin: 0 auto;
-
+		margin: 20px auto;
+		font-weight: 500;
 		@include sm-down {
 			padding: 5%;
 			width: 100%;
+		}
+		@include mdl-down {
+			width: 90%;
 		}
 	}
 	.playerTable {

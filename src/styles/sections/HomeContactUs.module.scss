@@ -2,7 +2,7 @@
 
 .HomeContactUs {
 	background-color: #583060;
-
+	padding-bottom: 0;
 	.Wrapper {
 		margin: 0 auto;
 		padding: 2%;
@@ -39,7 +39,6 @@
 					// padding: 1% 4%;
 					// margin: 3% 0;
 					margin: 2% 0;
-
 				}
 				input {
 					padding: 2% 0%;
@@ -61,7 +60,6 @@
 			}
 		}
 		.rightClm {
-		
 			position: relative;
 
 			color: var(--color_white);
@@ -80,10 +78,9 @@
 				gap: 4%;
 			}
 			p {
-				
 				font-weight: 300;
 				padding: 5% 0;
-				@include sm-down{
+				@include sm-down {
 					font-size: 14px;
 				}
 				span {

@@ -23,8 +23,8 @@ import "swiper/swiper-bundle.css";
 /** HomeContactUs Section */
 export default function HomeContactUs() {
 	return (
-		<section className={styles.HomeContactUs}>
-			<div className="container section_spacing">
+		<section className={`${styles.HomeContactUs} section_spacing`}>
+			<div className="container ">
 				<div className={`${styles.Wrapper} `}>
 					<div className={styles.ContactUs}>
 						<div>

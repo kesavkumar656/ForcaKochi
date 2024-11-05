@@ -1,107 +1,5 @@
 @import "../helpers/helpers.scss";
 
-// .HomePointsTable {
-//   .table-container {
-//     width: 100%;
-//   }
-
-//   table {
-//     width: 100%;
-//     border-spacing: 0 10px;
-//     font-size: 20px;
-//     color: #ffffffab;
-
-//     thead {
-//       th {
-//         padding: 30px;
-//         border: 1px solid var(--color_secondary);
-//         border-left: 0;
-//         border-right: 0;
-//         &:first-child {
-//           border-radius: 5px 0 0 5px;
-//         }
-//         &:last-child {
-//           border-radius: 0 5px 5px 0;
-//         }
-//       }
-//     }
-
-//     tbody {
-//       tr {
-//         background-color: #ffffff07;
-//         border-radius: 20px;
-//         transition: background-color 0.3s ease;
-//         position: relative;
-
-//         &:hover {
-//           background-color: #ffffff10;
-//         }
-
-//         td {
-//           padding: 20px;
-//           text-align: center;
-//           position: relative;
-
-//           &:first-child {
-//             padding-left: 35px;
-//             &::before {
-//               content: "";
-//               position: absolute;
-//               left: 10px;
-//               width: 5px;
-//               height: 20px;
-//               border-radius: 10px;
-//               background-color: var(--color_secondary);
-//             }
-//           }
-
-//           &:last-child {
-//             padding-right: 35px;
-//             &::after {
-//               content: "";
-//               position: absolute;
-//               right: 10px;
-//               width: 5px;
-//               height: 20px;
-//               border-radius: 10px;
-//               background-color: var(--color_secondary);
-//             }
-//           }
-
-//           &:nth-child(2) {
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             gap: 10px;
-//           }
-//         }
-
-//         .ClubImage {
-//           width: 50px;
-//           height: 50px;
-//           border-radius: 50%;
-//         }
-
-//         .ClubName {
-//           font-weight: bold;
-//           text-align: left;
-//           color: #ffffff;
-//         }
-//       }
-//     }
-//   }
-
-//   @include sm-down {
-//     table {
-//       font-size: 14px;
-//     }
-
-//     .ClubName {
-//       display: none;
-//     }
-//   }
-// }
-
 .HomePointsTable {
 	position: relative;
 
@@ -180,9 +78,11 @@
 				}
 			}
 			th {
-				padding: 30px 0;
+				padding: 30px 20px;
 				border-bottom: 1px solid var(--color_secondary);
 				border-top: 1px solid var(--color_secondary);
+				border-left: 0;
+				border-right: 0;
 				@include sm-down {
 					padding: 0;
 					border: 0;
@@ -200,9 +100,8 @@
 			font-size: 14px;
 		}
 
-		// Apply border globally for thead th
 		thead th {
-			border-bottom: 2px solid #000; // Border for th elements in thead
+			border-bottom: 2px solid #000;
 		}
 
 		.ClubImage {
@@ -247,7 +146,6 @@
 			}
 		}
 
-		// Media query to hide thead on smaller screens
 		@include md-down {
 			.heading {
 				border: 1px solid var(--color_secondary);
@@ -295,179 +193,10 @@
 		&::before {
 			top: 0;
 			bottom: 0;
-			width: 3px; // Adjust thickness for smaller screens if needed
+			width: 3px;
 		}
 		&:hover {
 			background-color: #ffffff10;
 		}
 	}
 }
-
-// @import "../helpers/helpers.scss";
-
-// .HomePointsTable {
-// 	.heading {
-// 		.HeadingTeam {
-// 			text-align: left;
-// 		}
-// 		th {
-// 			border: 1px solid var(--color_secondary);
-// 			border-left: 0;
-// 			border-right: 0;
-// 			padding: 30px;
-// 			@include sm-down {
-// 				border: 0;
-// 			}
-// 		}
-// 	}
-// 	td:first-child {
-// 		border-radius: 10px 0 0 10px;
-// 	}
-// 	td:last-child {
-// 		// border-radius: 10px 0 0 10px;
-// 	}
-// 	th:first-child {
-// 		border-radius: 5px 0 0 5px;
-// 	}
-// 	th:last-child {
-// 		border-radius: 0px 5px 5px 0px;
-// 	}
-
-// 	.table-container {
-// 		width: 100%;
-// 	}
-// 	.heading {
-// 		border: 1px solid var(--color_secondary);
-// 	}
-// 	table {
-// 		width: 100%;
-// 		border-spacing: 0px 10px;
-// 		color: #ffffffab;
-// 		font-size: 20px;
-// 		@include sm-down {
-// 			font-size: 14px;
-// 		}
-
-// 		.ClubImage {
-// 			@include sm-down {
-// 				width: 50px;
-// 			}
-// 		}
-// 		.ClubName {
-// 			text-align: left;
-// 			@include sm-down {
-// 				display: none;
-// 			}
-// 		}
-
-// 		tr {
-// 			td:nth-child(1) {
-// 				&::before {
-// 					content: "";
-// 					width: 5px;
-// 					height: 20px;
-// 					border-radius: 10px;
-
-// 					position: absolute;
-// 					left: 10px;
-// 					text-align: left;
-// 					font-weight: bold;
-// 					background-color: var(--color_secondary);
-// 				}
-// 			}
-// 			td:nth-child(11) {
-// 				&::after {
-// 					content: "";
-// 					width: 5px;
-// 					height: 20px;
-// 					border-radius: 10px;
-
-// 					position: absolute;
-// 					right: 10px;
-
-// 					text-align: left;
-// 					font-weight: bold;
-// 					background-color: var(--color_secondary);
-// 				}
-// 			}
-// 			// display: table-row;
-// 			td:nth-child(2) {
-// 				display: flex;
-// 				align-items: center;
-// 				gap: 2%;
-// 				justify-content: center;
-// 			}
-// 		}
-// 		thead {
-// 		}
-
-// 		// 	@include md-down {
-// 		// 		tbody tr {
-// 		// 			display: flex;
-// 		// 			flex-direction: row;
-// 		// 			justify-content: space-evenly;
-// 		// 			align-items: center;
-
-// 		// 			background-color: #ffffff17;
-// 		// 			margin-bottom: 10px;
-// 		// 			border-radius: 10px;
-// 		// 		}
-
-// 		// 		tbody td {
-// 		// 			padding: 10px 0;
-// 		// 			text-align: center;
-
-// 		// 			&:nth-child(2) {
-// 		// 				display: flex;
-// 		// 				align-items: center;
-// 		// 				justify-content: center;
-// 		// 				gap: 10px;
-// 		// 			}
-// 		// 		}
-// 		// 	}
-// 		// }
-// 		@include md-up {
-// 			display: table; // Return to table layout for medium and larger screens
-// 			tr {
-// 				display: table-row;
-// 			}
-// 			td,
-// 			th {
-// 				display: table-cell;
-// 				padding: 15px;
-// 				text-align: center;
-// 			}
-
-// 			// Column hiding for medium screens
-// 			.ClubName {
-// 				display: table-cell;
-// 			}
-
-// 			th:first-child,
-// 			td:first-child {
-// 				text-align: center;
-// 				padding-left: 15px;
-// 			}
-
-// 			th:last-child,
-// 			td:last-child {
-// 				text-align: center;
-// 				padding-right: 15px;
-// 			}
-// 		}
-// 		tbody td {
-// 			padding: 20px;
-// 			text-align: center;
-// 		}
-
-// 		tbody tr {
-// 			background-color: #ffffff07;
-// 			border-radius: 20px;
-// 			transition: background-color 0.3s ease;
-
-// 			&:hover {
-// 				background-color: #ffffff10;
-// 			}
-// 		}
-// 	}
-// }

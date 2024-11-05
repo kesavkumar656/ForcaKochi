@@ -1,11 +1,13 @@
 @import "../helpers/helpers.scss";
 
 .HomeUpcomingMatches {
-	// margin-top: -600px;
 	z-index: 4;
 
 	@include sm-down {
 		margin-top: -100px;
+	}
+	@include mdl-down {
+		margin-top: -200px;
 	}
 
 	.table {

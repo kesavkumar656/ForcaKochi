@@ -55,9 +55,9 @@ export default function HomeDrivingForce() {
 	];
 
 	return (
-		<section className={`${styles.HomeDrivingForce}`}>
+		<section className={`${styles.HomeDrivingForce} section_spacing`}>
 			<div className="container ">
-				<div className={`${styles.Wrapper}`}>
+				<div className={`${styles.Wrapper} `}>
 					<div className="next_cover_image objectFitCover">
 						<Image className={`${styles.background}`} src={background} alt="" />
 					</div>

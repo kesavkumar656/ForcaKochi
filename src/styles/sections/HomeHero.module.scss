@@ -8,11 +8,12 @@
 		position: relative;
 
 		.FootbalTxt {
+			font-weight: 600;
 			line-height: 1;
 
-			@include md-down {
+			@include mdl-down {
 				width: 80%;
-				font-size: 32px;
+				font-size: 52px;
 			}
 
 			@include sm-down {
@@ -27,24 +28,25 @@
 			width: 30%;
 			line-height: 1.5;
 
-			@include lg-down {
+			@include mdl-down {
 				position: initial;
 				right: 15%;
 				bottom: 5%;
-				font-size: 14px;
+				font-size: 24px;
 				width: 90%;
 			}
 			@include sm-down {
 				padding: 2% 0;
-				width: 60%;
+				font-size: 14px;
+				width: 80%;
 			}
 		}
 		.Image {
 			position: absolute;
 			right: 0%;
 			bottom: 5%;
-			@include lg-down {
-				right: 10%;
+			@include mdl-down {
+				right: 2%;
 				bottom: 5%;
 			}
 			@include sm-down {

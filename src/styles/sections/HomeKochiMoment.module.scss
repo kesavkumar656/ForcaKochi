@@ -2,6 +2,7 @@
 
 .HomeKochiMoment {
 	background-color: #583060;
+	overflow: hidden;
 	.Marquee {
 		position: absolute;
 		@extend %rel_xy_center;

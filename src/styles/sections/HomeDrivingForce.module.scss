@@ -1,9 +1,11 @@
 @import "../helpers/helpers.scss";
 
 .HomeDrivingForce {
-    background-color: #583060;
-    padding-bottom: 15%;
-
+	background-color: #583060;
+	// padding-bottom: 15%;
+	@include mdl-down {
+		padding-bottom: 26%;
+	}
 	.background {
 		margin: 0 auto;
 	}
@@ -22,6 +24,10 @@
 			@include sm-down {
 				top: 7%;
 				font-size: 25px;
+			}
+			@include mdl-down {
+				top: 30%;
+				font-size: 60px;
 			}
 		}
 
@@ -49,6 +55,14 @@
 				@include sm-down {
 					position: unset !important;
 					transform: unset !important;
+				}
+				@include mdl-down {
+					border-radius: 10px;
+					min-width: unset !important;
+					width: 20% !important;
+					background-color: var(--color_primary);
+					position: absolute;
+					display: flex;
 				}
 
 				.wrapper {
@@ -82,7 +96,8 @@
 						}
 
 						.animation {
-							width: 90%;
+							font-size: 16px;
+							font-weight: 200;
 							margin: 0 auto;
 							display: flex;
 							align-items: center;
@@ -141,18 +156,27 @@
 				@include sm-down {
 					margin-top: -100px;
 				}
+				@include mdl-down {
+					transform: translate(-50%, 34%);
+				}
 			}
 
 			.MapDiv:nth-child(2) {
 				right: 20%;
 				bottom: 0%;
 				transform: translate(50%, 22%);
+				@include mdl-down {
+					transform: translate(50%, 10%);
+				}
 			}
 
 			.MapDiv:nth-child(3) {
 				left: 25%;
 				bottom: 0;
 				transform: translate(45%, 78%);
+				@include mdl-down {
+					transform: translate(76%, 72%);
+				}
 			}
 
 			.MapDiv:nth-child(4) {
@@ -160,7 +184,9 @@
 				bottom: 0%;
 				transform: translate(0%, 21%);
 				z-index: 11;
-				flex-direction: row-reverse !important;
+				@include mdl-down {
+					transform: translate(16%, 9%);
+				}
 			}
 		}
 	}
