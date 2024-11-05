@@ -19,7 +19,7 @@ import styles from "@/styles/sections/HomePointsTable.module.scss";
 export default function HomePointsTable() {
 	const tableData = [
 		{
-			no: "1",
+			no: "01",
 			ClubName: "Forca KochI fc",
 
 			Img: "/img/HomePointsTable/forca.png",
@@ -33,7 +33,7 @@ export default function HomePointsTable() {
 			PTS: "4",
 		},
 		{
-			no: "2",
+			no: "02",
 			Img: "/img/HomePointsTable/calicut.png",
 			ClubName: "Calicut Football Club",
 
@@ -47,7 +47,7 @@ export default function HomePointsTable() {
 			PTS: "4",
 		},
 		{
-			no: "3",
+			no: "03",
 			Img: "/img/HomePointsTable/kannur.png",
 			ClubName: "Kannur Squad FC",
 
@@ -61,7 +61,7 @@ export default function HomePointsTable() {
 			PTS: "4",
 		},
 		{
-			no: "4",
+			no: "04",
 			Img: "/img/HomePointsTable/malappuram.png",
 			ClubName: "Thiruvanthapuram kombans fc",
 
@@ -75,7 +75,7 @@ export default function HomePointsTable() {
 			W: "1",
 		},
 		{
-			no: "5",
+			no: "05",
 			Img: "/img/HomePointsTable/kombans.png",
 			ClubName: "Malappuram FC",
 
@@ -89,7 +89,7 @@ export default function HomePointsTable() {
 			PTS: "4",
 		},
 		{
-			no: "6",
+			no: "06",
 			ClubName: "Thrissur Roar FC",
 
 			Img: "/img/HomePointsTable/thrissur.png",

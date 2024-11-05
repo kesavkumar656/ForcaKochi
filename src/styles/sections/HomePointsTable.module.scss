@@ -1,169 +1,115 @@
 @import "../helpers/helpers.scss";
 
 // .HomePointsTable {
-// 	// First and last columns with rounded corners
+//   .table-container {
+//     width: 100%;
+//   }
 
-// 	td:first-child {
-// 		border-radius: 10px 0 0 10px;
-// 	}
-// 	td:last-child {
-// 		border-radius: 0px 10px 10px 0px;
-// 	}
-// 	th:first-child {
-// 		border-radius: 5px 0 0 5px;
-// 	}
-// 	th:last-child {
-// 		border-radius: 0px 5px 5px 0px;
-// 	}
+//   table {
+//     width: 100%;
+//     border-spacing: 0 10px;
+//     font-size: 20px;
+//     color: #ffffffab;
 
-// 	thead {
-// 		th {
-// 			border: 1px solid var(--color_secondary);
-// 			padding: 3% 0;
-// 			border-left: 0;
-// 			border-right: 0;
-// 			border-top: 2px solid #fff;
-// 			border-bottom: 2px solid #fff;
-// 			border: 5px solid transparent;
-// 			border-image: url("") 30 round;
+//     thead {
+//       th {
+//         padding: 30px;
+//         border: 1px solid var(--color_secondary);
+//         border-left: 0;
+//         border-right: 0;
+//         &:first-child {
+//           border-radius: 5px 0 0 5px;
+//         }
+//         &:last-child {
+//           border-radius: 0 5px 5px 0;
+//         }
+//       }
+//     }
 
-// 			padding: 3% 0;
-// 		}
-// 	}
-// 	.table-container {
-// 		width: 100%;
-// 		overflow-x: auto;
-// 	}
-// 	.table-container table thead th {
-// 		border-bottom: 2px solid #ffffff;
-// 	}
+//     tbody {
+//       tr {
+//         background-color: #ffffff07;
+//         border-radius: 20px;
+//         transition: background-color 0.3s ease;
+//         position: relative;
 
-// 	table {
-// 		width: 100%;
-// 		border-spacing: 0px 10px;
-// 		color: #ffffffab;
-// 		font-size: 20px;
-// 		tbody:nth-child(1) {
-// 			border: 1px solid var(--color_secondary);
-// 		}
-// 		@include sm-down {
-// 			font-size: 14px;
-// 		}
+//         &:hover {
+//           background-color: #ffffff10;
+//         }
 
-// 		thead th {
-// 			border-bottom: 2px solid #000;
-// 		}
+//         td {
+//           padding: 20px;
+//           text-align: center;
+//           position: relative;
 
-// 		.ClubImage {
-// 			@include sm-down {
-// 				width: 50px;
-// 			}
-// 		}
+//           &:first-child {
+//             padding-left: 35px;
+//             &::before {
+//               content: "";
+//               position: absolute;
+//               left: 10px;
+//               width: 5px;
+//               height: 20px;
+//               border-radius: 10px;
+//               background-color: var(--color_secondary);
+//             }
+//           }
 
-// 		.ClubName {
-// 			text-align: left;
-// 			@include sm-down {
-// 				display: none;
-// 			}
-// 		}
+//           &:last-child {
+//             padding-right: 35px;
+//             &::after {
+//               content: "";
+//               position: absolute;
+//               right: 10px;
+//               width: 5px;
+//               height: 20px;
+//               border-radius: 10px;
+//               background-color: var(--color_secondary);
+//             }
+//           }
 
-// 		tr {
-// 			display: table-row;
-// 			td:nth-child(2) {
-// 				display: flex;
-// 				align-items: center;
-// 				gap: 2%;
-// 			}
-// 		}
+//           &:nth-child(2) {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             gap: 10px;
+//           }
+//         }
 
-// 		.heading {
-// 			.table td,
-// 			.table th {
-// 				border: 1px solid #ddd;
-// 				border-collapse: collapse;
-// 			}
-// 			border: 1px solid red;
+//         .ClubImage {
+//           width: 50px;
+//           height: 50px;
+//           border-radius: 50%;
+//         }
 
-// 			th {
-// 				// border: 1px solid var(--color_secondary);
-// 				border-left: 0;
-// 				border-right: 0;
-// 				padding: 3% 0;
-// 			}
-// 		}
+//         .ClubName {
+//           font-weight: bold;
+//           text-align: left;
+//           color: #ffffff;
+//         }
+//       }
+//     }
+//   }
 
-// 		// Media query to hide thead on smaller screens
-// 		@include md-down {
-// 			thead {
-// 				display: none;
-// 			}
+//   @include sm-down {
+//     table {
+//       font-size: 14px;
+//     }
 
-// 			tbody tr {
-// 				display: flex;
-// 				flex-direction: row;
-// 				justify-content: space-evenly;
-// 				align-items: center;
-
-// 				background-color: #ffffff17;
-// 				margin-bottom: 10px;
-// 				border-radius: 10px;
-// 			}
-
-// 			tbody td {
-// 				padding: 10px 0;
-// 				text-align: center;
-// 				border: none;
-
-// 				&:nth-child(2) {
-// 					display: flex;
-// 					align-items: center;
-// 					justify-content: center;
-// 					gap: 10px;
-// 				}
-
-// 				&::before {
-// 					content: none;
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	tbody td {
-// 		padding: 20px;
-// 		text-align: center;
-// 	}
-
-// 	tbody tr {
-// 		background-color: #ffffff07;
-// 		border-radius: 20px;
-// 		transition: background-color 0.3s ease;
-
-// 		&:hover {
-// 			background-color: #ffffff10;
-// 		}
-// 	}
+//     .ClubName {
+//       display: none;
+//     }
+//   }
 // }
 
 .HomePointsTable {
-	.heading {
-		.HeadingTeam {
-			text-align: left;
-		}
-		th {
-			border: 1px solid var(--color_secondary);
-			border-left: 0;
-			border-right: 0;
-			padding: 4% 2%;
-			@include sm-down {
-				border: 0;
-			}
-		}
-	}
+	position: relative;
+	&:before,
 	td:first-child {
 		border-radius: 10px 0 0 10px;
 	}
 	td:last-child {
-		// border-radius: 10px 0 0 10px;
+		border-radius: 0px 10px 10px 0px;
 	}
 	th:first-child {
 		border-radius: 5px 0 0 5px;
@@ -174,17 +120,50 @@
 
 	.table-container {
 		width: 100%;
+		overflow-x: auto;
 	}
-	.heading {
-		border: 1px solid var(--color_secondary);
+	.table-container table thead th {
+		border-bottom: 2px solid #ffffff;
 	}
+
 	table {
 		width: 100%;
 		border-spacing: 0px 10px;
 		color: #ffffffab;
 		font-size: 20px;
+		.heading {
+			th:nth-child(1) {
+				@include sm-down {
+					visibility: hidden;
+				}
+			}
+			th:nth-child(2) {
+				@include sm-down {
+					display: none;
+				}
+			}
+			th {
+				padding: 30px 0;
+				border-bottom: 1px solid var(--color_secondary);
+				border-top: 1px solid var(--color_secondary);
+				@include sm-down {
+					padding: 0;
+					border: 0;
+				}
+			}
+			.HeadingTeam {
+				text-align: left;
+			}
+			tr {
+			}
+		}
 		@include sm-down {
 			font-size: 14px;
+		}
+
+		// Apply border globally for thead th
+		thead th {
+			border-bottom: 2px solid #000; // Border for th elements in thead
 		}
 
 		.ClubImage {
@@ -192,6 +171,7 @@
 				width: 50px;
 			}
 		}
+
 		.ClubName {
 			text-align: left;
 			@include sm-down {
@@ -200,35 +180,64 @@
 		}
 
 		tr {
-			// display: table-row;
+			display: table-row;
+
 			td:nth-child(2) {
 				display: flex;
 				align-items: center;
 				gap: 2%;
-				justify-content: center;
-			}
-		}
-		thead {
-			th {
-				border-bottom: 2px solid #000;
 			}
 		}
 
+		.heading {
+			.HeadingTeam {
+				text-align: left;
+			}
+			tr {
+				padding: 20px 0;
+
+				td {
+					border: 1px solid red;
+				}
+				@include sm-down {
+					border: 0;
+				}
+			}
+		}
+
+		// Media query to hide thead on smaller screens
 		@include md-down {
+			.heading {
+				border: 1px solid var(--color_secondary);
+				padding: 20px 0;
+			}
+
 			tbody tr {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
 				align-items: center;
-
 				background-color: #ffffff17;
 				margin-bottom: 10px;
 				border-radius: 10px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					left: 0;
+					height: 10px;
+					top: 10px;
+					bottom: 10px;
+					width: 5px; // Adjust the thickness of the line
+					background-color: var(--color_secondary); // Set line color
+					border-radius: 10px 0 0 10px;
+				}
 			}
 
 			tbody td {
 				padding: 10px 0;
 				text-align: center;
+				border: none;
 
 				&:nth-child(2) {
 					display: flex;
@@ -237,7 +246,9 @@
 					gap: 10px;
 				}
 
-				
+				&::before {
+					content: none;
+				}
 			}
 		}
 	}
@@ -251,9 +262,182 @@
 		background-color: #ffffff07;
 		border-radius: 20px;
 		transition: background-color 0.3s ease;
-
+		&::before {
+			top: 0;
+			bottom: 0;
+			width: 3px; // Adjust thickness for smaller screens if needed
+		}
 		&:hover {
 			background-color: #ffffff10;
 		}
 	}
 }
+
+// @import "../helpers/helpers.scss";
+
+// .HomePointsTable {
+// 	.heading {
+// 		.HeadingTeam {
+// 			text-align: left;
+// 		}
+// 		th {
+// 			border: 1px solid var(--color_secondary);
+// 			border-left: 0;
+// 			border-right: 0;
+// 			padding: 30px;
+// 			@include sm-down {
+// 				border: 0;
+// 			}
+// 		}
+// 	}
+// 	td:first-child {
+// 		border-radius: 10px 0 0 10px;
+// 	}
+// 	td:last-child {
+// 		// border-radius: 10px 0 0 10px;
+// 	}
+// 	th:first-child {
+// 		border-radius: 5px 0 0 5px;
+// 	}
+// 	th:last-child {
+// 		border-radius: 0px 5px 5px 0px;
+// 	}
+
+// 	.table-container {
+// 		width: 100%;
+// 	}
+// 	.heading {
+// 		border: 1px solid var(--color_secondary);
+// 	}
+// 	table {
+// 		width: 100%;
+// 		border-spacing: 0px 10px;
+// 		color: #ffffffab;
+// 		font-size: 20px;
+// 		@include sm-down {
+// 			font-size: 14px;
+// 		}
+
+// 		.ClubImage {
+// 			@include sm-down {
+// 				width: 50px;
+// 			}
+// 		}
+// 		.ClubName {
+// 			text-align: left;
+// 			@include sm-down {
+// 				display: none;
+// 			}
+// 		}
+
+// 		tr {
+// 			td:nth-child(1) {
+// 				&::before {
+// 					content: "";
+// 					width: 5px;
+// 					height: 20px;
+// 					border-radius: 10px;
+
+// 					position: absolute;
+// 					left: 10px;
+// 					text-align: left;
+// 					font-weight: bold;
+// 					background-color: var(--color_secondary);
+// 				}
+// 			}
+// 			td:nth-child(11) {
+// 				&::after {
+// 					content: "";
+// 					width: 5px;
+// 					height: 20px;
+// 					border-radius: 10px;
+
+// 					position: absolute;
+// 					right: 10px;
+
+// 					text-align: left;
+// 					font-weight: bold;
+// 					background-color: var(--color_secondary);
+// 				}
+// 			}
+// 			// display: table-row;
+// 			td:nth-child(2) {
+// 				display: flex;
+// 				align-items: center;
+// 				gap: 2%;
+// 				justify-content: center;
+// 			}
+// 		}
+// 		thead {
+// 		}
+
+// 		// 	@include md-down {
+// 		// 		tbody tr {
+// 		// 			display: flex;
+// 		// 			flex-direction: row;
+// 		// 			justify-content: space-evenly;
+// 		// 			align-items: center;
+
+// 		// 			background-color: #ffffff17;
+// 		// 			margin-bottom: 10px;
+// 		// 			border-radius: 10px;
+// 		// 		}
+
+// 		// 		tbody td {
+// 		// 			padding: 10px 0;
+// 		// 			text-align: center;
+
+// 		// 			&:nth-child(2) {
+// 		// 				display: flex;
+// 		// 				align-items: center;
+// 		// 				justify-content: center;
+// 		// 				gap: 10px;
+// 		// 			}
+// 		// 		}
+// 		// 	}
+// 		// }
+// 		@include md-up {
+// 			display: table; // Return to table layout for medium and larger screens
+// 			tr {
+// 				display: table-row;
+// 			}
+// 			td,
+// 			th {
+// 				display: table-cell;
+// 				padding: 15px;
+// 				text-align: center;
+// 			}
+
+// 			// Column hiding for medium screens
+// 			.ClubName {
+// 				display: table-cell;
+// 			}
+
+// 			th:first-child,
+// 			td:first-child {
+// 				text-align: center;
+// 				padding-left: 15px;
+// 			}
+
+// 			th:last-child,
+// 			td:last-child {
+// 				text-align: center;
+// 				padding-right: 15px;
+// 			}
+// 		}
+// 		tbody td {
+// 			padding: 20px;
+// 			text-align: center;
+// 		}
+
+// 		tbody tr {
+// 			background-color: #ffffff07;
+// 			border-radius: 20px;
+// 			transition: background-color 0.3s ease;
+
+// 			&:hover {
+// 				background-color: #ffffff10;
+// 			}
+// 		}
+// 	}
+// }
