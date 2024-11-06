@@ -188,9 +188,9 @@
 			}
 
 			.MapDiv:nth-child(3) {
-				left: 25%;
+				left: 50%;
 				bottom: 0;
-				transform: translate(45%, 78%);
+				transform: translate(-50%, 50%);
 				@include mdl-down {
 					transform: translate(76%, 72%);
 				}
