@@ -13,10 +13,16 @@
 	th:first-child {
 		border-radius: 10px 0 0 10px;
 		border-left: 1px solid var(--color_secondary);
+		@include mdl-down {
+			border-radius: 0;
+		}
 	}
 	th:last-child {
 		border-radius: 0 10px 10px 0;
 		border-right: 1px solid var(--color_secondary);
+		@include mdl-down {
+			border-radius: 0;
+		}
 	}
 	.TableData {
 		position: relative;

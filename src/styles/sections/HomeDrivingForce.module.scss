@@ -22,8 +22,8 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			@include sm-down {
-				top: 7%;
-				font-size: 25px;
+				top: 7% !important;
+				font-size: 25px !important;
 			}
 			@include mdl-down {
 				top: 30%;
@@ -36,8 +36,8 @@
 			padding: 2%;
 
 			@include sm-down {
-				display: grid;
-				gap: 20px;
+				display: grid !important;
+				gap: 20px !important;
 				justify-content: center;
 			}
 			.MapDiv {
@@ -58,8 +58,8 @@
 				}
 				@include mdl-down {
 					border-radius: 10px;
-					min-width: unset !important;
-					width: 20% !important;
+
+					width: 20%;
 					background-color: var(--color_primary);
 					position: absolute;
 					display: flex;
@@ -123,12 +123,16 @@
 				z-index: 14;
 
 				width: 400px;
+
 				display: block !important;
 				padding: 3%;
 				transition: var(--transition);
 				@include sm-down {
 					padding: 10px;
 					width: auto;
+				}
+				@include mdl-down {
+					font-size: 14px;
 				}
 			}
 
@@ -165,8 +169,14 @@
 				right: 20%;
 				bottom: 0%;
 				transform: translate(50%, 22%);
+
 				@include mdl-down {
 					transform: translate(50%, 10%);
+					&.active {
+						right: auto;
+						left: 0;
+						transform: translate(-50%, 22%);
+					}
 				}
 			}
 
