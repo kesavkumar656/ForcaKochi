@@ -1,7 +1,7 @@
 @import "../helpers/helpers.scss";
 
 .HomeSponsors {
-	padding-top: 10%;
+	padding-top: 5%;
 	.heading {
 		margin: 2% 0;
 		@include sm-down {
@@ -41,7 +41,7 @@
 		}
 	}
 	.OfficialPartner {
-		width: 100% ;
+		width: 100%;
 		flex-wrap: wrap;
 
 		:hover {
@@ -51,7 +51,7 @@
 		@include sm-down {
 			display: none;
 		}
-		@include mdl-down{
+		@include mdl-down {
 			width: 70%;
 		}
 	}
