@@ -4,7 +4,7 @@
 	background-color: #583060;
 	padding-bottom: 20%;
 	@include mdl-down {
-		padding-bottom: 30%;
+		padding-bottom: 10%;
 	}
 	.background {
 		margin: 0 auto;
@@ -26,7 +26,7 @@
 				font-size: 25px !important;
 			}
 			@include mdl-down {
-				top: 30%;
+				top: 10%;
 				font-size: 60px;
 			}
 		}
@@ -39,6 +39,16 @@
 				display: grid !important;
 				gap: 20px !important;
 				justify-content: end;
+			}
+			@include mdl-down {
+				margin-top: -370px !important;
+
+				display: grid !important;
+				gap: 20px !important;
+				width: fit-content;
+				padding: 2%;
+
+				margin: 0 auto;
 			}
 			.MapDiv {
 				width: auto;
@@ -53,16 +63,12 @@
 
 				display: flex;
 				@include sm-down {
-					position: unset !important;
-					transform: unset !important;
+					position: unset;
+					transform: unset;
 				}
 				@include mdl-down {
-					border-radius: 10px;
-
-					width: 20%;
-					background-color: var(--color_primary);
-					position: absolute;
-					display: flex;
+					position: unset !important;
+					transform: unset !important;
 				}
 
 				.wrapper {
