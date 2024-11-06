@@ -38,11 +38,11 @@
 			@include sm-down {
 				display: grid !important;
 				gap: 20px !important;
-				justify-content: center;
+				justify-content: end;
 			}
 			.MapDiv {
 				width: auto;
-				min-width: fit-content;
+
 				border-radius: 10px;
 				width: 20%;
 				// padding: 1% 0;
