@@ -43,9 +43,12 @@
 				}
 				@include mdl-down {
 					margin: 2% 0%;
-
+					flex-direction: column;
 					align-items: center;
 					justify-content: center;
+				}
+				img {
+					min-width: 120px;
 				}
 				.TimeZone {
 					font-weight: 100;
