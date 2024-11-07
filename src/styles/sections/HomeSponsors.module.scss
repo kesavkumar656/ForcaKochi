@@ -1,7 +1,10 @@
 @import "../helpers/helpers.scss";
 
 .HomeSponsors {
-	padding-top: 5%;
+	padding: 5% 0;
+	@include mdl-down {
+		padding: 10% 0;
+	}
 	.heading {
 		margin: 2% 0;
 		@include sm-down {
