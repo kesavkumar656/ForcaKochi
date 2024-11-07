@@ -24,7 +24,8 @@
 			grid-template-columns: repeat(2, 1fr);
 
 			@include sm-down {
-				width: 80%;
+				width: 100% !important;
+				gap: 5px !important;
 			}
 			@include mdl-down {
 				width: 70%;
@@ -38,10 +39,11 @@
 				@extend %f_r_a_center;
 				@include sm-down {
 					align-items: center;
+					gap: 5px;
 				}
 				@include mdl-down {
 					margin: 2% 0%;
-					font-size: 24px;
+
 					align-items: center;
 					justify-content: center;
 				}

@@ -38,19 +38,17 @@
 			padding: 2%;
 
 			@include sm-down {
-				margin-top: -5% !important;
+				margin-top: 0% !important;
 				display: grid !important;
 				gap: 20px !important;
 				justify-content: end;
 			}
 			@include mdl-down {
 				margin-top: -30% !important;
-
+				justify-content: center;
 				display: grid !important;
 				gap: 20px !important;
-				width: fit-content;
 				padding: 2%;
-
 				margin: 0 auto;
 			}
 			.MapDiv {
@@ -70,6 +68,7 @@
 					transform: unset;
 				}
 				@include mdl-down {
+					width: auto;
 					position: unset !important;
 					transform: unset !important;
 				}
@@ -163,11 +162,11 @@
 			.MapDiv:nth-child(1) {
 				left: 50%;
 				top: 25%;
-				transform: translate(-50%, 50%);
+				transform: translate(-50%, 58%);
 				z-index: 10;
 
 				@include sm-down {
-					margin-top: -100px;
+					margin-top: 0;
 				}
 				@include mdl-down {
 					transform: translate(-50%, 34%);
