@@ -9,22 +9,29 @@
 		@include sm-down {
 			flex-direction: column;
 		}
-		.heading {
+		@include mdl-down {
+			flex-direction: column;
+		}
+		.threejs {
+			@include mdl-down {
+				margin: 0 auto;
+			}
 		}
 		.country {
 			margin-top: 4% !important;
 			display: grid;
 			width: 70%;
 			grid-template-columns: repeat(2, 1fr);
+
 			@include sm-down {
-				margin: 0 auto;
 				width: 80%;
 			}
 			@include mdl-down {
-				width: 100%;
+				width: 70%;
+				margin: 0 auto;
 			}
 			.MapDiv {
-				margin: 5% 0%;
+				margin: 3% 0%;
 
 				font-size: 14px;
 				gap: 15px;
@@ -33,6 +40,8 @@
 					align-items: center;
 				}
 				@include mdl-down {
+					margin: 2% 0%;
+					font-size: 24px;
 					align-items: center;
 					justify-content: center;
 				}

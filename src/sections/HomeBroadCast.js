@@ -76,7 +76,7 @@ export default function HomeBroadCast() {
 						</div>
 					</div>
 
-					<div>
+					<div className={styles.threejs}>
 						<Image src={Threejs} alt=""></Image>
 					</div>
 				</div>
