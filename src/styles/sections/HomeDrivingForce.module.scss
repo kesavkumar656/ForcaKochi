@@ -1,6 +1,7 @@
 @import "../helpers/helpers.scss";
 
 .HomeDrivingForce {
+	overflow: hidden;
 	background-color: #583060;
 	padding-bottom: 20%;
 	@include mdl-down {
