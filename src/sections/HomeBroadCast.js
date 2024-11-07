@@ -66,7 +66,7 @@ export default function HomeBroadCast() {
 									<Image alt="" src={CountryData.imgData} width={90} height={50} />
 
 									<div>
-										<p className={`${styles.countryName} text_center text_500`}>
+										<p className={`${styles.countryName} text_sm text_center text_500`}>
 											{CountryData.country}
 										</p>
 										<p className={`${styles.TimeZone} `}>{CountryData.TimeZone}</p>

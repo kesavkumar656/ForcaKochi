@@ -49,6 +49,12 @@
 				}
 				img {
 					min-width: 120px;
+					@include sm-down {
+						min-width: 120px !important;
+					}
+					@include mdl-down {
+						min-width: 220px;
+					}
 				}
 				.TimeZone {
 					font-weight: 100;
