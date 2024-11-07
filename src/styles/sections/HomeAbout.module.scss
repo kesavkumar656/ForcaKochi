@@ -30,10 +30,11 @@
 				text-align: center;
 
 				@include sm-down {
-					font-size: 30px;
+					font-size: 30px !important;
 					margin: 10px 0;
-					width: auto;
+					width: 60%;
 					font-size: 30px;
+					margin: 0 auto;
 				}
 				@include mdl-down {
 					font-size: 60px;
@@ -46,9 +47,9 @@
 				max-width: 90%;
 				margin: 0 auto;
 				@include sm-down {
-					font-size: 16px;
+					font-size: 14px !important;
 					font-weight: 300;
-					width: 80% !important;
+					width: 70% !important;
 					margin: 20px auto;
 				}
 

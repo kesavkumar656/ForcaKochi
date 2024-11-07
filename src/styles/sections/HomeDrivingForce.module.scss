@@ -52,8 +52,6 @@
 				margin: 0 auto;
 			}
 			.MapDiv {
-				width: auto;
-
 				border-radius: 10px;
 				width: 20%;
 				// padding: 1% 0;
@@ -68,7 +66,6 @@
 					transform: unset;
 				}
 				@include mdl-down {
-					width: auto;
 					position: unset !important;
 					transform: unset !important;
 				}
@@ -137,7 +134,6 @@
 				transition: var(--transition);
 				@include sm-down {
 					padding: 10px;
-					width: auto;
 				}
 				@include mdl-down {
 					font-size: 14px;

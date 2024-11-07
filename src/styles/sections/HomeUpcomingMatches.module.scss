@@ -4,9 +4,10 @@
 	z-index: 4;
 
 	@include sm-down {
+		margin-top: 10% !important;
 	}
 	@include mdl-down {
-		margin-top: -50%;
+		margin-top: -30%;
 	}
 
 	.table {
