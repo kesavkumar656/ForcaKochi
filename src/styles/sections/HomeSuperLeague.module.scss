@@ -41,8 +41,11 @@
 		transform: translate(0, 40%);
 
 		@include sm-down {
-			transform: translate(10%, 15%) !important;
+			transform: translate(10%, 15%);
 			min-width: 700px;
+		}
+		@include md-down {
+			transform: translate(0%, 4%) !important;
 		}
 		@include mdl-down {
 			transform: translate(0%, -5%);

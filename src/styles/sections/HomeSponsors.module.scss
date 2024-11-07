@@ -5,6 +5,9 @@
 	@include mdl-down {
 		padding: 10% 0;
 	}
+	@include mdl-up {
+		padding: 2% 0;
+	}
 	.heading {
 		margin: 2% 0;
 		@include sm-down {
