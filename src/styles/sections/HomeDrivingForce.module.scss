@@ -42,7 +42,7 @@
 				justify-content: end;
 			}
 			@include mdl-down {
-				margin-top: -30%;
+				margin-top: -30% !important;
 
 				display: grid !important;
 				gap: 20px !important;

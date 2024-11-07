@@ -11,6 +11,9 @@
 			width: 80%;
 			position: relative;
 			font-weight: 600;
+			@include mdl-down {
+				width: 90%;
+			}
 			.heading {
 				line-height: 1;
 				@include mdl-down {

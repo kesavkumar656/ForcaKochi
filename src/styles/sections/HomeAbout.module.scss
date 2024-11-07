@@ -2,7 +2,7 @@
 
 .HomeAbout {
 	padding-top: 6%;
-overflow: hidden;
+	overflow: hidden;
 	width: 100%;
 	@include mdl-down {
 		padding-top: 0;
@@ -34,6 +34,9 @@ overflow: hidden;
 					margin: 10px 0;
 					width: auto;
 					font-size: 30px;
+				}
+				@include mdl-down {
+					font-size: 60px;
 				}
 			}
 			.Para {
