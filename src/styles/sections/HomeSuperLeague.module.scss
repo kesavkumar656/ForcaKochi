@@ -1,8 +1,6 @@
 @import "../helpers/helpers.scss";
 
 .HomeSuperLeague {
-	
-
 	background-color: var(--color_white);
 	height: 100vh;
 	@include sm-down {
@@ -27,7 +25,7 @@
 					width: 100% !important;
 				}
 				@include mdl-down {
-					width: 70% ;
+					width: 70%;
 					font-size: 16px;
 				}
 			}
@@ -44,10 +42,7 @@
 			min-width: 700px;
 		}
 		@include mdl-down {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			transform: translate(0%, 0%);
+			transform: translate(0%, -5%);
 		}
 	}
 }
