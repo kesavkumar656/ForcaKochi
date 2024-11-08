@@ -52,7 +52,7 @@ export default function Header() {
 					<div className={`${styles.links_wrap} font_primary`}>
 						<div className={styles.leftDiv}>
 							<div className={styles.links}>
-								<Link href="">
+								<Link href="#contactUs">
 									<div className={styles.link_title}>Contact</div>
 								</Link>
 							</div>
@@ -62,7 +62,7 @@ export default function Header() {
 								</Link>
 							</div>
 							<div className={styles.links}>
-								<Link href="">
+								<Link href="#contactUs">
 									<div className={styles.link_title}>Contact</div>
 								</Link>
 							</div>

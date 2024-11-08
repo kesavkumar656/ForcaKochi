@@ -60,7 +60,7 @@
 			// The menu is transformed as per sidebar on click of hamburger icon
 			@include sm-down {
 				margin-left: 4%;
-				width: 92%;
+				width: 92.4%;
 				padding-top: 5%;
 				opacity: 0;
 				border: 0.5px solid var(--color_secondary);
@@ -69,7 +69,6 @@
 				transform: translateY(-25%);
 				display: flex !important;
 				flex-direction: column;
-
 				position: absolute;
 				top: 10%;
 				left: 0;
