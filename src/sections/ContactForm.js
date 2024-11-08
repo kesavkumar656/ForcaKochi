@@ -32,7 +32,7 @@ export default function ContactForm() {
 	};
 
 	return (
-		<div>
+		<div id="Contact">
 			<h1>Contact Us</h1>
 			<form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.formGroup}>

@@ -75,7 +75,7 @@ export default function Header() {
 								</Link>
 							</div>
 							<div className={styles.links}>
-								<Link href="">
+								<Link href="#owner">
 									<div className={styles.link_title}>Owners</div>
 								</Link>
 							</div>
