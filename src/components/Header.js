@@ -44,7 +44,7 @@ export default function Header() {
 			<div className="container ">
 				<div className={`${styles.header_inside} ${styles.border} `}>
 					{/* Logo wrap */}
-					<Link href="/">
+					<Link href="/" scroll={true}>
 						<Image className={styles.image_wrap} src={Logo} alt="Logo" />
 					</Link>
 
@@ -52,7 +52,7 @@ export default function Header() {
 					<div className={`${styles.links_wrap} font_primary`}>
 						<div className={styles.leftDiv}>
 							<div className={styles.links}>
-								<Link href="#contactUs">
+								<Link href="#contactUs" scroll={true}>
 									<div className={styles.link_title}>Contact</div>
 								</Link>
 							</div>
@@ -62,7 +62,7 @@ export default function Header() {
 								</Link>
 							</div>
 							<div className={styles.links}>
-								<Link href="#contactUs">
+								<Link href="#contactUs" scroll={true}>
 									<div className={styles.link_title}>Contact</div>
 								</Link>
 							</div>
@@ -70,17 +70,17 @@ export default function Header() {
 
 						<div className={styles.rightDiv}>
 							<div className={styles.links}>
-								<Link href="">
+								<Link href="#About">
 									<div className={styles.link_title}>Community</div>
 								</Link>
 							</div>
 							<div className={styles.links}>
-								<Link href="#owner">
+								<Link href="#owner" scroll={true}>
 									<div className={styles.link_title}>Owners</div>
 								</Link>
 							</div>
 							<div className={styles.links}>
-								<Link href="">
+								<Link href="#sponser">
 									<div className={styles.link_title}>Get in Touch</div>
 								</Link>
 							</div>

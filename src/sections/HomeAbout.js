@@ -22,7 +22,7 @@ import yellow from "@/../public/img/homeAbout/Yellow.png";
 /** HomeAbout Section */
 export default function HomeAbout() {
 	return (
-		<section className={`${styles.HomeAbout} bg_primary `}>
+		<section id="About" className={`${styles.HomeAbout} bg_primary `}>
 			<Image className={styles.BGLight} src={Background} alt=" "></Image>
 			<div className={`${styles.Background} container`}>
 				<div>

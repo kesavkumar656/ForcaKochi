@@ -50,7 +50,7 @@ export default function HomeSponsors() {
 		{ official: "/img/HomeSponsors/OfficialSponsor/18.png" },
 	];
 	return (
-		<section className={`${styles.HomeSponsors}   `}>
+		<section id="sponser" className={`${styles.HomeSponsors}   `}>
 			<div className="container">
 				<h1
 					className={`${styles.heading} color_secondary text_500 text_md font_primary text_uppercase `}
