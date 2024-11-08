@@ -28,11 +28,20 @@ export default function Footer() {
 		>
 			<p>© {new Date().getFullYear()} Copyright</p>
 			<div className={styles.social}>
-				<Image alt="" src={fb} width={20}></Image>
-				<Image alt="" src={insta} width={20}></Image>
-				<Image alt="" src={linkedin} width={20}></Image>
-				<Image alt="" src={twitter} width={20}></Image>
-				<Image alt="" src={yt} width={20}></Image>
+				<a>
+					{" "}
+					<Image alt="" src={fb} width={20}></Image>
+				</a>
+				<a>
+					<Image alt="" src={linkedin} width={20}></Image>
+				</a>
+				<a>
+					<Image alt="" src={twitter} width={20}></Image>
+				</a>
+
+				<a>
+					<Image alt="" src={yt} width={20}></Image>
+				</a>
 			</div>
 			<div>
 				<Image alt="" src={MadeByTing}></Image>
