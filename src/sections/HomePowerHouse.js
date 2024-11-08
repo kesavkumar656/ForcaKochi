@@ -7,15 +7,17 @@ import Image from "next/image";
 // PLUGINS //
 
 // UTILS //
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // STYLES //
 import styles from "@/styles/sections/HomePowerHouse.module.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar } from "swiper";
 
 // IMAGES //
 import BG from "@/../public/img/homePowerHouse/cardBG.png";
@@ -96,35 +98,23 @@ export default function HomePowerHouse() {
 		},
 	];
 	return (
-		<section className={`${styles.HomePowerHouse}  bg_white`}>
-			<div className="container-fluid ">
+		<section className={`${styles.HomePowerHouse} bg_white`}>
+			<div className="container-fluid">
 				<div
-					className={`${styles.heading} col-xs-10   color_secondary text_700  font_primary text_lg text_uppercase text_center`}
+					className={`${styles.heading} color_secondary text_700 font_primary text_lg text_uppercase text_center`}
 				>
 					Meet the Powerhouse of Forca Kochi
 				</div>
-				<div className={`${styles.playerTable}  `}>
+				<div className={`${styles.playerTable}`}>
 					<Swiper
 						loop={true}
 						spaceBetween={0}
-						slidesPerView={4}
-						navigation={false}
+						slidesPerView={3}
+						modules={[Navigation, Pagination, Scrollbar]} // Add modules here
 						pagination={{ clickable: true }}
-						// modules={(Navigation, Pagination, Scrollbar)}
 						scrollbar={{ draggable: true }}
-						// button={true}
 						breakpoints={{
-							320: {
-								slidesPerView: 2,
-							},
-
-							480: {
-								slidesPerView: 3,
-							},
-
-							640: {
-								slidesPerView: 4,
-							},
+							320: { slidesPerView: 2 },
 						}}
 					>
 						{Data.map((slide) => (
@@ -137,7 +127,6 @@ export default function HomePowerHouse() {
 										height={100}
 										alt=""
 									/>
-
 									<Image
 										className={styles.playerIMG}
 										src={slide.playerimg}
@@ -152,13 +141,11 @@ export default function HomePowerHouse() {
 										width={300}
 										height={300}
 										alt=""
-										src={BG}
-									></Image>
+										src={slide.bg}
+									/>
 								</div>
 							</SwiperSlide>
 						))}
-
-						{/* <SwiperSlide src="@/../public/img/HomeHero/ArrowDownn.png"></SwiperSlide> */}
 					</Swiper>
 				</div>
 			</div>
