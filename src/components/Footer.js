@@ -29,7 +29,6 @@ export default function Footer() {
 			<p>© {new Date().getFullYear()} Copyright</p>
 			<div className={styles.social}>
 				<a>
-					{" "}
 					<Image alt="" src={fb} width={20}></Image>
 				</a>
 				<a>
