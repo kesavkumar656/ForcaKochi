@@ -40,15 +40,16 @@
 			@include sm-down {
 				margin-top: 0% !important;
 				display: grid !important;
-				gap: 20px !important;
+
 				justify-content: end;
 			}
 			@include mdl-down {
 				margin-top: -30% !important;
-				justify-content: center;
+				justify-items: center;
 				display: grid !important;
 				gap: 20px !important;
 				padding: 2%;
+
 				margin: 0 auto;
 			}
 			.MapDiv {
@@ -64,11 +65,13 @@
 				@include sm-down {
 					position: unset;
 					transform: unset;
+					width: auto;
+					margin: 0 auto;
 				}
 				@include mdl-down {
 					position: unset !important;
 					transform: unset !important;
-					width: auto;
+					width: fit-content;
 				}
 
 				.wrapper {
