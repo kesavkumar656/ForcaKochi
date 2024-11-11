@@ -68,6 +68,7 @@
 				@include mdl-down {
 					position: unset !important;
 					transform: unset !important;
+					width: auto;
 				}
 
 				.wrapper {
@@ -137,6 +138,7 @@
 				}
 				@include mdl-down {
 					font-size: 14px;
+					width: fit-content;
 				}
 			}
 
