@@ -14,6 +14,7 @@ import styles from "@/styles/sections/HomeBroadCast.module.scss";
 // IMAGES //
 
 import Threejs from "@/../public/img/HomeBroadcast/threejs.png";
+import ThreeJs from "../components/ThreeJs";
 // DATA //
 
 /** HomeBroadCast Section */
@@ -77,7 +78,7 @@ export default function HomeBroadCast() {
 					</div>
 
 					<div className={styles.threejs}>
-						<Image src={Threejs} alt=""></Image>
+						<ThreeJs></ThreeJs>
 					</div>
 				</div>
 				<div></div>

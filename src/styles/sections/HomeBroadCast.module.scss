@@ -13,6 +13,7 @@
 			flex-direction: column;
 		}
 		.threejs {
+			
 			@include mdl-down {
 				margin: 0 auto;
 			}

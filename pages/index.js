@@ -41,18 +41,18 @@ export default function HomePage() {
 
 			{/* Page Content starts here */}
 			<main className={`${styles.HomePage} 	 `}>
-				<HomeHero></HomeHero>
+				{/* <HomeHero></HomeHero>
 				<HomeAbout></HomeAbout>
 				<HomeSuperLeague></HomeSuperLeague>
 				<HomeUpcomingMatches></HomeUpcomingMatches>
 				<HomePowerHouse></HomePowerHouse>
-				<HomePointsTable></HomePointsTable>
+				<HomePointsTable></HomePointsTable> */}
 				<HomeBroadCast></HomeBroadCast>
-				<HomeKochiMoment></HomeKochiMoment>
+				{/* <HomeKochiMoment></HomeKochiMoment>
 				<HomeStayHooked></HomeStayHooked>
 				<HomeDrivingForce></HomeDrivingForce>
 				<HomeContactUs></HomeContactUs>
-				<HomeSponsors></HomeSponsors>
+				<HomeSponsors></HomeSponsors> */}
 			</main>
 			{/* Page Content ends here */}
 
