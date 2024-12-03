@@ -5,15 +5,15 @@
 	.wrapper {
 		// @extend %f_r_a_center;
 		@extend %d_flex;
+		align-items: flex-end;
 		// align-items: center;
 		@include sm-down {
-			flex-direction: column;
 		}
 		@include mdl-down {
 			flex-direction: column;
 		}
 		.threejs {
-			
+			width: 100%;
 			@include mdl-down {
 				margin: 0 auto;
 			}
@@ -21,7 +21,7 @@
 		.country {
 			margin-top: 4% !important;
 			display: grid;
-			width: 70%;
+
 			grid-template-columns: repeat(2, 1fr);
 
 			@include sm-down {

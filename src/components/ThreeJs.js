@@ -1,77 +1,75 @@
-// MODULES //
-
-// COMPONENTS //
-
-// SECTIONS //
-
-// PLUGINS //
+/* eslint-disable require-jsdoc */
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-// UTILS //
-
-// STYLES //
 import styles from "@/styles/components/ThreeJs.module.scss";
 
-// IMAGES //
-
-// DATA //
-
-/** ThreeJs Component */
-/* eslint-disable require-jsdoc */
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ThreeBox = () => {
 	const containerRef = useRef();
 
 	useEffect(() => {
-		// Set up the scene, camera, and renderer
-		const container = containerRef.current;
+		if (!containerRef.current) return;
+
+		// Set up scene, camera, and renderer
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(
-			100,
+			75,
 			window.innerWidth / window.innerHeight,
-			1,
+			0.1,
 			1000
 		);
-		camera.position.z = 2;
+		camera.position.set(1, 1, 3);
 
-		const renderer = new THREE.WebGLRenderer();
+		const renderer = new THREE.WebGLRenderer({ alpha: true });
+
 		renderer.setSize(window.innerWidth, window.innerHeight);
-		container.appendChild(renderer.domElement);
 
-		// Texture loader
-		const loader = new THREE.TextureLoader();
-		const texture = loader.load(
-			"/img/HomeBroadcast/world.jpg",
-			() => console.log("Texture loaded successfully"),
-			undefined,
-			(error) => console.error("Error loading texture:", error)
-		);
+		containerRef.current.appendChild(renderer.domElement);
 
-		// Sphere geometry and material
-		const geometry = new THREE.SphereGeometry(1, 33, 25);
-		const material = new THREE.MeshLambertMaterial({
-			map: texture,
-			emissive: 11060,
+		// Add lighting
+		// const ambientLight = new THREE.Light(0xffffff, 10);
+		// scene.add(ambientLight);
+
+		const directionalLight = new THREE.HemisphereLight(0xffffff, 2);
+		directionalLight.position.set(1, 1, 2);
+		scene.add(directionalLight);
+
+		// Prevent scrolling behavior
+		const handleWheel = (event) => {
+			event.preventDefault();
+		};
+		renderer.domElement.addEventListener("wheel", handleWheel);
+
+		// OrbitControls setup
+		const orbit = new OrbitControls(camera, renderer.domElement);
+		orbit.enableZoom = false;
+		orbit.enablePan = false;
+		orbit.enableDamping = true;
+		orbit.autoRotate = true;
+		orbit.autoRotateSpeed = 0.4;
+
+		// Add a basic sphere
+		const geometry = new THREE.SphereGeometry(2, 32, 32);
+		const textureLoader = new THREE.TextureLoader(); // Create a new instance of TextureLoader
+
+		const material = new THREE.MeshMatcapMaterial({
+			map: textureLoader.load("/img/HomeBroadcast/world.jpg"), // Use the loaded texture
 		});
 		const sphere = new THREE.Mesh(geometry, material);
 		scene.add(sphere);
-
-		// Light
-		const pointLight = new THREE.SpotLight(0xffffff, 100, 0);
-		pointLight.position.set(1, 5, 5);
-		scene.add(pointLight);
-
-		// Interaction state
+		sphere.scale.set(1, 1, 1);
 
 		// Animation loop
 		const animate = () => {
 			requestAnimationFrame(animate);
+			orbit.update(); // Necessary for damping to work
 			renderer.render(scene, camera);
 		};
-
 		animate();
 
-		// Resize handling
+		// Handle window resize
 		const handleResize = () => {
 			camera.aspect = window.innerWidth / window.innerHeight;
 			camera.updateProjectionMatrix();
@@ -79,14 +77,16 @@ const ThreeBox = () => {
 		};
 		window.addEventListener("resize", handleResize);
 
-		// Cleanup on unmount
+		// Cleanup
 		return () => {
 			renderer.dispose();
-			
+			containerRef.current.removeChild(renderer.domElement);
+
+			// window.removeEventListener("resize", handleResize);
 		};
 	}, []);
 
-	return <div className={styles.Model} ref={containerRef} />;
+	return <div className={`${styles.model} resize`} ref={containerRef} />;
 };
 
 export default ThreeBox;

@@ -1,9 +1,10 @@
 @import "../helpers/helpers.scss";
 
-.Model {
+.model {
+	width: 100%;
 	canvas {
 		background: transparent;
-		width: 50% !important;
-		height: 50% !important;
+		width: 100% !important;
+		height: auto !important;
 	}
 }
