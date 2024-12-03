@@ -2,8 +2,6 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import styles from "@/styles/components/ThreeJs.module.scss";
-
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const ThreeBox = () => {
@@ -27,7 +25,6 @@ const ThreeBox = () => {
 
 		containerRef.current.appendChild(renderer.domElement);
 
-		// Add lighting
 		// const ambientLight = new THREE.Light(0xffffff, 10);
 		// scene.add(ambientLight);
 
@@ -38,7 +35,7 @@ const ThreeBox = () => {
 		const handleWheel = (event) => {
 			event.preventDefault();
 		};
-		renderer.domElement.addEventListener("wheel", handleWheel);
+		// renderer.domElement.addEventListener("wheel", handleWheel);
 
 		const orbit = new OrbitControls(camera, renderer.domElement);
 		orbit.enableZoom = false;
@@ -55,7 +52,6 @@ const ThreeBox = () => {
 		});
 		const sphere = new THREE.Mesh(geometry, material);
 		scene.add(sphere);
-		sphere.scale.set(1, 1, 1);
 
 		const animate = () => {
 			requestAnimationFrame(animate);
@@ -69,8 +65,8 @@ const ThreeBox = () => {
 			camera.updateProjectionMatrix();
 			renderer.setSize(window.innerWidth, window.innerHeight);
 		};
-		window.addEventListener("resize", handleResize);
 
+		window.addEventListener("resize", handleResize);
 		return () => {
 			renderer.dispose();
 			containerRef.current.removeChild(renderer.domElement);
