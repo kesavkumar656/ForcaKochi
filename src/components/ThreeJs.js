@@ -12,7 +12,6 @@ const ThreeBox = () => {
 	useEffect(() => {
 		if (!containerRef.current) return;
 
-		// Set up scene, camera, and renderer
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(
 			75,
@@ -36,13 +35,11 @@ const ThreeBox = () => {
 		directionalLight.position.set(1, 1, 2);
 		scene.add(directionalLight);
 
-		// Prevent scrolling behavior
 		const handleWheel = (event) => {
 			event.preventDefault();
 		};
 		renderer.domElement.addEventListener("wheel", handleWheel);
 
-		// OrbitControls setup
 		const orbit = new OrbitControls(camera, renderer.domElement);
 		orbit.enableZoom = false;
 		orbit.enablePan = false;
@@ -50,26 +47,23 @@ const ThreeBox = () => {
 		orbit.autoRotate = true;
 		orbit.autoRotateSpeed = 0.4;
 
-		// Add a basic sphere
 		const geometry = new THREE.SphereGeometry(2, 32, 32);
-		const textureLoader = new THREE.TextureLoader(); // Create a new instance of TextureLoader
+		const textureLoader = new THREE.TextureLoader();
 
 		const material = new THREE.MeshMatcapMaterial({
-			map: textureLoader.load("/img/HomeBroadcast/world.jpg"), // Use the loaded texture
+			map: textureLoader.load("/img/HomeBroadcast/world.jpg"),
 		});
 		const sphere = new THREE.Mesh(geometry, material);
 		scene.add(sphere);
 		sphere.scale.set(1, 1, 1);
 
-		// Animation loop
 		const animate = () => {
 			requestAnimationFrame(animate);
-			orbit.update(); // Necessary for damping to work
+			orbit.update();
 			renderer.render(scene, camera);
 		};
 		animate();
 
-		// Handle window resize
 		const handleResize = () => {
 			camera.aspect = window.innerWidth / window.innerHeight;
 			camera.updateProjectionMatrix();
@@ -77,12 +71,11 @@ const ThreeBox = () => {
 		};
 		window.addEventListener("resize", handleResize);
 
-		// Cleanup
 		return () => {
 			renderer.dispose();
 			containerRef.current.removeChild(renderer.domElement);
 
-			// window.removeEventListener("resize", handleResize);
+			window.removeEventListener("resize", handleResize);
 		};
 	}, []);
 
