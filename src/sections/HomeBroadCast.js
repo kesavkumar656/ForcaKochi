@@ -1,5 +1,5 @@
 // MODULES //
-
+import { useEffect, useRef } from "react";
 // COMPONENTS //
 
 // SECTIONS //
@@ -19,6 +19,8 @@ import ThreeJs from "../components/ThreeJs";
 
 /** HomeBroadCast Section */
 export default function HomeBroadCast() {
+	const threejs = useRef();
+
 	const Data = [
 		{
 			country: "India",
@@ -77,7 +79,7 @@ export default function HomeBroadCast() {
 						</div>
 					</div>
 
-					<div className={styles.threejs}>
+					<div className={styles.threejs} ref={threejs}>
 						<ThreeJs></ThreeJs>
 					</div>
 				</div>
