@@ -17,7 +17,7 @@ const ThreeBox = () => {
 			0.1,
 			1000
 		);
-		camera.position.set(1, 1, 3);
+		camera.position.set(1, 1, 10);
 
 		const renderer = new THREE.WebGLRenderer({ alpha: true });
 
@@ -61,6 +61,15 @@ const ThreeBox = () => {
 			});
 			gsap.to(sphere.rotation, {
 				y: Math.PI * 2,
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true,
+				},
+			});
+			gsap.to(camera.position, {
+				z: 3,
 				scrollTrigger: {
 					trigger: containerRef.current,
 					start: "top bottom",

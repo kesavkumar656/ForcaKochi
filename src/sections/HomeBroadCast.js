@@ -12,6 +12,7 @@ import Image from "next/image";
 import styles from "@/styles/sections/HomeBroadCast.module.scss";
 
 // IMAGES //
+import gsap from "gsap";
 
 import Threejs from "@/../public/img/HomeBroadcast/threejs.png";
 import ThreeJs from "../components/ThreeJs";
@@ -20,7 +21,18 @@ import ThreeJs from "../components/ThreeJs";
 /** HomeBroadCast Section */
 export default function HomeBroadCast() {
 	const threejs = useRef();
+	const containerRef = useRef();
 
+	// gsap.to(threejs.current, {
+	// 	y: -1000,
+	// 	scrollTrigger: {
+	// 		trigger: containerRef.current,
+	// 		start: "top bottom",
+	// 		end: "bottom top",
+	// 		scrub: true,
+	// 		markers: true,
+	// 	},
+	// });
 	const Data = [
 		{
 			country: "India",
@@ -55,7 +67,7 @@ export default function HomeBroadCast() {
 	];
 	return (
 		<section className={`${styles.HomeBroadCast} section_spacing bg_primary`}>
-			<div className="container ">
+			<div className="container " ref={containerRef}>
 				<div className={styles.wrapper}>
 					<div>
 						<h1
