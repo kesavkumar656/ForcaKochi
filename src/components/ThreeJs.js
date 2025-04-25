@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import styles from "@/styles/components/ThreeJs.module.scss";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-
+import gsap from "gsap";
 const ThreeBox = () => {
 	const containerRef = useRef();
 
@@ -52,7 +52,23 @@ const ThreeBox = () => {
 		});
 		const sphere = new THREE.Mesh(geometry, material);
 		scene.add(sphere);
+		import("gsap/ScrollTrigger").then((ScrollTriggerModule) => {
+			const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
+			gsap.registerPlugin(ScrollTrigger);
 
+			gsap.to(containerRef, {
+				y: "-100%",
+			});
+			gsap.to(sphere.rotation, {
+				y: Math.PI * 2,
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: "top bottom",
+					end: "bottom top",
+					scrub: true,
+				},
+			});
+		});
 		const animate = () => {
 			requestAnimationFrame(animate);
 			orbit.update();

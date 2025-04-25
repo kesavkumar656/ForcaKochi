@@ -25,6 +25,7 @@ import HomeStayHooked from "../src/sections/HomeStayHooked";
 import HomeDrivingForce from "../src/sections/HomeDrivingForce";
 import HomeContactUs from "../src/sections/HomeContactUs";
 import HomeSponsors from "../src/sections/HomeSponsors";
+import HomeThreeJsTest from "@/sections/HomeThreeJsTest";
 // IMAGES //
 
 // DATA //
@@ -48,6 +49,7 @@ export default function HomePage() {
 				<HomePowerHouse></HomePowerHouse>
 				<HomePointsTable></HomePointsTable>
 				<HomeBroadCast></HomeBroadCast>
+				<HomeThreeJsTest />
 				<HomeKochiMoment></HomeKochiMoment>
 				<HomeStayHooked></HomeStayHooked>
 				<HomeDrivingForce></HomeDrivingForce>
